@@ -3,19 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "sass src/scss:temp --no-source-map",
+    "merge": "node src/scripts/concat.mjs",
+    "minify": "postcss dist/combined.css -o dist/custom.minified.css",
+    "cleanup": "node src/scripts/cleanup.mjs",
+    "build": "yarn compile && yarn merge && yarn minify && yarn cleanup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "yarn": "^1.22.21",
-    "build-css": "sass scss/: temp/ --no-source-map && concat temp/*.css -o styles/combined.css && cleancss -o styles/custom.minified.css styles/combined.css && rm -rf temp"
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "concat": "^1.0.3",
+    "cssnano": "^6.0.3",
+    "glob": "^10.3.10",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "rimraf": "^5.0.5",
     "sass": "^1.70.0"
   }
 }

@@ -1,0 +1,45 @@
+:root {
+  --cursor-border-radius: 2px;
+  --border-radius-lg: 6px;
+  --border-radius-md: 5px;
+  --border-radius-sm: 4px;
+  --separator-width: 0px;
+  --scrollbar-thickness: 8px;
+  --scrollbar-border-radius: 999px;
+  --vim-status: #e5c07b;
+  --vim-input-height: 22px;
+  --vim-status-input-width: 200px;
+  --vim-pending-keys: #61afef;
+  --vim-pending-keys-input-width: 50px;
+  --icon-button-container-height: 40px;
+  --icon-button-size: 19px;
+  --icon-button-wrapper-gap: 8px;
+  --icon-button-wrapper-border-radius: 6px;
+  --icon-button-wrapper-size: 32px;
+  --icon-button-and-content-gutter: 0px;
+  --screen-edge-gutter: 5px;
+  --internal-gutter: var(--screen-edge-gutter);
+  --main-split-view-gutter: var(--screen-edge-gutter);
+  --titlebar-search-box-font-size: 13px;
+  --titlebar-search-box-min-width: 275px;
+  --titlebar-search-box-padding: 0 15px;
+  --editor-action-size: 13px;
+  --pane-header-accordion-height: 36px;
+  --active-tab-editor-background: #323842;
+  --hovered-tab-editor-background: #282d35;
+  --sticky-background: #272b32;
+  --tab-height: 30px;
+  --tab-gutter: 3px;
+  --general-trans-props: top, left, width, height;
+  --general-trans-duration: 125ms;
+  --general-trans-duration-sm: 100ms;
+  --general-trans-duration-xs: 75ms;
+  --command-palette-duration: var(--general-trans-duration);
+  --active-row-duration: 125ms;
+  --tabs-duration: 150ms;
+  --status-bar-item-gap: 12px;
+}
+
+div {
+  background-color: red;
+}
