@@ -1,0 +1,21 @@
+{
+  "name": "apc-custom-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yarn": "^1.22.21",
+    "build-css": "sass scss/: temp/ --no-source-map && concat temp/*.css -o styles/combined.css && cleancss -o styles/custom.minified.css styles/combined.css && rm -rf temp"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "concat": "^1.0.3",
+    "sass": "^1.70.0"
+  }
+}
