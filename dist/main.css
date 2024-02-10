@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-shadow: none;
+  font-weight: 500;
+  /* no important */
 }
 
 .monaco-workbench {

@@ -1,8 +1,11 @@
+const cssnano = require('cssnano');
+var safeImportant = require('postcss-safe-important');
+
 module.exports = {
   plugins: [
-    require('cssnano')({
+    cssnano({
       preset: 'default',
     }),
-    require('postcss-safe-important')(),
+    safeImportant(),
   ],
 };
