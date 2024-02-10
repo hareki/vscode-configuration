@@ -4,12 +4,14 @@ $editor-id: 'workbench.parts.editor';
 $titlebar-id: 'workbench.parts.titlebar';
 $banner-id: 'workbench.parts.banner';
 $statusbar-id: 'workbench.parts.statusbar';
+$panel-id: 'workbench.parts.panel';
 
 $cursor-border-radius: 2px;
-$border-radius-lg: 6px;
-$border-radius-md: 5px;
+$border-radius-lg: 8px;
+$border-radius-md: 6px;
 $border-radius-sm: 4px;
 $separator-width: 0px;
+$separator-color: #373d48;
 
 $scrollbar-thickness: 8px;
 $scrollbar-border-radius: 999px;
@@ -59,3 +61,6 @@ $active-row-duration: 125ms;
 $tabs-duration: 150ms;
 
 $status-bar-item-gap: 12px;
+
+$popup-background: #282c34;
+$panel-background: #1b1f23;

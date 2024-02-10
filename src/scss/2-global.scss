@@ -62,18 +62,18 @@
 .minimap-slider-horizontal,
 [class*='wordHighlight'],
 .monaco-editor .bracket-match {
-  border-radius: $cursor-border-radius;
+  border-radius: $border-radius-sm;
 }
 
 .monaco-list-row,
 .monaco-workbench .monaco-list:not(.element-focused):focus:before {
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-md;
 }
 
 .monaco-tree-sticky-container {
   &,
   .monaco-tree-sticky-row {
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-md;
   }
 
   .monaco-tree-sticky-row {
@@ -85,7 +85,8 @@
   overflow: hidden;
 }
 
-/* mimic, custom the border for focused welcome view content, since the width and height is controlled by JS, so we can't use padding, margin to style it properly*/
+/* mimic, custom the border for focused welcome view content, since the width and height
+is controlled by JS, so we can't use padding, margin to style it properly*/
 .welcome-view-content {
   outline-width: 0px;
 
@@ -153,6 +154,12 @@
     border-radius: $border-radius-md;
     width: calc(99.5% - $main-split-view-gutter);
   }
+}
+
+[id='#{$panel-id}'] {
+  box-sizing: border-box;
+  padding-left: calc($main-split-view-gutter + 5px);
+  margin-right: calc($main-split-view-gutter);
 }
 
 /* ---------------------------- Section separator --------------------------- */
@@ -232,4 +239,18 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
 .quick-input-list-row div {
   display: flex;
   align-items: center;
+}
+
+.custom-list-row .monaco-list-row .explorer-item::after {
+  padding-bottom: 4px;
+}
+
+/* ------------------------------- Find widget ------------------------------ */
+.monaco-editor .find-widget {
+  background-color: #282c34;
+  border-radius: $popup-background;
+
+  .monaco-sash {
+    background-color: $popup-background;
+  }
 }

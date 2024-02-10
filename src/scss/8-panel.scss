@@ -1,0 +1,25 @@
+[id='#{$panel-id}'] {
+  > .title {
+    background-color: $panel-background;
+    border-color: $separator-color;
+    border-style: solid;
+
+    border-top-left-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
+    border-width: 1px 1px 0px;
+  }
+
+  > .content {
+    background-color: $panel-background;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    max-width: 100%;
+    border-color: $separator-color;
+    border-style: solid;
+
+    // border-bottom-left-radius: $border-radius-lg;
+    // border-bottom-right-radius: $border-radius-lg;
+    border-width: 0px 1px;
+  }
+}

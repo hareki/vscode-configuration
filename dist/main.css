@@ -50,7 +50,7 @@
 .minimap-slider-horizontal,
 [class*=wordHighlight],
 .monaco-editor .bracket-match {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .monaco-list-row,
@@ -71,13 +71,14 @@
   width: 100%;
 }
 
-/* mimic, custom the border for focused welcome view content, since the width and height is controlled by JS, so we can't use padding, margin to style it properly*/
+/* mimic, custom the border for focused welcome view content, since the width and height
+is controlled by JS, so we can't use padding, margin to style it properly*/
 .welcome-view-content {
   outline-width: 0px;
 }
 .welcome-view-content:focus::before {
   content: "";
-  border-radius: 6px;
+  border-radius: 8px;
   outline: 1px solid;
   outline-color: var(--vscode-focusBorder);
   position: absolute;
@@ -89,17 +90,17 @@
 }
 
 .split-view-view.visible[style*=top]:first-child:has(> .pane > .pane-header[role=button]), .split-view-view.visible[style*=top]:first-child > .pane > .pane-header[role=button] {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   overflow: hidden;
 }
 .split-view-view.visible[style*=top]:last-child:has(> .pane > .pane-header[role=button]:last-child), .split-view-view.visible[style*=top]:last-child > .pane > .pane-header[role=button] {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   overflow: hidden;
 }
 .split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]) + .split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]), .split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]) + .split-view-view.visible[style*=top] > .pane.expanded > .pane-header[role=button] {
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -121,8 +122,14 @@
 }
 [id="workbench.parts.editor"] .current-line-exact,
 [id="workbench.parts.editor"] [widgetid="editor.contrib.stickyScrollWidget"] {
-  border-radius: 5px;
+  border-radius: 6px;
   width: calc(99.5% - 5px);
+}
+
+[id="workbench.parts.panel"] {
+  box-sizing: border-box;
+  padding-left: 10px;
+  margin-right: 5px;
 }
 
 /* ---------------------------- Section separator --------------------------- */
@@ -182,6 +189,19 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
 .quick-input-list-row div {
   display: flex;
   align-items: center;
+}
+
+.custom-list-row .monaco-list-row .explorer-item::after {
+  padding-bottom: 4px;
+}
+
+/* ------------------------------- Find widget ------------------------------ */
+.monaco-editor .find-widget {
+  background-color: #282c34;
+  border-radius: #282c34;
+}
+.monaco-editor .find-widget .monaco-sash {
+  background-color: #282c34;
 }
 
 .monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title {
@@ -252,7 +272,7 @@ div[id="vscodevim.vim.primary"] > .statusbar-item-label,
 div[id="vscodevim.vim.showcmd"] > .statusbar-item-label {
   min-width: 0px;
   transition: min-width 125ms;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 div[id="vscodevim.vim.primary"] > .statusbar-item-label[style*="display: none"],
 div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"] {
@@ -262,7 +282,7 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"] 
 div[id="vscodevim.vim.primary"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ), div[id="vscodevim.vim.primary"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ),
 div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ),
 div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ) {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   height: 22px;
   box-sizing: border-box;
 }
@@ -503,4 +523,22 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 .monaco-list-row:not(.explorer-folders-view .monaco-list-row,
 .code-cell-row).focused {
   scale: 1;
+}
+
+[id="workbench.parts.panel"] > .title {
+  background-color: #1b1f23;
+  border-color: #373d48;
+  border-style: solid;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-width: 1px 1px 0px;
+}
+[id="workbench.parts.panel"] > .content {
+  background-color: #1b1f23;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  border-color: #373d48;
+  border-style: solid;
+  border-width: 0px 1px;
 }

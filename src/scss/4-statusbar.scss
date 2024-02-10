@@ -71,7 +71,7 @@ div[id='vscodevim.vim.showcmd'] {
 
     &:not([style*='display: none']):not(#\9):not(#\9),
     &[aria-label*='|']:not(#\9):not(#\9) {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
       height: $vim-input-height;
       box-sizing: border-box;
     }
