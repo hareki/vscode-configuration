@@ -24,11 +24,18 @@
 /* --------------------------------- Spacing -------------------------------- */
 [id='#{$statusbar-id}'] {
   > .left-items.items-container > div,
-  > .right-items.items-container > div,
+  > .right-items.items-container > div {
+    // > .left-items.items-container > div > .statusbar-item-label,
+    // > .right-items.items-container > div > .statusbar-item-label {
+    height: $status-bar-item-height;
+    margin: 3px 0 0;
+    padding: 0;
+  }
   > .left-items.items-container > div > .statusbar-item-label,
   > .right-items.items-container > div > .statusbar-item-label {
     margin: 0;
-    padding: 0;
+    padding: 0px 5px;
+    border-radius: $border-radius-md;
   }
 
   > .left-items.items-container {
@@ -39,7 +46,9 @@
   }
 
   > .right-items.items-container {
-    > [id='vscodevim.vim.showcmd'] {
+    > [id='vscodevim.vim.showcmd']:not(
+        :has(> .statusbar-item-label[style*='display: none'])
+      ) {
       margin-right: $screen-edge-gutter;
     }
     gap: $status-bar-item-gap;
@@ -59,7 +68,9 @@ div[id='vscodevim.vim.showcmd'] {
   display: flex;
   align-items: center;
 
-  > .statusbar-item-label {
+  > .statusbar-item-label:not(#\9) {
+    margin: 0;
+    padding: 0;
     min-width: 0px;
     transition: min-width $general-trans-duration;
     border-radius: $border-radius-md;
@@ -71,7 +82,7 @@ div[id='vscodevim.vim.showcmd'] {
 
     &:not([style*='display: none']):not(#\9):not(#\9),
     &[aria-label*='|']:not(#\9):not(#\9) {
-      margin-bottom: 2px;
+      // margin-bottom: 2px;
       height: $vim-input-height;
       box-sizing: border-box;
     }

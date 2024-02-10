@@ -245,26 +245,31 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
 
 /* --------------------------------- Spacing -------------------------------- */
 [id="workbench.parts.statusbar"] > .left-items.items-container > div,
-[id="workbench.parts.statusbar"] > .right-items.items-container > div,
+[id="workbench.parts.statusbar"] > .right-items.items-container > div {
+  height: 25px;
+  margin: 3px 0 0;
+  padding: 0;
+}
 [id="workbench.parts.statusbar"] > .left-items.items-container > div > .statusbar-item-label,
 [id="workbench.parts.statusbar"] > .right-items.items-container > div > .statusbar-item-label {
   margin: 0;
-  padding: 0;
+  padding: 0px 5px;
+  border-radius: 6px;
 }
 [id="workbench.parts.statusbar"] > .left-items.items-container {
-  gap: 12px;
+  gap: 8px;
 }
 [id="workbench.parts.statusbar"] > .left-items.items-container > [id="vscodevim.vim.primary"] {
   margin-left: 5px;
 }
 [id="workbench.parts.statusbar"] > .right-items.items-container {
-  gap: 12px;
+  gap: 8px;
 }
-[id="workbench.parts.statusbar"] > .right-items.items-container > [id="vscodevim.vim.showcmd"] {
+[id="workbench.parts.statusbar"] > .right-items.items-container > [id="vscodevim.vim.showcmd"]:not(:has(> .statusbar-item-label[style*="display: none"])) {
   margin-right: 5px;
 }
 [id="workbench.parts.statusbar"] [id="status.notifications"]:has(~ [id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"]) {
-  margin-right: -12px;
+  margin-right: -8px;
 }
 
 /* -------------------------------- VIM items ------------------------------- */
@@ -273,21 +278,22 @@ div[id="vscodevim.vim.showcmd"] {
   display: flex;
   align-items: center;
 }
-div[id="vscodevim.vim.primary"] > .statusbar-item-label,
-div[id="vscodevim.vim.showcmd"] > .statusbar-item-label {
+div[id="vscodevim.vim.primary"] > .statusbar-item-label:not(#\9 ),
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not(#\9 ) {
+  margin: 0;
+  padding: 0;
   min-width: 0px;
   transition: min-width 125ms;
   border-radius: 6px;
 }
-div[id="vscodevim.vim.primary"] > .statusbar-item-label[style*="display: none"],
-div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"] {
+div[id="vscodevim.vim.primary"] > .statusbar-item-label:not(#\9 )[style*="display: none"],
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not(#\9 )[style*="display: none"] {
   width: 0px;
   display: block;
 }
-div[id="vscodevim.vim.primary"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ), div[id="vscodevim.vim.primary"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ),
-div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ),
-div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ) {
-  margin-bottom: 2px;
+div[id="vscodevim.vim.primary"] > .statusbar-item-label:not(#\9 ):not([style*="display: none"]):not(#\9 ):not(#\9 ), div[id="vscodevim.vim.primary"] > .statusbar-item-label:not(#\9 )[aria-label*="|"]:not(#\9 ):not(#\9 ),
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not(#\9 ):not([style*="display: none"]):not(#\9 ):not(#\9 ),
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not(#\9 )[aria-label*="|"]:not(#\9 ):not(#\9 ) {
   height: 22px;
   box-sizing: border-box;
 }
@@ -324,15 +330,15 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 .monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar .monaco-action-bar .action-item.icon .action-label:not(.codicon) {
   box-sizing: border-box;
   padding: 0;
-  height: 19px;
-  width: 19px;
-  -webkit-mask-size: 19px;
+  height: 20px;
+  width: 20px;
+  -webkit-mask-size: 20px;
 }
 .monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar .monaco-action-bar .action-label.codicon {
   width: fit-content;
   height: fit-content;
   padding: 0;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 [id="workbench.parts.sidebar"] > .title + .content,
@@ -355,7 +361,7 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 /* ---------- Active and hover background for icon buttons and tabs --------- */

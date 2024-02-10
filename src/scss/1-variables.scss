@@ -23,7 +23,7 @@ $vim-pending-keys: #61afef;
 $vim-pending-keys-input-width: 50px;
 
 $icon-button-container-height: 40px;
-$icon-button-size: 19px;
+$icon-button-size: 20px;
 
 $icon-button-wrapper-gap: 8px;
 $icon-button-wrapper-border-radius: 6px;
@@ -39,7 +39,7 @@ $titlebar-search-box-font-size: 13px;
 $titlebar-search-box-min-width: 275px;
 $titlebar-search-box-padding: 0 15px;
 
-$editor-action-size: 13px;
+$editor-action-size: 16px;
 
 $pane-header-accordion-height: 36px;
 
@@ -60,7 +60,7 @@ $command-palette-duration: $general-trans-duration;
 $active-row-duration: 125ms;
 $tabs-duration: 150ms;
 
-$status-bar-item-gap: 12px;
-
 $popup-background: #282c34;
 $panel-background: #1b1f23;
+$status-bar-item-gap: 8px;
+$status-bar-item-height: 25px;
