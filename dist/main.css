@@ -58,6 +58,11 @@
   border-radius: 6px;
 }
 
+.monaco-workbench .monaco-list:not(.element-focused):focus:before {
+  top: 1px;
+  height: calc(100% - 1px);
+}
+
 .monaco-tree-sticky-container {
   overflow: hidden;
 }
@@ -364,8 +369,11 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 
 /* --------------------------------- Styles --------------------------------- */
 .title.tabs:has(> .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist]) {
-  --editor-group-tab-height: $tab-height;
+  --editor-group-tab-height: 31px !important;
   margin-bottom: 5px;
+}
+.title.tabs > .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist] + [role=presentation] > .slider:not(#\9 ) {
+  height: 3px;
 }
 .title.tabs > .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist] > .tab[role=tab] {
   margin-right: 3px;

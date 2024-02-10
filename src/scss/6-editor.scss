@@ -5,17 +5,21 @@
         > .monaco-scrollable-element
         div.tabs-container[role='tablist']
     ) {
-    --editor-group-tab-height: $tab-height;
+    --editor-group-tab-height: #{$tab-height} !important;
     margin-bottom: $internal-gutter;
   }
 
   > .tabs-and-actions-container
     > .monaco-scrollable-element
-    div.tabs-container[role='tablist']
+    div.tabs-container[role='tablist'] {
+    & + [role='presentation'] > .slider:not(#\9) {
+      height: 3px;
+    }
     > .tab[role='tab'] {
-    margin-right: $tab-gutter;
-    border-right: none;
-    border-radius: $border-radius-md;
+      margin-right: $tab-gutter;
+      border-right: none;
+      border-radius: $border-radius-md;
+    }
   }
 }
 
