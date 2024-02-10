@@ -55,13 +55,13 @@
 
 /* ------------------------------ Border radius ----------------------------- */
 .cursor,
-.monaco-editor [class*='ced-2-TextEditor'] {
+.monaco-editor [class*='ced-2-TextEditor'],
+[class*='wordHighlight'],
+.monaco-editor .bracket-match {
   border-radius: $cursor-border-radius;
 }
 
-.minimap-slider-horizontal,
-[class*='wordHighlight'],
-.monaco-editor .bracket-match {
+.minimap-slider-horizontal {
   border-radius: $border-radius-sm;
 }
 
