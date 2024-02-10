@@ -149,6 +149,11 @@ is controlled by JS, so we can't use padding, margin to style it properly*/
   }
 }
 
+.diffViewport {
+  border-radius: $border-radius-sm;
+  width: $diff-viewport-width;
+}
+
 [id='#{$editor-id}'] {
   box-sizing: border-box;
   padding-left: $main-split-view-gutter;

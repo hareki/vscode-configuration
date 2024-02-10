@@ -120,6 +120,11 @@ is controlled by JS, so we can't use padding, margin to style it properly*/
   height: 8px;
 }
 
+.diffViewport {
+  border-radius: 4px;
+  width: 20px;
+}
+
 [id="workbench.parts.editor"] {
   box-sizing: border-box;
   padding-left: 5px;
