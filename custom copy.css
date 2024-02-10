@@ -1,0 +1,525 @@
+:root {
+  --cursor-border-radius: 2px;
+  --border-radius-lg: 6px;
+  --border-radius-md: 5px;
+  --border-radius-sm: 4px;
+  --separator-width: 0px;
+
+  --scrollbar-thickness: 8px;
+  --scrollbar-border-radius: 999px;
+
+  --vim-status: #e5c07b;
+  --vim-input-height: 22px;
+  --vim-status-input-width: 200px;
+  --vim-pending-keys: #61afef;
+  --vim-pending-keys-input-width: 50px;
+
+  --icon-button-container-height: 40px;
+  --icon-button-size: 19px;
+
+  --icon-button-wrapper-gap: 8px;
+  --icon-button-wrapper-border-radius: 6px;
+  --icon-button-wrapper-size: 32px;
+
+  --icon-button-and-content-gutter: 0px;
+
+  --screen-edge-gutter: 5px;
+  --internal-gutter: var(--screen-edge-gutter);
+  --main-split-view-gutter: var(--screen-edge-gutter);
+
+  --titlebar-search-box-font-size: 13px;
+  --titlebar-search-box-min-width: 275px;
+  --titlebar-search-box-padding: 0 15px;
+
+  --editor-action-size: 13px;
+
+  --pane-header-accordion-height: 36px;
+
+  --active-tab-editor-background: #323842;
+  --hovered-tab-editor-background: #282d35;
+
+  --sticky-background: #272b32;
+
+  --tab-height: 30px;
+  --tab-gutter: 3px;
+
+  --general-trans-props: top, left, width, height;
+  --general-trans-duration: 125ms;
+  --general-trans-duration-sm: 100ms;
+  --general-trans-duration-xs: 75ms;
+
+  --command-palette-duration: var(--general-trans-duration);
+  --active-row-duration: 125ms;
+  --tabs-duration: 150ms;
+
+  --status-bar-item-gap: 12px;
+}
+
+/* completely remove the shadow, it's for the context menu, since it's in the shadow root, can't select it directly */
+.monaco-workbench {
+  --vscode-widget-shadow: 'transparent';
+}
+
+/* --------------------------- Config edge spacing -------------------------- */
+
+/* -------------------------- Config border radius -------------------------- */
+
+/* -------------------------------- Scrollbar ------------------------------- */
+
+/* --------------------------- Config border width -------------------------- */
+
+/* ------------------------ Hide unnecessary elements ----------------------- */
+/* -------------------------------- Titlebar -------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  STATUSBAR                                 */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Item order ------------------------------- */
+/* right */
+[id='vscodevim.vim.primary'] {
+  order: 1;
+}
+[id='koalamer.workspace-in-status-bar'] {
+  order: 2;
+}
+[id='status.scm.0'] {
+  order: 3;
+}
+[id='status.scm.1'] {
+  order: 4;
+}
+[id='status.problems'] {
+  order: 5;
+}
+
+/* left */
+[id='vscodevim.vim.showcmd'] {
+  order: -1;
+}
+
+/* ------------------------------- Item styles ------------------------------- */
+
+/* ------------------------------- VIM Statusbar ------------------------------- */
+
+div[id='vscodevim.vim.primary'],
+div[id='vscodevim.vim.showcmd'] {
+  display: flex !important;
+  align-items: center !important;
+}
+
+div[id='vscodevim.vim.showcmd'] > .statusbar-item-label,
+div[id='vscodevim.vim.primary'] > .statusbar-item-label {
+  min-width: 0px !important;
+  transition: min-width var(--general-trans-duration) !important;
+  border-radius: var(--border-radius-md) !important;
+}
+
+div[id='vscodevim.vim.primary'] > .statusbar-item-label {
+  color: var(--vim-status) !important;
+}
+
+div[id='vscodevim.vim.showcmd'] > .statusbar-item-label {
+  color: var(--vim-pending-keys) !important;
+}
+
+div[id='vscodevim.vim.showcmd']
+  > .statusbar-item-label[style*='display: none'] {
+  width: 0px !important;
+  display: block !important;
+}
+
+div[id='vscodevim.vim.showcmd']
+  > .statusbar-item-label:not([style*='display: none']):not(#\9):not(#\9),
+div[id='vscodevim.vim.primary'][aria-label*='|']
+  > .statusbar-item-label:not(#\9):not(#\9) {
+  margin-bottom: 3px !important;
+  height: var(--vim-input-height) !important;
+  box-sizing: border-box;
+}
+
+div[id='vscodevim.vim.primary'][aria-label*='|']
+  > .statusbar-item-label:not(#\9):not(#\9) {
+  min-width: var(--vim-status-input-width) !important;
+  outline: 2px solid var(--vim-status) !important;
+  padding: 2px 3px 2px !important;
+}
+
+div[id='vscodevim.vim.showcmd']
+  > .statusbar-item-label:not([style*='display: none']):not(#\9):not(#\9) {
+  min-width: var(--vim-pending-keys-input-width) !important;
+  outline: 2px solid var(--vim-pending-keys) !important;
+  padding: 2px 2px 5px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*       CUSTOM STYLE FOR THE ICON BUTTONS IN SIDEBAR AND AUXILIARY BAR       */
+/* -------------------------------------------------------------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  > .actions-container {
+  align-items: start !important;
+  gap: var(--icon-button-wrapper-gap) !important;
+}
+
+/* --------------------------- Icon button wrapper -------------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.icon {
+  padding: 0 !important;
+  border-radius: var(--icon-button-wrapper-border-radius) !important;
+  width: var(--icon-button-wrapper-size) !important;
+  height: var(--icon-button-wrapper-size) !important;
+}
+
+/* ----------------------- Native vscode icon buttons ----------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  .monaco-action-bar
+  .action-label.codicon {
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 0 !important;
+  font-size: var(--icon-button-size) !important;
+}
+
+/* ------------------------- Extension icon buttons ------------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.icon
+  .action-label:not(.codicon) {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  height: var(--icon-button-size) !important;
+  width: var(--icon-button-size) !important;
+  -webkit-mask-size: var(--icon-button-size);
+}
+
+[id='workbench.parts.sidebar'] > .title + .content,
+[id='workbench.parts.auxiliarybar'] > .title + .content {
+  padding-top: var(--icon-button-and-content-gutter) !important;
+  box-sizing: border-box !important;
+}
+
+/* --------- Styles for editor action buttons in auxiliary bar position --------- */
+.monaco-action-bar .action-item .codicon {
+  justify-content: center !important;
+}
+
+[id='workbench.parts.auxiliarybar'] > .title > .title-actions > .monaco-toolbar,
+[id='workbench.parts.auxiliarybar']
+  > .title
+  > .global-actions
+  > .monaco-toolbar {
+  height: 100% !important;
+}
+
+.monaco-workbench
+  .pane-composite-part
+  > .title.has-composite-bar
+  > .title-actions
+  .monaco-action-bar
+  .action-item
+  .action-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--editor-action-size) !important;
+}
+
+/* ---------------------- Active icon button background --------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.icon.checked:not(#\9):not(#\9) {
+  background-color: var(--active-tab-editor-background) !important;
+}
+
+/* ---------------------- Hover icon button background ---------------------- */
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.icon:hover {
+  background-color: var(--hovered-tab-editor-background) !important;
+}
+
+/* -------------------------- Active tab background ------------------------- */
+.title.tabs
+  > .tabs-and-actions-container
+  > .monaco-scrollable-element
+  div[class='tabs-container'][role='tablist']
+  > .tab.active[role='tab']:not(#\9):not(#\9) {
+  background-color: var(--active-tab-editor-background) !important;
+}
+
+/* -------------------------- Hover tab background -------------------------- */
+.title.tabs
+  > .tabs-and-actions-container
+  > .monaco-scrollable-element
+  div[class='tabs-container'][role='tablist']
+  > .tab[role='tab']:not(#\9):not(#\9):hover {
+  background-color: var(--hovered-tab-editor-background) !important;
+}
+
+/* --- */
+.split-view-view.visible[style*='top']:first-child:has(
+    > .pane > .pane-header[role='button']
+  ),
+.split-view-view.visible[style*='top']:first-child
+  > .pane
+  > .pane-header[role='button'] {
+  border-top-left-radius: var(--border-radius-lg) !important;
+  border-top-right-radius: var(--border-radius-lg) !important;
+  overflow: hidden;
+}
+
+.split-view-view.visible[style*='top']:last-child:has(
+    > .pane > .pane-header[role='button']:last-child
+  ),
+.split-view-view.visible[style*='top']:last-child
+  > .pane
+  > .pane-header[role='button'] {
+  border-bottom-left-radius: var(--border-radius-lg) !important;
+  border-bottom-right-radius: var(--border-radius-lg) !important;
+  overflow: hidden;
+}
+
+.split-view-view.visible[style*='top']:has(
+    > .pane.expanded > .pane-header[role='button']
+  )
+  + .split-view-view.visible[style*='top']:has(
+    > .pane.expanded > .pane-header[role='button']
+  ),
+.split-view-view.visible[style*='top']:has(
+    > .pane.expanded > .pane-header[role='button']
+  )
+  + .split-view-view.visible[style*='top']
+  > .pane.expanded
+  > .pane-header[role='button'] {
+  border-radius: var(--border-radius-lg) !important;
+  overflow: hidden;
+}
+
+/* ------------------- Sticky scroll box-shadow separation ------------------ */
+/* .terminal-sticky-scroll,
+.monaco-tree-sticky-container,
+div[widgetid='editor.contrib.stickyScrollWidget'] {
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4) !important;
+} */
+
+.monaco-tree-sticky-container .monaco-tree-sticky-row {
+  background: var(--sticky-background) !important;
+}
+
+/* ------ Fix list row icon alignment since we've increased the height ----- */
+.filematch .monaco-icon-label:before,
+.scm-view .monaco-icon-label:before,
+.custom-list-row.results .monaco-list-row .monaco-icon-label:before {
+  background-position: 0 5px !important;
+}
+.filematch .monaco-count-badge {
+  padding: 5px 6px 0 6px !important;
+}
+.quick-input-list-row div {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.title.tabs:has(
+    > .tabs-and-actions-container
+      > .monaco-scrollable-element
+      div[class='tabs-container'][role='tablist']
+  ) {
+  --editor-group-tab-height: var(--tab-height) !important;
+  margin-bottom: var(--internal-gutter) !important;
+}
+
+.title.tabs
+  > .tabs-and-actions-container
+  > .monaco-scrollable-element
+  div[class='tabs-container'][role='tablist']
+  > .tab[role='tab'] {
+  margin-right: var(--tab-gutter) !important;
+  border-right: none !important;
+  border-radius: var(--border-radius-lg) !important;
+}
+
+/* ----------------------- Hide editor action buttons ----------------------- */
+/* .title.title.tabs > .tabs-and-actions-container .editor-actions {
+  display: none !important;
+} */
+
+/* ----- Hide squiggly (wavy) lines while maintain the color in minimap ----- */
+/* .squiggly-error,
+.squiggly-warning,
+.squiggly-info {
+  display: none !important;
+} */
+
+/* -------------------------------------------------------------------------- */
+/*            CUSTOM ANIMATION BASED ON VSCODE ANIMATIONS EXTENSION           */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- Keyframes ------------------------------- */
+@keyframes openPopupScale {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes closePopupScale {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes tabMoveLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tabMoveRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes openTab {
+  from {
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* --------------------------- General transitions --------------------------- */
+
+.split-view-container .split-view-view,
+[id='workbench.parts.editor'] .content[style*='width'],
+[id='workbench.parts.editor'] .overflow-guard[style*='width'],
+[id='workbench.parts.editor'] .overlayWidgets[style*='width'],
+[id='workbench.parts.editor'] .view-overlays[style*='width'],
+/* animating slider will causing delay when scrolling */
+/* [id='workbench.parts.editor'] .slider[style*='width'], */
+.split-view-container
+  .split-view-view
+  [class*='minimap']:not([class*='minimap-slider']),
+.split-view-container .split-view-view [class*='minimap'] > canvas,
+.split-view-container
+  .split-view-view
+  [id='workbench.parts.editor']
+  .monaco-scrollable-element {
+  transition-property: var(--general-trans-props) !important;
+  transition-duration: var(--general-trans-duration) !important;
+}
+
+[id='workbench.parts.editor'] .view-line {
+  transition-property: var(--general-trans-props);
+  transition-duration: var(--general-trans-duration-xs);
+}
+
+.monaco-workbench {
+  background-color: var(--vscode-editor-background);
+}
+.lightBulbWidget {
+  transition: top var(--general-trans-duration-sm);
+}
+.monaco-hover:not(.hidden) {
+  transform-origin: bottom;
+  animation: openPopupScale var(--general-trans-duration-sm);
+}
+.action-label {
+  transition: color var(--general-trans-duration);
+}
+
+/* ----------------------------- Command pallette ---------------------------- */
+.quick-input-widget,
+.suggest-widget {
+  transform-origin: top;
+  animation: openPopupScale var(--command-palette-duration);
+}
+.suggest-widget[style*='display: none;'],
+.quick-input-widget[style*='display: none;'] {
+  display: block !important;
+  transform-origin: top;
+  animation: closePopupScale var(--command-palette-duration);
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+
+/* ---------------------------------- Tabs ---------------------------------- */
+.tabs-container > .tab.moveLeft {
+  transform-origin: left;
+  z-index: 2;
+}
+
+.tabs-container > .tab.moveRight {
+  transform-origin: left;
+  animation: tabMoveRight var(--tabs-duration);
+  z-index: 2;
+}
+
+.tabs-container > .tab.newTab {
+  transform-origin: left;
+  animation: openTab var(--tabs-duration);
+}
+
+.tabs-container > .tab {
+  z-index: 2;
+}
+
+/* ----------------------------- Rows ----------------------------- */
+.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row) {
+  transition: scale var(--active-row-duration);
+  scale: 0.98;
+}
+.monaco-list-row:not(
+    .explorer-folders-view .monaco-list-row,
+    .code-cell-row
+  ).focused {
+  scale: 1;
+}

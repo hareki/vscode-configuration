@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "compile": "sass src/scss:temp --no-source-map",
+    "compile": "sass src/main.scss dist/main.css --no-source-map",
     "merge": "node src/scripts/concat.mjs",
-    "minify": "postcss dist/combined.css -o dist/custom.minified.css",
+    "minify": "postcss dist/main.css -o dist/custom.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
-    "build": "yarn compile && yarn merge && yarn minify && yarn cleanup"
+    "build": "yarn compile &&  yarn minify"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "glob": "^10.3.10",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
+    "postcss-safe-important": "^2.0.1",
     "rimraf": "^5.0.5",
     "sass": "^1.70.0"
   }

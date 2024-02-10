@@ -1,0 +1,235 @@
+/* -------------------------- Remove all box-shadow ------------------------- */
+*,
+*::before,
+*::after {
+  box-shadow: none;
+}
+
+.monaco-workbench {
+  --vscode-widget-shadow: 'transparent';
+}
+
+/* --------------------------------- Spacing -------------------------------- */
+.monaco-pane-view .pane > .pane-header.not-collapsible .title {
+  margin-left: 4px;
+}
+
+[id='#{$sidebar-id}'] {
+  padding-left: $screen-edge-gutter;
+  box-sizing: border-box;
+
+  & > .content {
+    padding-right: $screen-edge-gutter;
+    box-sizing: border-box;
+  }
+}
+
+[id='#{$auxiliarybar-id}'] > .content {
+  padding-right: $screen-edge-gutter;
+  box-sizing: border-box;
+}
+
+.monaco-workbench {
+  .part > .title {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  *:has(> .monaco-list:not(.element-focused):focus) {
+    padding-bottom: $screen-edge-gutter;
+    box-sizing: border-box;
+  }
+}
+
+[role='application']
+  > .monaco-grid-view
+  > .monaco-grid-branch-node
+  > .monaco-split-view2.vertical
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view:not(
+    :has(> [id='#{$titlebar-id}'], > [id='#{$banner-id}'])
+  ) {
+  margin-top: $screen-edge-gutter;
+}
+
+/* ------------------------------ Border radius ----------------------------- */
+.cursor,
+.monaco-editor [class*='ced-2-TextEditor'] {
+  border-radius: $cursor-border-radius;
+}
+
+.minimap-slider-horizontal,
+[class*='wordHighlight'],
+.monaco-editor .bracket-match {
+  border-radius: $cursor-border-radius;
+}
+
+.monaco-list-row,
+.monaco-workbench .monaco-list:not(.element-focused):focus:before {
+  border-radius: $border-radius-lg;
+}
+
+.monaco-tree-sticky-container {
+  &,
+  .monaco-tree-sticky-row {
+    border-radius: $border-radius-lg;
+  }
+
+  .monaco-tree-sticky-row {
+    border-radius: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  overflow: hidden;
+}
+
+/* mimic, custom the border for focused welcome view content, since the width and height is controlled by JS, so we can't use padding, margin to style it properly*/
+.welcome-view-content {
+  outline-width: 0px;
+
+  &:focus::before {
+    content: '';
+    border-radius: $border-radius-lg;
+    outline: 1px solid;
+    outline-color: var(--vscode-focusBorder);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: calc(100% - $screen-edge-gutter + 1px);
+    height: calc(100% - $screen-edge-gutter);
+    z-index: 15;
+  }
+}
+
+// Accordion in the auxiliary bar
+.split-view-view.visible[style*='top'] {
+  &:first-child:has(> .pane > .pane-header[role='button']),
+  &:first-child > .pane > .pane-header[role='button'] {
+    border-top-left-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
+    overflow: hidden;
+  }
+
+  &:last-child:has(> .pane > .pane-header[role='button']:last-child),
+  &:last-child > .pane > .pane-header[role='button'] {
+    border-bottom-left-radius: $border-radius-lg;
+    border-bottom-right-radius: $border-radius-lg;
+    overflow: hidden;
+  }
+
+  &:has(> .pane.expanded > .pane-header[role='button'])
+    + &:has(> .pane.expanded > .pane-header[role='button']),
+  &:has(> .pane.expanded > .pane-header[role='button'])
+    + &
+    > .pane.expanded
+    > .pane-header[role='button'] {
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+  }
+}
+
+/* -------------------------------- Scrollbar ------------------------------- */
+.slider {
+  border-radius: $scrollbar-border-radius;
+
+  .vertical > & {
+    width: $scrollbar-thickness;
+  }
+
+  .horizontal > & {
+    height: $scrollbar-thickness;
+  }
+}
+
+[id='#{$editor-id}'] {
+  box-sizing: border-box;
+  padding-left: $main-split-view-gutter;
+  margin-right: $main-split-view-gutter;
+
+  & .current-line-exact,
+  [widgetid='editor.contrib.stickyScrollWidget'] {
+    border-radius: $border-radius-md;
+    width: calc(99.5% - $main-split-view-gutter);
+  }
+}
+
+/* ---------------------------- Section separator --------------------------- */
+div[id='#{$sidebar-id}'],
+div[id='#{$auxiliarybar-id}'],
+div[id='#{$titlebar-id}'] {
+  border-width: $separator-width;
+}
+
+.monaco-split-view2.separator-border.horizontal
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view:not(:first-child):before {
+  width: $separator-width;
+}
+
+.monaco-workbench {
+  .part.statusbar.status-border-top:after {
+    height: $separator-width;
+  }
+
+  .part.editor
+    > .content
+    .editor-group-container
+    > .title
+    .tabs-container
+    > .tab.active.tab-border-bottom
+    > .tab-border-bottom-container {
+    height: $separator-width;
+  }
+}
+
+[id='#{$sidebar-id}'],
+[id='#{$auxiliarybar-id}'] {
+  .active-item-indicator:before {
+    border-top-width: $separator-width;
+  }
+}
+
+/* ------------------------ Hide unnecessary elements ----------------------- */
+.window-appicon,
+.watermark-box {
+  display: none;
+}
+
+.notification-toast-container {
+  &:has([title*='Error initializing Apollo GraphQL project']),
+  &:has([aria-label*='Error: Failed to connect to a running GraphQL']) {
+    display: none;
+  }
+}
+
+/* ------------------------------ Sticky scroll ----------------------------- */
+// box-shadow separation
+
+/* .terminal-sticky-scroll,
+.monaco-tree-sticky-container,
+div[widgetid='editor.contrib.stickyScrollWidget'] {
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
+} */
+
+.monaco-tree-sticky-container .monaco-tree-sticky-row {
+  background: var(--sticky-background);
+}
+
+/* ------------------------- List row icon alignment ------------------------ */
+.filematch .monaco-icon-label:before,
+.scm-view .monaco-icon-label:before,
+.custom-list-row.results .monaco-list-row .monaco-icon-label:before {
+  background-position: 0 5px;
+}
+
+.filematch .monaco-count-badge {
+  padding: 5px 6px 0 6px;
+}
+
+.quick-input-list-row div {
+  display: flex;
+  align-items: center;
+}

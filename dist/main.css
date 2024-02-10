@@ -1,0 +1,506 @@
+/* -------------------------- Remove all box-shadow ------------------------- */
+*,
+*::before,
+*::after {
+  box-shadow: none;
+}
+
+.monaco-workbench {
+  --vscode-widget-shadow: "transparent";
+}
+
+/* --------------------------------- Spacing -------------------------------- */
+.monaco-pane-view .pane > .pane-header.not-collapsible .title {
+  margin-left: 4px;
+}
+
+[id="workbench.parts.sidebar"] {
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+[id="workbench.parts.sidebar"] > .content {
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+[id="workbench.parts.auxiliarybar"] > .content {
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.monaco-workbench .part > .title {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.monaco-workbench *:has(> .monaco-list:not(.element-focused):focus) {
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+[role=application] > .monaco-grid-view > .monaco-grid-branch-node > .monaco-split-view2.vertical > .monaco-scrollable-element > .split-view-container > .split-view-view:not(:has(> [id="workbench.parts.titlebar"], > [id="workbench.parts.banner"])) {
+  margin-top: 5px;
+}
+
+/* ------------------------------ Border radius ----------------------------- */
+.cursor,
+.monaco-editor [class*=ced-2-TextEditor] {
+  border-radius: 2px;
+}
+
+.minimap-slider-horizontal,
+[class*=wordHighlight],
+.monaco-editor .bracket-match {
+  border-radius: 2px;
+}
+
+.monaco-list-row,
+.monaco-workbench .monaco-list:not(.element-focused):focus:before {
+  border-radius: 6px;
+}
+
+.monaco-tree-sticky-container {
+  overflow: hidden;
+}
+.monaco-tree-sticky-container,
+.monaco-tree-sticky-container .monaco-tree-sticky-row {
+  border-radius: 6px;
+}
+.monaco-tree-sticky-container .monaco-tree-sticky-row {
+  border-radius: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+/* mimic, custom the border for focused welcome view content, since the width and height is controlled by JS, so we can't use padding, margin to style it properly*/
+.welcome-view-content {
+  outline-width: 0px;
+}
+.welcome-view-content:focus::before {
+  content: "";
+  border-radius: 6px;
+  outline: 1px solid;
+  outline-color: var(--vscode-focusBorder);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 5px + 1px);
+  height: calc(100% - 5px);
+  z-index: 15;
+}
+
+.split-view-view.visible[style*=top]:first-child:has(> .pane > .pane-header[role=button]), .split-view-view.visible[style*=top]:first-child > .pane > .pane-header[role=button] {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow: hidden;
+}
+.split-view-view.visible[style*=top]:last-child:has(> .pane > .pane-header[role=button]:last-child), .split-view-view.visible[style*=top]:last-child > .pane > .pane-header[role=button] {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+}
+.split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]) + .split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]), .split-view-view.visible[style*=top]:has(> .pane.expanded > .pane-header[role=button]) + .split-view-view.visible[style*=top] > .pane.expanded > .pane-header[role=button] {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* -------------------------------- Scrollbar ------------------------------- */
+.slider {
+  border-radius: 999px;
+}
+.vertical > .slider {
+  width: 8px;
+}
+.horizontal > .slider {
+  height: 8px;
+}
+
+[id="workbench.parts.editor"] {
+  box-sizing: border-box;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+[id="workbench.parts.editor"] .current-line-exact,
+[id="workbench.parts.editor"] [widgetid="editor.contrib.stickyScrollWidget"] {
+  border-radius: 5px;
+  width: calc(99.5% - 5px);
+}
+
+/* ---------------------------- Section separator --------------------------- */
+div[id="workbench.parts.sidebar"],
+div[id="workbench.parts.auxiliarybar"],
+div[id="workbench.parts.titlebar"] {
+  border-width: 0px;
+}
+
+.monaco-split-view2.separator-border.horizontal > .monaco-scrollable-element > .split-view-container > .split-view-view:not(:first-child):before {
+  width: 0px;
+}
+
+.monaco-workbench .part.statusbar.status-border-top:after {
+  height: 0px;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active.tab-border-bottom > .tab-border-bottom-container {
+  height: 0px;
+}
+
+[id="workbench.parts.sidebar"] .active-item-indicator:before,
+[id="workbench.parts.auxiliarybar"] .active-item-indicator:before {
+  border-top-width: 0px;
+}
+
+/* ------------------------ Hide unnecessary elements ----------------------- */
+.window-appicon,
+.watermark-box {
+  display: none;
+}
+
+.notification-toast-container:has([title*="Error initializing Apollo GraphQL project"]), .notification-toast-container:has([aria-label*="Error: Failed to connect to a running GraphQL"]) {
+  display: none;
+}
+
+/* ------------------------------ Sticky scroll ----------------------------- */
+/* .terminal-sticky-scroll,
+.monaco-tree-sticky-container,
+div[widgetid='editor.contrib.stickyScrollWidget'] {
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
+} */
+.monaco-tree-sticky-container .monaco-tree-sticky-row {
+  background: var(--sticky-background);
+}
+
+/* ------------------------- List row icon alignment ------------------------ */
+.filematch .monaco-icon-label:before,
+.scm-view .monaco-icon-label:before,
+.custom-list-row.results .monaco-list-row .monaco-icon-label:before {
+  background-position: 0 5px;
+}
+
+.filematch .monaco-count-badge {
+  padding: 5px 6px 0 6px;
+}
+
+.quick-input-list-row div {
+  display: flex;
+  align-items: center;
+}
+
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title {
+  font-size: 13px;
+}
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title > .command-center .action-item.command-center-center {
+  width: fit-content;
+  min-width: 275px;
+  padding: 0 15px;
+}
+
+/* ---------------------------------- Order --------------------------------- */
+[id="vscodevim.vim.primary"] {
+  order: 1;
+}
+
+[id="koalamer.workspace-in-status-bar"] {
+  order: 2;
+}
+
+[id="status.scm.0"] {
+  order: 3;
+}
+
+[id="status.scm.1"] {
+  order: 4;
+}
+
+[id="status.problems"] {
+  order: 5;
+}
+
+[id="vscodevim.vim.showcmd"] {
+  order: -1;
+}
+
+/* --------------------------------- Spacing -------------------------------- */
+[id="workbench.parts.statusbar"] > .left-items.items-container > div,
+[id="workbench.parts.statusbar"] > .right-items.items-container > div,
+[id="workbench.parts.statusbar"] > .left-items.items-container > div > .statusbar-item-label,
+[id="workbench.parts.statusbar"] > .right-items.items-container > div > .statusbar-item-label {
+  margin: 0;
+  padding: 0;
+}
+[id="workbench.parts.statusbar"] > .left-items.items-container {
+  gap: 12px;
+}
+[id="workbench.parts.statusbar"] > .left-items.items-container > [id="vscodevim.vim.primary"] {
+  margin-left: 5px;
+}
+[id="workbench.parts.statusbar"] > .right-items.items-container {
+  gap: 12px;
+}
+[id="workbench.parts.statusbar"] > .right-items.items-container > [id="vscodevim.vim.showcmd"] {
+  margin-right: 5px;
+}
+[id="workbench.parts.statusbar"] [id="status.notifications"]:has(~ [id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"]) {
+  margin-right: -12px;
+}
+
+/* -------------------------------- VIM items ------------------------------- */
+div[id="vscodevim.vim.primary"],
+div[id="vscodevim.vim.showcmd"] {
+  display: flex;
+  align-items: center;
+}
+div[id="vscodevim.vim.primary"] > .statusbar-item-label,
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label {
+  min-width: 0px;
+  transition: min-width 125ms;
+  border-radius: 5px;
+}
+div[id="vscodevim.vim.primary"] > .statusbar-item-label[style*="display: none"],
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[style*="display: none"] {
+  width: 0px;
+  display: block;
+}
+div[id="vscodevim.vim.primary"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ), div[id="vscodevim.vim.primary"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ),
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ),
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ) {
+  margin-bottom: 3px;
+  height: 22px;
+  box-sizing: border-box;
+}
+
+div[id="vscodevim.vim.primary"] > .statusbar-item-label {
+  color: #e5c07b;
+}
+div[id="vscodevim.vim.primary"] > .statusbar-item-label[aria-label*="|"]:not(#\9 ):not(#\9 ) {
+  min-width: 200px;
+  outline: 2px solid #e5c07b;
+  padding: 2px 3px 2px;
+}
+
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label {
+  color: #61afef;
+}
+div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: none"]):not(#\9 ):not(#\9 ) {
+  min-width: 50px;
+  outline: 2px solid #61afef;
+  padding: 2px 2px 5px;
+}
+
+/* ---------------------------- Main icon buttons --------------------------- */
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar > .actions-container {
+  align-items: start;
+  gap: 8px;
+}
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar .monaco-action-bar .action-item.icon {
+  padding: 0;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+}
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar .monaco-action-bar .action-item.icon .action-label:not(.codicon) {
+  box-sizing: border-box;
+  padding: 0;
+  height: 19px;
+  width: 19px;
+  -webkit-mask-size: 19px;
+}
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar .monaco-action-bar .action-label.codicon {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  font-size: 19px;
+}
+
+[id="workbench.parts.sidebar"] > .title + .content,
+[id="workbench.parts.auxiliarybar"] > .title + .content {
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+
+/* ----------------------- Editor action icon buttons ----------------------- */
+.monaco-action-bar .action-item .codicon {
+  justify-content: center;
+}
+
+[id="workbench.parts.auxiliarybar"] > .title > .title-actions > .monaco-toolbar,
+[id="workbench.parts.auxiliarybar"] > .title > .global-actions > .monaco-toolbar {
+  height: 100%;
+}
+
+.monaco-workbench .pane-composite-part > .title.has-composite-bar > .title-actions .monaco-action-bar .action-item .action-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* ---------- Active and hover background for icon buttons and tabs --------- */
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar .action-item.icon.checked:not(#\9 ):not(#\9 ) {
+  background-color: #323842;
+}
+
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar .action-item.icon:hover {
+  background-color: #282d35;
+}
+
+/* --------------------------------- Styles --------------------------------- */
+.title.tabs:has(> .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist]) {
+  --editor-group-tab-height: $tab-height;
+  margin-bottom: 5px;
+}
+.title.tabs > .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist] > .tab[role=tab] {
+  margin-right: 3px;
+  border-right: none;
+  border-radius: 6px;
+}
+
+/* ------------------ Active and hover background for tabs ------------------ */
+.title.tabs > .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist] > .tab.active[role=tab]:not(#\9 ):not(#\9 ) {
+  background-color: #323842;
+}
+
+.title.tabs > .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role=tablist] > .tab[role=tab]:not(#\9 ):not(#\9 ):hover {
+  background-color: #282d35;
+}
+
+/* ----------------------- Hide editor action buttons ----------------------- */
+/* .title.title.tabs > .tabs-and-actions-container .editor-actions {
+  display: none;
+} */
+/* ----- Hide squiggly (wavy) lines while maintain the color in minimap ----- */
+/* .squiggly-error,
+.squiggly-warning,
+.squiggly-info {
+  display: none;
+} */
+/* -------------------------------- Keyframes ------------------------------- */
+@keyframes openPopupScale {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes closePopupScale {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+@keyframes tabMoveLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes tabMoveRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes openTab {
+  from {
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+/* --------------------------- General transitions -------------------------- */
+.split-view-container .split-view-view,
+.split-view-container .split-view-view [class*=minimap]:not([class*=minimap-slider]),
+.split-view-container .split-view-view [class*=minimap] > canvas,
+.split-view-container .split-view-view [id="workbench.parts.editor"] .monaco-scrollable-element {
+  transition-property: top, left, width, height;
+  transition-duration: 125ms;
+}
+
+[id="workbench.parts.editor"] .content[style*=width],
+[id="workbench.parts.editor"] .overflow-guard[style*=width],
+[id="workbench.parts.editor"] .overlayWidgets[style*=width],
+[id="workbench.parts.editor"] .view-overlays[style*=width] {
+  transition-property: top, left, width, height;
+  transition-duration: 125ms;
+}
+[id="workbench.parts.editor"] .view-line {
+  transition-property: top, left, width, height;
+  transition-duration: 75ms;
+}
+
+.monaco-workbench {
+  background-color: var(--vscode-editor-background);
+}
+
+.lightBulbWidget {
+  transition: top 100ms;
+}
+
+.monaco-hover:not(.hidden) {
+  transform-origin: bottom;
+  animation: openPopupScale 100ms;
+}
+
+.action-label {
+  transition: color 125ms;
+}
+
+/* ----------------------------- Command pallette ---------------------------- */
+.quick-input-widget,
+.suggest-widget {
+  transform-origin: top;
+  animation: openPopupScale 125ms;
+}
+
+.suggest-widget[style*="display: none;"],
+.quick-input-widget[style*="display: none;"] {
+  display: block;
+  transform-origin: top;
+  animation: closePopupScale 125ms;
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+
+/* ---------------------------------- Tabs ---------------------------------- */
+.tabs-container > .tab.moveLeft {
+  transform-origin: left;
+  z-index: 2;
+}
+.tabs-container > .tab.moveRight {
+  transform-origin: left;
+  animation: tabMoveRight 150ms;
+  z-index: 2;
+}
+.tabs-container > .tab {
+  transform-origin: left;
+  animation: openTab 150ms;
+}
+.tabs-container > .tab {
+  z-index: 2;
+}
+
+/* ----------------------------- Rows ----------------------------- */
+.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row) {
+  transition: scale 125ms;
+  scale: 0.98;
+}
+
+.monaco-list-row:not(.explorer-folders-view .monaco-list-row,
+.code-cell-row).focused {
+  scale: 1;
+}

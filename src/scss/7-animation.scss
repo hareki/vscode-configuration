@@ -1,0 +1,149 @@
+/* -------------------------------- Keyframes ------------------------------- */
+@keyframes openPopupScale {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes closePopupScale {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes tabMoveLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tabMoveRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes openTab {
+  from {
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* --------------------------- General transitions -------------------------- */
+.split-view-container {
+  & .split-view-view,
+  .split-view-view [class*='minimap']:not([class*='minimap-slider']),
+  .split-view-view [class*='minimap'] > canvas,
+  .split-view-view [id='workbench.parts.editor'] .monaco-scrollable-element {
+    transition-property: $general-trans-props;
+    transition-duration: $general-trans-duration;
+  }
+}
+
+[id='workbench.parts.editor'] {
+  .content[style*='width'],
+  .overflow-guard[style*='width'],
+  .overlayWidgets[style*='width'],
+  .view-overlays[style*='width'] {
+    transition-property: $general-trans-props;
+    transition-duration: $general-trans-duration;
+  }
+
+  .view-line {
+    transition-property: $general-trans-props;
+    transition-duration: $general-trans-duration-xs;
+  }
+}
+
+.monaco-workbench {
+  background-color: var(--vscode-editor-background);
+}
+
+.lightBulbWidget {
+  transition: top $general-trans-duration-sm;
+}
+
+.monaco-hover:not(.hidden) {
+  transform-origin: bottom;
+  animation: openPopupScale $general-trans-duration-sm;
+}
+
+.action-label {
+  transition: color $general-trans-duration;
+}
+
+/* ----------------------------- Command pallette ---------------------------- */
+.quick-input-widget,
+.suggest-widget {
+  transform-origin: top;
+  animation: openPopupScale $command-palette-duration;
+}
+
+.suggest-widget[style*='display: none;'],
+.quick-input-widget[style*='display: none;'] {
+  display: block;
+  transform-origin: top;
+  animation: closePopupScale $command-palette-duration;
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+
+/* ---------------------------------- Tabs ---------------------------------- */
+.tabs-container {
+  > .tab.moveLeft {
+    transform-origin: left;
+    z-index: 2;
+  }
+
+  > .tab.moveRight {
+    transform-origin: left;
+    animation: tabMoveRight $tabs-duration;
+    z-index: 2;
+  }
+
+  > .tab {
+    transform-origin: left;
+    animation: openTab $tabs-duration;
+  }
+
+  > .tab {
+    z-index: 2;
+  }
+}
+
+/* ----------------------------- Rows ----------------------------- */
+.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row) {
+  transition: scale $active-row-duration;
+  scale: 0.98;
+}
+
+.monaco-list-row:not(
+    .explorer-folders-view .monaco-list-row,
+    .code-cell-row
+  ).focused {
+  scale: 1;
+}

@@ -1,0 +1,92 @@
+/* ---------------------------- Main icon buttons --------------------------- */
+.monaco-workbench {
+  .pane-composite-part > .title > .composite-bar-container > .composite-bar {
+    > .monaco-action-bar > .actions-container {
+      align-items: start;
+      gap: $icon-button-wrapper-gap;
+    }
+
+    .monaco-action-bar {
+      // Wrapper
+      .action-item.icon {
+        padding: 0;
+        border-radius: $icon-button-wrapper-border-radius;
+        width: $icon-button-wrapper-size;
+        height: $icon-button-wrapper-size;
+
+        // Extension icon buttons
+        .action-label:not(.codicon) {
+          box-sizing: border-box;
+          padding: 0;
+          height: $icon-button-size;
+          width: $icon-button-size;
+          -webkit-mask-size: $icon-button-size;
+        }
+      }
+
+      //   Native icon buttons
+      .action-label.codicon {
+        width: fit-content;
+        height: fit-content;
+        padding: 0;
+        font-size: $icon-button-size;
+      }
+    }
+  }
+}
+
+// Buttons and content gutter
+[id='#{$sidebar-id}'] > .title + .content,
+[id='#{$auxiliarybar-id}'] > .title + .content {
+  padding-top: $icon-button-and-content-gutter;
+  box-sizing: border-box;
+}
+
+/* ----------------------- Editor action icon buttons ----------------------- */
+.monaco-action-bar .action-item .codicon {
+  justify-content: center;
+}
+
+[id='workbench.parts.auxiliarybar'] {
+  > .title > .title-actions > .monaco-toolbar,
+  > .title > .global-actions > .monaco-toolbar {
+    height: 100%;
+  }
+}
+
+.monaco-workbench {
+  .pane-composite-part
+    > .title.has-composite-bar
+    > .title-actions
+    .monaco-action-bar
+    .action-item
+    .action-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $editor-action-size;
+  }
+}
+
+/* ---------- Active and hover background for icon buttons and tabs --------- */
+.monaco-workbench {
+  .pane-composite-part
+    > .title
+    > .composite-bar-container
+    > .composite-bar
+    > .monaco-action-bar
+    .action-item.icon.checked:not(#\9):not(#\9) {
+    background-color: $active-tab-editor-background;
+  }
+}
+
+.monaco-workbench {
+  .pane-composite-part
+    > .title
+    > .composite-bar-container
+    > .composite-bar
+    > .monaco-action-bar
+    .action-item.icon:hover {
+    background-color: $hovered-tab-editor-background;
+  }
+}

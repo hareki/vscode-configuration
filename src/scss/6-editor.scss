@@ -1,0 +1,51 @@
+/* --------------------------------- Styles --------------------------------- */
+.title.tabs {
+  &:has(
+      > .tabs-and-actions-container
+        > .monaco-scrollable-element
+        div.tabs-container[role='tablist']
+    ) {
+    --editor-group-tab-height: $tab-height;
+    margin-bottom: $internal-gutter;
+  }
+
+  > .tabs-and-actions-container
+    > .monaco-scrollable-element
+    div.tabs-container[role='tablist']
+    > .tab[role='tab'] {
+    margin-right: $tab-gutter;
+    border-right: none;
+    border-radius: $border-radius-lg;
+  }
+}
+
+/* ------------------ Active and hover background for tabs ------------------ */
+.title.tabs {
+  > .tabs-and-actions-container
+    > .monaco-scrollable-element
+    div.tabs-container[role='tablist']
+    > .tab.active[role='tab']:not(#\9):not(#\9) {
+    background-color: $active-tab-editor-background;
+  }
+}
+
+.title.tabs {
+  > .tabs-and-actions-container
+    > .monaco-scrollable-element
+    div.tabs-container[role='tablist']
+    > .tab[role='tab']:not(#\9):not(#\9):hover {
+    background-color: $hovered-tab-editor-background;
+  }
+}
+
+/* ----------------------- Hide editor action buttons ----------------------- */
+/* .title.title.tabs > .tabs-and-actions-container .editor-actions {
+  display: none;
+} */
+
+/* ----- Hide squiggly (wavy) lines while maintain the color in minimap ----- */
+/* .squiggly-error,
+.squiggly-warning,
+.squiggly-info {
+  display: none;
+} */

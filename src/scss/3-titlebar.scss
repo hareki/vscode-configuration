@@ -1,0 +1,13 @@
+.monaco-workbench
+  .part.titlebar
+  > .titlebar-container
+  > .titlebar-center
+  > .window-title {
+  font-size: $titlebar-search-box-font-size;
+
+  > .command-center .action-item.command-center-center {
+    width: fit-content;
+    min-width: $titlebar-search-box-min-width;
+    padding: $titlebar-search-box-padding;
+  }
+}
