@@ -256,13 +256,3 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
 .custom-list-row .monaco-list-row .explorer-item::after {
   padding-bottom: 4px;
 }
-
-/* ------------------------------- Find widget ------------------------------ */
-.monaco-editor .find-widget {
-  background-color: #282c34;
-  border-radius: $popup-background;
-
-  .monaco-sash {
-    background-color: $popup-background;
-  }
-}

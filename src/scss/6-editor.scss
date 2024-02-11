@@ -42,6 +42,33 @@
   }
 }
 
+/* --------------------------------- Search --------------------------------- */
+.search-view .query-details.more h4 {
+  font-weight: 600;
+}
+
+/* ------------------------------- Hover popup ------------------------------ */
+.monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) {
+  border-top: 1px solid $separator-color;
+}
+
+.monaco-editor .monaco-hover {
+  border-radius: $border-radius-md;
+  .monaco-hover-content {
+    background-color: $popup-background;
+  }
+}
+
+/* ------------------------------- Find widget ------------------------------ */
+.monaco-editor .find-widget {
+  background-color: #282c34;
+  border-radius: $popup-background;
+
+  .monaco-sash {
+    background-color: $popup-background;
+  }
+}
+
 /* ----------------------- Hide editor action buttons ----------------------- */
 /* .title.title.tabs > .tabs-and-actions-container .editor-actions {
   display: none;
