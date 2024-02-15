@@ -234,7 +234,7 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
 } */
 
 .monaco-tree-sticky-container .monaco-tree-sticky-row {
-  background: var(--sticky-background);
+  background: $sticky-background;
 }
 
 /* ------------------------- List row icon alignment ------------------------ */

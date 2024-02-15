@@ -184,7 +184,7 @@ div[widgetid='editor.contrib.stickyScrollWidget'] {
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
 } */
 .monaco-tree-sticky-container .monaco-tree-sticky-row {
-  background: var(--sticky-background);
+  background: #272b32;
 }
 
 /* ------------------------- List row icon alignment ------------------------ */
