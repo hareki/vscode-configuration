@@ -528,9 +528,7 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 .quick-input-widget[style*="display: none;"] {
   display: block;
   transform-origin: top;
-  animation: closePopupScale 125ms;
-  opacity: 0;
-  transform: scaleY(0);
+  animation: closePopupScale 125ms forwards;
   pointer-events: none;
 }
 

@@ -106,9 +106,7 @@
 .quick-input-widget[style*='display: none;'] {
   display: block;
   transform-origin: top;
-  animation: closePopupScale $command-palette-duration;
-  opacity: 0;
-  transform: scaleY(0);
+  animation: closePopupScale $command-palette-duration forwards;
   pointer-events: none;
 }
 
