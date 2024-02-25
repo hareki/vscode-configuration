@@ -23,6 +23,7 @@
 
 /* --------------------------------- Spacing -------------------------------- */
 [id='#{$statusbar-id}'] {
+  background-color: $status-bar-background;
   > .left-items.items-container > div,
   > .right-items.items-container > div {
     // > .left-items.items-container > div > .statusbar-item-label,
