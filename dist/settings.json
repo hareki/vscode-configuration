@@ -1,0 +1,520 @@
+{
+  /* -------------------------------------------------------------------------- */
+  /*                               FUNCTIONALITY                                */
+  /* -------------------------------------------------------------------------- */
+
+  /* ------------------------------ Sticky scroll ----------------------------- */
+  "editor.stickyScroll.enabled": true,
+  "workbench.tree.enableStickyScroll": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  /* ------------------------------- Suggestions ------------------------------ */
+  "editor.snippetSuggestions": "inline",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "strings": "on"
+  },
+  "editor.tabCompletion": "on",
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.inlineSuggest.enabled": true,
+
+  /* --------------------- File exclusion for performance --------------------- */
+  "files.exclude": {
+    "**/yarn.lock": true,
+    "node_modules": true
+  },
+
+  "json.schemas": [
+    {
+      "exclude": ["node_modules"]
+    }
+  ],
+
+  /* -------------------------------- Explorer -------------------------------- */
+  "explorer.compactFolders": false,
+  "explorer.copyRelativePathSeparator": "/",
+
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 20,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.expandMode": "doubleClick",
+
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  /* --------------------------------- Update --------------------------------- */
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "update.mode": "default",
+  "update.showReleaseNotes": true,
+
+  /* -------------------------------------------------------------------------- */
+  /*                                 APPEARANCE                                 */
+  /* -------------------------------------------------------------------------- */
+  "apc.imports": [
+    "/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/apc-custom-css/dist/custom.minified.css",
+    "/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/apc-custom-css/dist/custom.minified.css"
+  ],
+
+  /* ------------------------------ Activity bar ------------------------------ */
+  "workbench.activityBar.location": "top",
+
+  /* -------------------------------- Title bar -------------------------------- */
+  "window.titleBarStyle": "custom",
+  "window.title": "${dirty}Hareki's Secret Lab",
+  "window.titleSeparator": " | ",
+  "window.customTitleBarVisibility": "windowed",
+
+  /* -------------------------------- Menu bar -------------------------------- */
+  "window.customMenuBarAltFocus": false,
+  "window.menuBarVisibility": "hidden",
+
+  /* ------------------------------- Status bar ------------------------------- */
+  "apc.statusBar": {
+    // "position": "editor-bottom",
+    "height": 35,
+    "fontSize": 14
+  },
+
+  /* -------------------------------- List row -------------------------------- */
+  "apc.listRow": {
+    "lists": [
+      "customview-tree",
+      "results",
+      "open-editors",
+      "explorer-folders-view",
+      "outline-tree",
+      "scm-view",
+      "debug-view-content",
+      "debug-breakpoints",
+      "tree",
+      "quick-input-list"
+    ],
+    "height": 30
+  },
+
+  /* ---------------------------------- Font ---------------------------------- */
+  "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' off, 'ss02' off",
+  "editor.fontSize": 14,
+  "editor.fontWeight": 500,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font','JetBrainsMono NF', Consolas, 'Courier New', monospace",
+
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontWeight": "600",
+  "terminal.integrated.fontSize": 15,
+
+  "apc.font.family": "JetBrainsMono Nerd Font",
+
+  "editor.lineHeight": 24,
+  "window.zoomLevel": 0.7,
+
+  /* ---------------------------------- Theme --------------------------------- */
+  "workbench.iconTheme": "bearded-icons",
+  "symbols.hidesExplorerArrows": false,
+
+  "workbench.colorTheme": "One Dark Pro",
+  "oneDarkPro.editorTheme": "One Dark Pro",
+  "oneDarkPro.italic": true,
+
+  "workbench.colorCustomizations": {
+    "menu.background": "#282c34",
+    "quickInput.background": "#282c34",
+    "editorCursor.foreground": "#61afef",
+    "editorCursor.background": "#fff",
+
+    // One Dark Pro error color
+    "errorLens.errorForeground": "#f44747",
+    // Remove the transparent background
+    "errorLens.errorMessageBackground": "#3f353f",
+
+    "errorLens.infoMessageBackground": "#283f4d",
+    "errorLens.warningMessageBackground": "#423b3b",
+
+    "[One Dark Pro]": {
+      "editorStickyScroll.background": "#272b32",
+      "terminalStickyScroll.background": "#272b32",
+      // "editorStickyScroll.background": "#1e2227",
+      "editorStickyScrollHover.background": "#474f5e",
+      "editor.background": "#1e2227",
+      "sideBar.background": "#1e2227",
+      "sideBar.border": "#373d48",
+      "statusBar.border": "#373d48",
+      "titleBar.border": "#373d48",
+      "statusBar.background": "#23272e",
+      "titleBar.activeBackground": "#23272e",
+      "editor.findMatchBackground": "#42557b1a",
+      "editorGroup.border": "#373d48",
+      "terminal.background": "#1b1f23",
+
+      // "editorError.foreground": "#00000000",
+      // "editorWarning.foreground": "#00000000",
+      // "editorInfo.foreground": "#00000000",
+
+      // Custom One Dark Pro to be exactly as One Dark Pro Darker
+      // For some reason the color customization doesn't work for Darker theme
+      "activityBar.background": "#23272e",
+      "debugToolBar.background": "#1e2227",
+      "dropdown.background": "#1e2227",
+      "dropdown.border": "#1e2227",
+      // "editor.background": "#23272e",
+      "editorGroupHeader.tabsBackground": "#1e2227",
+      "editorHoverWidget.background": "#1e2227",
+      "editorMarkerNavigation.background": "#1e2227",
+      "editorSuggestWidget.background": "#1e2227",
+      "editorWidget.background": "#1e2227",
+      "panelSectionHeader.background": "#1e2227",
+      "settings.focusedRowBackground": "#23272e",
+      //  "sideBar.background": "#1e2227",
+      "sideBarSectionHeader.background": "#23272e",
+      // "statusBar.background": "#1e2227",
+      "statusBar.noFolderBackground": "#1e2227",
+      "tab.activeBackground": "#23272e",
+      "tab.inactiveBackground": "#1e2227",
+      // "terminal.background": "#23272e",
+      // "titleBar.activeBackground": "#23272e",
+      "titleBar.inactiveBackground": "#23272e"
+    }
+  },
+
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": []
+  },
+
+  /* -------------------------- Error Lens extension -------------------------- */
+  "errorLens.fontStyleItalic": true,
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.borderRadius": "6px",
+  "errorLens.padding": "0 6px",
+
+  /* -------------------------- Smooth transition -------------------------- */
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+
+  "editor.mouseWheelScrollSensitivity": 2.5,
+  "workbench.list.mouseWheelScrollSensitivity": 2.5,
+
+  /* --------------------------------- Minimap -------------------------------- */
+  "editor.minimap.side": "left",
+  "editor.minimap.scale": 1,
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.maxColumn": 100,
+  "editor.minimap.renderCharacters": false,
+
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+
+  /* -------------------------------- Terminal -------------------------------- */
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.title": "${cwdFolder}",
+  "terminal.integrated.tabs.description": "",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.gpuAcceleration": "auto",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.mouseWheelScrollSensitivity": 2.5,
+  "terminal.integrated.tabs.enabled": false,
+
+  /* ---------------------------------- Tabs ---------------------------------- */
+  "workbench.editor.untitled.labelFormat": "name",
+  "breadcrumbs.enabled": false,
+  "workbench.editor.labelFormat": "short",
+
+  /* ------------------------------ Bracket pairs ----------------------------- */
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+
+  /* -------------------------------------------------------------------------- */
+  /*                                 EXTENSIONS                                 */
+  /* -------------------------------------------------------------------------- */
+
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
+  /* ------------------------- Copilot Configurations ------------------------- */
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
+  },
+
+  /* -------------------------------- Formatter ------------------------------- */
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "prettier.trailingComma": "all",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "eslint.validate": ["javascript"],
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "html.format.wrapLineLength": 100,
+  "html.format.wrapAttributes": "force-aligned",
+
+  /* ------------------------------ Color preview ----------------------------- */
+  "color-highlight.markerType": "dot-before",
+  "color-highlight.markRuler": false,
+  "editor.colorDecorators": false,
+
+  "typescript.suggest.paths": true,
+  "javascript.suggest.paths": true,
+
+  /* ----------------------------------- Git ---------------------------------- */
+  "git.enableSmartCommit": true,
+  "gitlens.blame.compact": false,
+
+  /* ----------------------------------- Env ---------------------------------- */
+  "files.associations": {
+    "*.env.local": "env",
+    ".env*": "dotenv"
+  },
+  "dotenv.enableAutocloaking": false,
+
+  /* --------------------------- Spelling exceptions -------------------------- */
+  "cSpell.language": "en, vi",
+  "cSpell.userWords": [
+    "antd",
+    "appicon",
+    "Autocloaking",
+    "auxiliarybar",
+    "calt",
+    "classname",
+    "Consolas",
+    "customview",
+    "devserver",
+    "donot",
+    "dtos",
+    "esbenp",
+    "filematch",
+    "Flexbox",
+    "Formik",
+    "hareki",
+    "jetbrains",
+    "liga",
+    "Lightbox",
+    "matchtext",
+    "minht",
+    "Monokai",
+    "nestjs",
+    "nextjs",
+    "noninteractive",
+    "pdfs",
+    "reduxjs",
+    "scminput",
+    "showcmd",
+    "stylesheet",
+    "tablist",
+    "tabnine",
+    "tanstack",
+    "usehooks",
+    "vscodevim",
+    "vsplit",
+    "widgetid"
+  ],
+
+  /* --------------------- Other extension configurations --------------------- */
+  "emmet.excludeLanguages": ["typescriptreact", "javascriptreact"],
+
+  "reactSnippets.settings.importReactOnTop": false,
+
+  "turboConsoleLog.delimiterInsideMessage": "-",
+  "turboConsoleLog.logMessagePrefix": "TCL",
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+
+  "auto-rename-tag.activationOnLanguage": [
+    "*",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+
+  "tailwindCSS.experimental.classRegex": [
+    "`tw([^`]*)", // `tw ...`
+    "'tw([^']*)", // 'tw ...'
+    "\"tw([^']*)" // "tw ..."
+  ],
+
+  "projectManager.git.baseFolders": [
+    // Windows
+    "D:\\Work\\Zigvy\\Repositories",
+    "C:\\Users\\minht\\OneDrive\\Cloud Storage\\Settings\\VSCode",
+
+    // MacOS
+    "/Users/Hareki/Documents/Repositories"
+  ],
+
+  "turboConsoleLog.includeFileNameAndLineNum": true,
+
+  /* ----------------------------------- VIM Configurations ---------------------------------- */
+  "editor.lineNumbers": "relative",
+
+  "vim.timeout": 350,
+  "vim.overrideCopy": true,
+  "vim.leader": "<Space>",
+  "vim.camelCaseMotion.enable": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["e"], "after": ["e", "l"] },
+
+    { "before": ["leader", "v"], "commands": [":vsplit"], "silent": true },
+    { "before": ["leader", "d"], "commands": [":split"], "silent": true },
+
+    {
+      "silent": true,
+      "before": ["leader", "s"],
+      "commands": ["workbench.action.files.save"]
+    },
+    { "before": ["leader", "a"], "commands": ["saveAll"], "silent": true },
+    {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "silent": true
+    },
+    { "before": ["leader", "x"], "commands": [":x"] },
+    { "before": ["<C-f>"], "commands": ["actions.find"], "silent": true },
+    { "before": ["leader", "f"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"],
+      "silent": true
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["references-view.findReferences"],
+      "silent": true
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["leader", "m"],
+      "after": ["@", "@"]
+    },
+    { "before": ["P"], "after": ["\"", "0", "p"] },
+    { "before": ["<leader>", "p"], "after": ["\"", "+", "p"] },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["C"],
+      "after": ["c", "$"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "0", "d"]
+    },
+    { "before": ["<leader>", "p"], "after": ["\"", "+", "p"] },
+    {
+      "before": ["leader", "m"],
+      "after": ["@", "@"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["Esc"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-p>": false,
+    "<C-o>": false,
+    "<C-i>": false,
+    "<C-h>": false,
+    "<C-l>": false,
+    "<C-x>": false,
+    "<C-e>": false,
+    "<C-space>": false
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    MISC                                    */
+  /* -------------------------------------------------------------------------- */
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.accessibilitySupport": "off",
+  "workbench.settings.editor": "json",
+  "diffEditor.ignoreTrimWhitespace": false
+}
