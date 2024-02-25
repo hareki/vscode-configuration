@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "compile": "sass src/main.scss dist/main.css --no-source-map --style=expanded",
+    "compile": "sass src/main.scss temp/main.css --no-source-map --style=expanded",
     "merge": "node src/scripts/concat.mjs",
-    "minify": "postcss dist/main.css -o dist/custom.minified.css",
+    "minify": "postcss temp/main.css -o dist/custom.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
     "build": "yarn compile &&  yarn minify"
   },
