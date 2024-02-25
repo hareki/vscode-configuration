@@ -426,7 +426,7 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 }
 
 .monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark > .letterpress {
-  background-image: url("/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/apc-custom-css/dist/hareki-watermark.png"), url("/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/apc-custom-css/dist/hareki-watermark.png");
+  background-image: url("/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/vscode-configurations/dist/watermark.png"), url("/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/vscode-configurations/dist/watermark.png");
   background-position: center;
 }
 

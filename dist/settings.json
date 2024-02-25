@@ -52,8 +52,8 @@
   /*                                 APPEARANCE                                 */
   /* -------------------------------------------------------------------------- */
   "apc.imports": [
-    "/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/apc-custom-css/dist/custom.minified.css",
-    "/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/apc-custom-css/dist/custom.minified.css"
+    "/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/vscode-configurations/dist/custom.minified.css",
+    "/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/vscode-configurations/dist/custom.minified.css"
   ],
 
   /* ------------------------------ Activity bar ------------------------------ */
