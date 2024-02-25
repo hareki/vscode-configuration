@@ -69,6 +69,26 @@
   }
 }
 
+/* -------------------------------- Watermark ------------------------------- */
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .editor-group-watermark {
+  max-width: $watermark-width;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .editor-group-watermark
+  > .letterpress {
+  background-image: url($windows-one-drive-path + $one-drive-common-path + $watermark-path),
+    url($macos-one-drive-path + $one-drive-common-path + $watermark-path);
+  background-position: center;
+}
+
 /* ----------------------- Hide editor action buttons ----------------------- */
 /* .title.title.tabs > .tabs-and-actions-container .editor-actions {
   display: none;

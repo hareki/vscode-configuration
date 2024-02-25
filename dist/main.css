@@ -420,6 +420,16 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
   background-color: #282c34;
 }
 
+/* -------------------------------- Watermark ------------------------------- */
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark {
+  max-width: 550px;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark > .letterpress {
+  background-image: url("/C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/apc-custom-css/dist/hareki-watermark.png"), url("/Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud Storage/Settings/VSCode/apc-custom-css/dist/hareki-watermark.png");
+  background-position: center;
+}
+
 /* ----------------------- Hide editor action buttons ----------------------- */
 /* .title.title.tabs > .tabs-and-actions-container .editor-actions {
   display: none;
