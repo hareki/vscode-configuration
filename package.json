@@ -1,8 +1,7 @@
 {
   "name": "apc-custom-css",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal configurations for my VSCode",
   "type": "commonjs",
   "scripts": {
     "compile": "sass src/main.scss temp/main.css --no-source-map --style=expanded",
@@ -12,12 +11,10 @@
     "build": "yarn compile &&  yarn minify"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hareki",
   "license": "ISC",
   "dependencies": {
-    "yarn": "^1.22.21"
-  },
-  "devDependencies": {
+    "yarn": "^1.22.21",
     "clean-css-cli": "^5.6.3",
     "concat": "^1.0.3",
     "cssnano": "^6.0.3",
