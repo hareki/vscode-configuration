@@ -516,5 +516,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "editor.accessibilitySupport": "off",
   "workbench.settings.editor": "json",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.restoreWindows": "none"
 }
