@@ -67,8 +67,11 @@ $status-bar-item-height: 25px;
 $diff-viewport-width: 20px;
 
 $watermark-width: 550px;
+$watermark-height: 200px;
 
 $windows-one-drive-path: '/C:/Users/minht/OneDrive';
 $macos-one-drive-path: '/Users/Hareki/Library/CloudStorage/OneDrive-Personal';
 $one-drive-common-path: '/Cloud Storage/Settings/VSCode/vscode-configurations';
-$watermark-path: '/dist/watermark.png';
+
+$watermark-dark-path: $one-drive-common-path + '/dist/watermark-dark.png';
+$watermark-light-path: $one-drive-common-path + '/dist/watermark-light.png';

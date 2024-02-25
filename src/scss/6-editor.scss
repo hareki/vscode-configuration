@@ -84,9 +84,22 @@
   .editor-group-container
   > .editor-group-watermark
   > .letterpress {
-  background-image: url($windows-one-drive-path + $one-drive-common-path + $watermark-path),
-    url($macos-one-drive-path + $one-drive-common-path + $watermark-path);
+  height: $watermark-height;
+  opacity: 0.8;
   background-position: center;
+
+  background-image: url($windows-one-drive-path + $watermark-light-path),
+    url($macos-one-drive-path + $watermark-light-path);
+}
+
+.monaco-workbench.vs-dark
+  .part.editor
+  > .content
+  .editor-group-container
+  > .editor-group-watermark
+  > .letterpress {
+  background-image: url($windows-one-drive-path + $watermark-light-path),
+    url($macos-one-drive-path + $watermark-light-path);
 }
 
 /* ----------------------- Hide editor action buttons ----------------------- */

@@ -212,8 +212,7 @@ div[id='#{$titlebar-id}'] {
 }
 
 /* ------------------------ Hide unnecessary elements ----------------------- */
-.window-appicon,
-.watermark-box {
+.window-appicon {
   display: none;
 }
 
