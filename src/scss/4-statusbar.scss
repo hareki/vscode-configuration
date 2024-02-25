@@ -90,6 +90,13 @@ div[id='vscodevim.vim.showcmd'] {
   }
 }
 
+.left-items.items-container:has(
+    > div[id='vscodevim.vim.primary']
+      > .statusbar-item-label[style*='display: none']
+  ) {
+  transform: translateX(0 - ($status-bar-item-gap + $screen-edge-gutter));
+}
+
 div[id='vscodevim.vim.primary'] {
   > .statusbar-item-label {
     color: $vim-status;
