@@ -17,7 +17,7 @@
 
 3. Go to https://www.photoroom.com/tools/background-remover and remove the background of the screenshot.
 
-4. Save the watermark as `dist/watermark.png`.
+4. Save the watermark as `dist/watermark-dark.png` or `dist/watermark-light.png`.
 
 ## Preview
 1. Landing page at full screen with all panels opened
