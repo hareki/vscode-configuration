@@ -207,12 +207,12 @@
   "errorLens.padding": "0 6px",
 
   /* -------------------------- Smooth transition -------------------------- */
-  // "editor.cursorSmoothCaretAnimation": "on",
-  // "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
   
-  // "editor.smoothScrolling": true,
-  // "terminal.integrated.smoothScrolling": true,
-  // "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
 
   "editor.mouseWheelScrollSensitivity": 2.5,
   "workbench.list.mouseWheelScrollSensitivity": 2.5,
