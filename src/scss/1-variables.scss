@@ -16,7 +16,10 @@ $separator-color: #373d48;
 $scrollbar-thickness: 8px;
 $scrollbar-border-radius: 999px;
 
-$vim-status: #e5c07b;
+$vim-status-foreground: #e5c07b;
+$vim-status-mode-background: #323842;
+$vim-status-mode-width: 110px;
+
 $vim-input-height: 22px;
 $vim-status-input-width: 200px;
 $vim-pending-keys: #61afef;
@@ -52,11 +55,12 @@ $tab-height: 31px;
 $tab-gutter: 3px;
 
 $general-trans-props: top, left, width, height;
-$general-trans-duration: 125ms;
-$general-trans-duration-sm: 100ms;
-$general-trans-duration-xs: 75ms;
+$general-trans-duration-medium: 125ms;
+$general-trans-duration-long: 175ms;
+$general-trans-duration-short: 100ms;
+$general-trans-duration-extra-short: 75ms;
 
-$command-palette-duration: $general-trans-duration;
+$command-palette-duration: $general-trans-duration-medium;
 $active-row-duration: 125ms;
 $tabs-duration: 150ms;
 

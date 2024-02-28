@@ -18,7 +18,7 @@
 
 // Left items
 [id='vscodevim.vim.showcmd'] {
-  order: -1;
+  order: 999;
 }
 
 /* --------------------------------- Spacing -------------------------------- */
@@ -47,7 +47,8 @@
   }
 
   > .right-items.items-container {
-    > [id='vscodevim.vim.showcmd']:not(
+    // > [id='vscodevim.vim.showcmd']:not(
+    > [id='status.notifications']:not(
         :has(> .statusbar-item-label[style*='display: none'])
       ) {
       margin-right: $screen-edge-gutter;
@@ -55,12 +56,12 @@
     gap: $status-bar-item-gap;
   }
 
-  [id='status.notifications']:has(
-      ~ [id='vscodevim.vim.showcmd']
-        > .statusbar-item-label[style*='display: none']
-    ) {
-    margin-right: calc(0px - $status-bar-item-gap);
-  }
+  // [id='status.notifications']:has(
+  //     ~ [id='vscodevim.vim.showcmd']
+  //       > .statusbar-item-label[style*='display: none']
+  //   ) {
+  //   margin-right: calc(0px - $status-bar-item-gap);
+  // }
 }
 
 /* -------------------------------- VIM items ------------------------------- */
@@ -72,12 +73,11 @@ div[id='vscodevim.vim.showcmd'] {
   > .statusbar-item-label:not(#\9) {
     margin: 0;
     padding: 0;
-    min-width: 0px;
-    transition: min-width $general-trans-duration;
+    min-width: 0;
     border-radius: $border-radius-md;
 
     &[style*='display: none'] {
-      width: 0px;
+      opacity: 0;
       display: block;
     }
 
@@ -99,12 +99,56 @@ div[id='vscodevim.vim.showcmd'] {
 
 div[id='vscodevim.vim.primary'] {
   > .statusbar-item-label {
-    color: $vim-status;
+    transition: min-width $general-trans-duration-long;
+    color: $vim-status-foreground;
+    position: relative;
 
     &[aria-label*='|']:not(#\9):not(#\9) {
       min-width: $vim-status-input-width;
-      outline: 2px solid $vim-status;
+      outline: 2px solid $vim-status-foreground;
       padding: 2px 3px 2px;
+    }
+
+    &:not([aria-label*='|']):not(#\9):not(#\9) {
+      width: $vim-status-mode-width;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $vim-status-mode-background;
+        text-align: center;
+      }
+    }
+
+    &[aria-label*='-- INSERT --']:not(#\9):not(#\9) {
+      &::before {
+        content: 'INSERT';
+      }
+    }
+    &[aria-label*='-- NORMAL --']:not(#\9):not(#\9) {
+      &::before {
+        content: 'NORMAL';
+      }
+    }
+
+    &[aria-label*='-- VISUAL --']:not(#\9):not(#\9) {
+      &::before {
+        content: 'VISUAL';
+      }
+    }
+
+    &[aria-label*='-- VISUAL LINE --']:not(#\9):not(#\9) {
+      &::before {
+        content: 'VISUAL LINE';
+      }
+    }
+
+    &[aria-label*='-- VISUAL BLOCK --']:not(#\9):not(#\9) {
+      &::before {
+        content: 'VISUAL BLOCK';
+      }
     }
   }
 }
@@ -112,8 +156,11 @@ div[id='vscodevim.vim.primary'] {
 div[id='vscodevim.vim.showcmd'] {
   > .statusbar-item-label {
     color: $vim-pending-keys;
+    transition: min-width $general-trans-duration-medium,
+      opacity $general-trans-duration-medium;
 
     &:not([style*='display: none']):not(#\9):not(#\9) {
+      opacity: 1;
       min-width: $vim-pending-keys-input-width;
       outline: 2px solid $vim-pending-keys;
       padding: 2px 2px 5px;

@@ -59,7 +59,7 @@
   .split-view-view [class*='minimap'] > canvas,
   .split-view-view [id='workbench.parts.editor'] .monaco-scrollable-element {
     transition-property: $general-trans-props;
-    transition-duration: $general-trans-duration;
+    transition-duration: $general-trans-duration-medium;
   }
 }
 
@@ -69,12 +69,12 @@
   .overlayWidgets[style*='width'],
   .view-overlays[style*='width'] {
     transition-property: $general-trans-props;
-    transition-duration: $general-trans-duration;
+    transition-duration: $general-trans-duration-medium;
   }
 
   .view-line {
     transition-property: $general-trans-props;
-    transition-duration: $general-trans-duration-xs;
+    transition-duration: $general-trans-duration-extra-short;
   }
 }
 
@@ -83,16 +83,16 @@
 }
 
 .lightBulbWidget {
-  transition: top $general-trans-duration-sm;
+  transition: top $general-trans-duration-short;
 }
 
 .monaco-hover:not(.hidden) {
   transform-origin: bottom;
-  animation: openPopupScale $general-trans-duration-sm;
+  animation: openPopupScale $general-trans-duration-short;
 }
 
 .action-label {
-  transition: color $general-trans-duration;
+  transition: color $general-trans-duration-medium;
 }
 
 /* ----------------------------- Command pallette ---------------------------- */
