@@ -46,15 +46,14 @@
     gap: $status-bar-item-gap;
   }
 
-  > .right-items.items-container {
-    // > [id='vscodevim.vim.showcmd']:not(
-    > [id='status.notifications']:not(
-        :has(> .statusbar-item-label[style*='display: none'])
-      ) {
-      margin-right: $screen-edge-gutter;
-    }
-    gap: $status-bar-item-gap;
-  }
+  // > .right-items.items-container {
+  //   > [id='vscodevim.vim.showcmd']:not(
+  //       :has(> .statusbar-item-label[style*='display: none'])
+  //     ) {
+  //     margin-right: $screen-edge-gutter;
+  //   }
+  //   gap: $status-bar-item-gap;
+  // }
 
   // [id='status.notifications']:has(
   //     ~ [id='vscodevim.vim.showcmd']
@@ -121,8 +120,8 @@ div[id='vscodevim.vim.primary'] {
     }
 
     &:not([aria-label*='|']):not([aria-label*='Pattern not found']):not(
-        #\9
-      ):not(#\9) {
+        [style*='display: none']
+      ):not(#\9):not(#\9) {
       width: $vim-status-mode-width;
       &::before {
         position: absolute;
