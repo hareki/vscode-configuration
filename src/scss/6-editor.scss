@@ -102,6 +102,14 @@
     url($macos-one-drive-path + $watermark-light-path);
 }
 
+/* ------------------------ Git blame inline message ------------------------ */
+.monaco-editor
+  span[class*='ced-1-TextEditorDecorationType']:not(#\9):not(#\9):not(
+    #\9
+  )::after {
+  color: #99999959;
+}
+
 /* ----------------------- Hide editor action buttons ----------------------- */
 /* .title.title.tabs > .tabs-and-actions-container .editor-actions {
   display: none;
