@@ -67,6 +67,15 @@
 /* -------------------------------- VIM items ------------------------------- */
 div[id='vscodevim.vim.primary'],
 div[id='vscodevim.vim.showcmd'] {
+  &.error-kind {
+    background-color: initial;
+    > .statusbar-item-label:not(#\9):not(#\9):not(#\9) {
+      color: $error-foreground;
+      background-color: $error-background;
+      outline: 2px solid $error-foreground;
+    }
+  }
+
   display: flex;
   align-items: center;
 
@@ -82,7 +91,8 @@ div[id='vscodevim.vim.showcmd'] {
     }
 
     &:not([style*='display: none']):not(#\9):not(#\9),
-    &[aria-label*='|']:not(#\9):not(#\9) {
+    &[aria-label*='|']:not(#\9):not(#\9),
+    &[aria-label*='Pattern not found']:not(#\9):not(#\9) {
       // margin-bottom: 2px;
       height: $vim-input-height;
       box-sizing: border-box;
@@ -103,13 +113,16 @@ div[id='vscodevim.vim.primary'] {
     color: $vim-status-foreground;
     position: relative;
 
-    &[aria-label*='|']:not(#\9):not(#\9) {
+    &[aria-label*='|']:not(#\9):not(#\9),
+    &[aria-label*='Pattern not found']:not(#\9):not(#\9) {
       min-width: $vim-status-input-width;
       outline: 2px solid $vim-status-foreground;
       padding: 2px 3px 2px;
     }
 
-    &:not([aria-label*='|']):not(#\9):not(#\9) {
+    &:not([aria-label*='|']):not([aria-label*='Pattern not found']):not(
+        #\9
+      ):not(#\9) {
       width: $vim-status-mode-width;
       &::before {
         position: absolute;
@@ -156,6 +169,7 @@ div[id='vscodevim.vim.primary'] {
 div[id='vscodevim.vim.showcmd'] {
   > .statusbar-item-label {
     color: $vim-pending-keys;
+    justify-content: center;
     transition: min-width $general-trans-duration-medium,
       opacity $general-trans-duration-medium;
 
