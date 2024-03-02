@@ -93,6 +93,10 @@
     "when": "reference-list.hasResult && references-view.canNavigate"
   },
   {
+    "key": "f5",
+    "command": "workbench.action.reloadWindow"
+  },
+  {
     "key": "shift+tab",
     "command": "editor.action.inlineSuggest.acceptNextWord",
     "when": "inlineSuggestionVisible && !editorReadonly"
@@ -104,7 +108,7 @@
     "command": "workbench.panel.chat.view.copilot.focus"
   },
   {
-    "key": "escape escape",
+    "key": "shift+escape",
     "command": "workbench.action.chat.copilot.newChat"
   },
 
@@ -220,16 +224,16 @@
     "when": "editorTextFocus"
   },
 
-  {
-    "key": "f2",
-    "command": "workbench.action.debug.disconnect",
-    "when": "focusedSessionIsAttach && inDebugMode"
-  },
-  {
-    "key": "f5",
-    "command": "workbench.action.debug.start",
-    "when": "debuggersAvailable && debugState == 'inactive'"
-  },
+  // {
+  //   "key": "f2",
+  //   "command": "workbench.action.debug.disconnect",
+  //   "when": "focusedSessionIsAttach && inDebugMode"
+  // },
+  // {
+  //   "key": "f5",
+  //   "command": "workbench.action.debug.start",
+  //   "when": "debuggersAvailable && debugState == 'inactive'"
+  // },
 
   /* -------------------------------------------------------------------------- */
   /*                           REPLACEMENT FOR ARROWS                           */
