@@ -46,6 +46,10 @@
     gap: $status-bar-item-gap;
   }
 
+  > .right-items.items-container {
+    gap: $status-bar-item-gap;
+  }
+
   // > .right-items.items-container {
   //   > [id='vscodevim.vim.showcmd']:not(
   //       :has(> .statusbar-item-label[style*='display: none'])

@@ -69,12 +69,43 @@
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
-    "key": "shift+alt+w",
+    "key": "alt+shift+w",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
+    "key": "f1",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+f1",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f3",
+    "command": "references-view.next",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
+    "key": "shift+f3",
+    "command": "references-view.prev",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
     "key": "shift+tab",
-    "command": "search.action.focusNextSearchResult"
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+
+  /* --------------------------------- Copilot -------------------------------- */
+  {
+    "key": "ctrl+shift+c",
+    "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "escape escape",
+    "command": "workbench.action.chat.copilot.newChat"
   },
 
   /* -------------------------------------------------------------------------- */
@@ -157,6 +188,14 @@
   {
     "key": "alt+shift+g",
     "command": "projectManager.listProjectsNewWindow"
+  },
+  {
+    "key": "alt+shift+o",
+    "command": "outline.focus"
+  },
+  {
+    "key": "alt+shift+i",
+    "command": "timeline.focus"
   },
 
   {
@@ -342,6 +381,10 @@
   {
     "key": "ctrl+shift+w",
     "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.closeEditorsToTheRight"
   },
   /* -------------------------------------------------------------------------- */
   /*                    AVOID ACCIDENTALLY ZOOMING IN OR OUT                    */
