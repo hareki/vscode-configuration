@@ -1,0 +1,18 @@
+[
+  {
+    "key": "alt+u",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal' || vim.mode == 'VisualLine' || vim.mode == 'Visual'",
+    "args": {
+      "after": ["<C-u>"]
+    }
+  },
+  {
+    "key": "alt+d",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal' || vim.mode == 'VisualLine' || vim.mode == 'Visual'",
+    "args": {
+      "after": ["<C-d>"]
+    }
+  }
+]
