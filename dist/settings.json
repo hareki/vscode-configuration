@@ -30,6 +30,11 @@
     }
   ],
 
+  /* --------------------------------- Preview -------------------------------- */
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "editor.suggest.preview": true,
+
   /* -------------------------------- Explorer -------------------------------- */
   "explorer.compactFolders": false,
   "explorer.copyRelativePathSeparator": "/",
@@ -111,9 +116,8 @@
   /* ---------------------------------- Theme --------------------------------- */
   "workbench.iconTheme": "bearded-icons",
   "symbols.hidesExplorerArrows": false,
-
-  "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.editorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.italic": true,
 
   "workbench.colorCustomizations": {
