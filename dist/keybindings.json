@@ -48,6 +48,11 @@
     "when": "sideBarFocus && !inputFocus"
   },
   {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  },
+  {
     "key": "alt+w",
     "command": "revealInExplorer"
   },
