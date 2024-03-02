@@ -45,7 +45,7 @@
 
   /* --------------------------------- Update --------------------------------- */
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  "update.mode": "default",
+  "update.mode": "start",
   "update.showReleaseNotes": true,
 
   /* -------------------------------------------------------------------------- */
@@ -207,12 +207,12 @@
   "errorLens.padding": "0 6px",
 
   /* -------------------------- Smooth transition -------------------------- */
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "smooth",
-  
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
+  // "editor.cursorSmoothCaretAnimation": "on",
+  // "editor.cursorBlinking": "smooth",
+
+  // "editor.smoothScrolling": true,
+  // "terminal.integrated.smoothScrolling": true,
+  // "workbench.list.smoothScrolling": true,
 
   "editor.mouseWheelScrollSensitivity": 2.5,
   "workbench.list.mouseWheelScrollSensitivity": 2.5,
@@ -350,6 +350,7 @@
     "filematch",
     "Flexbox",
     "Formik",
+    "gitblame",
     "hareki",
     "jetbrains",
     "liga",
@@ -374,15 +375,23 @@
     "widgetid"
   ],
 
+  "clock.alignment": "Right",
+  "clock.format": "ddd d/m/yyyy | hh:MM TT ",
+  "clock.updateInterval": 30000,
+  "clock.iconName": "null",
+
   /* --------------------- Other extension configurations --------------------- */
   "emmet.excludeLanguages": ["typescriptreact", "javascriptreact"],
-
-  "reactSnippets.settings.importReactOnTop": false,
 
   "turboConsoleLog.delimiterInsideMessage": "-",
   "turboConsoleLog.logMessagePrefix": "TCL",
   "turboConsoleLog.quote": "'",
   "turboConsoleLog.addSemicolonInTheEnd": true,
+
+  "gitblame.inlineMessageEnabled": true,
+  "gitblame.inlineMessageFormat": "${author.name} | ${time.ago} | ${commit.summary}",
+  "gitblame.inlineMessageMargin": 4,
+  "gitblame.delayBlame": 500,
 
   "auto-rename-tag.activationOnLanguage": [
     "*",
@@ -414,6 +423,8 @@
   "editor.lineNumbers": "relative",
 
   "vim.timeout": 350,
+  "vim.history": 15,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
   "vim.overrideCopy": true,
   "vim.leader": "<Space>",
   "vim.camelCaseMotion.enable": true,
@@ -448,7 +459,6 @@
       "silent": true
     },
     {
-      "before": ["<C-d>"],
       "after": ["<C-d>", "z", "z"]
     },
     {
@@ -476,6 +486,10 @@
     {
       "before": ["C"],
       "after": ["c", "$"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -486,6 +500,10 @@
     {
       "before": ["x"],
       "after": ["\"", "0", "d"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
     },
     { "before": ["<leader>", "p"], "after": ["\"", "+", "p"] },
     {
@@ -501,6 +519,7 @@
   ],
   "vim.handleKeys": {
     "<C-w>": false,
+    "<C-c>": false,
     "<C-p>": false,
     "<C-o>": false,
     "<C-i>": false,
@@ -518,5 +537,6 @@
   "editor.accessibilitySupport": "off",
   "workbench.settings.editor": "json",
   "diffEditor.ignoreTrimWhitespace": false,
-  "window.restoreWindows": "none"
+  "window.restoreWindows": "none",
+  "telemetry.telemetryLevel": "off"
 }
