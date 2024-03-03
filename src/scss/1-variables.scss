@@ -16,15 +16,6 @@ $separator-color: #373d48;
 $scrollbar-thickness: 8px;
 $scrollbar-border-radius: 999px;
 
-$vim-status-foreground: #e5c07b;
-$vim-status-mode-background: #323842;
-$vim-status-mode-width: 110px;
-
-$vim-input-height: 22px;
-$vim-status-input-width: 200px;
-$vim-pending-keys-foreground: #61afef;
-$vim-pending-keys-input-width: 50px;
-
 $icon-button-container-height: 40px;
 $icon-button-size: 20px;
 
@@ -85,4 +76,38 @@ $status-bar-background: #23272e;
 $error-background: #3f353f;
 $error-foreground: #f44747;
 
+// $vim-mode-background: #323842;
+
 $date-time-foreground: #98c379;
+$date-time-background: #98c37917;
+
+$vim-input-height: 22px;
+
+$vim-mode-width: 110px;
+$vim-mode-input-width: 200px;
+$vim-mode-foreground: #e5c07b;
+// can't use opacity here since we're covering the native content with a custom one
+// $vim-mode-background: #e5c07b17;
+$vim-mode-background: #353435;
+
+$vim-pending-input-width: 50px;
+
+$vim-info-foreground: #61afef;
+$vim-info-background: #61afef17;
+
+$vim-pending-foreground: #e06c75;
+$vim-pending-background: #e06c7517;
+
+$vim-normal-mode: '-- NORMAL --';
+$vim-insert-mode: '-- INSERT --';
+$vim-visual-mode: '-- VISUAL --';
+$vim-visual-line-mode: '-- VISUAL LINE --';
+$vim-visual-block-mode: '-- VISUAL BLOCK --';
+
+$vim-normal-mode-replacement: 'NORMAL';
+$vim-insert-mode-replacement: 'INSERT';
+$vim-visual-mode-replacement: 'VISUAL';
+$vim-visual-line-mode-replacement: 'VISUAL LINE';
+$vim-visual-block-mode-replacement: 'VISUAL BLOCK';
+
+$status-bar-item-info-padding: 2px 3px 2px;

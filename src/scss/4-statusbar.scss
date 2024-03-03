@@ -28,7 +28,7 @@
   .statusbar-item-label {
     padding: 0;
     color: $date-time-foreground;
-    background-color: $vim-status-mode-background;
+    background-color: $date-time-background;
   }
 }
 
@@ -88,17 +88,19 @@
 /* -------------------------------- VIM items ------------------------------- */
 div[id='vscodevim.vim.primary'],
 div[id='vscodevim.vim.showcmd'] {
+  display: flex;
+  align-items: center;
+
   &.error-kind {
     background-color: initial;
-    > .statusbar-item-label:not(#\9):not(#\9):not(#\9) {
+    > .statusbar-item-label:not(#\9):not(#\9) {
+      width: fit-content;
+      padding: $status-bar-item-info-padding;
       color: $error-foreground;
       background-color: $error-background;
       outline: 2px solid $error-foreground;
     }
   }
-
-  display: flex;
-  align-items: center;
 
   > .statusbar-item-label:not(#\9) {
     margin: 0;
@@ -112,9 +114,7 @@ div[id='vscodevim.vim.showcmd'] {
     }
 
     &:not([style*='display: none']):not(#\9):not(#\9),
-    &[aria-label*='|']:not(#\9):not(#\9),
-    &[aria-label*='Pattern not found']:not(#\9):not(#\9) {
-      // margin-bottom: 2px;
+    &[aria-label*='|']:not(#\9):not(#\9) {
       height: $vim-input-height;
       box-sizing: border-box;
     }
@@ -131,57 +131,75 @@ div[id='vscodevim.vim.showcmd'] {
 div[id='vscodevim.vim.primary'] {
   > .statusbar-item-label {
     transition: min-width $general-trans-duration-long;
-    color: $vim-status-foreground;
+    color: $vim-mode-foreground;
     position: relative;
 
-    &[aria-label*='|']:not(#\9):not(#\9),
-    &[aria-label*='Pattern not found']:not(#\9):not(#\9) {
-      min-width: $vim-status-input-width;
-      outline: 2px solid $vim-status-foreground;
-      padding: 2px 3px 2px;
+    &[aria-label*='|']:not(#\9):not(#\9) {
+      min-width: $vim-mode-input-width;
+      outline: 2px solid $vim-mode-foreground;
+      padding: $status-bar-item-info-padding;
     }
 
-    &:not([aria-label*='|']):not([aria-label*='Pattern not found']):not(
-        [style*='display: none']
-      ):not(#\9):not(#\9) {
-      width: $vim-status-mode-width;
+    &[aria-label*='#{$vim-normal-mode}'],
+    &[aria-label*='#{$vim-insert-mode}'],
+    &[aria-label*='#{$vim-visual-mode}'],
+    &[aria-label*='#{$vim-visual-line-mode}'],
+    &[aria-label*='#{$vim-visual-block-mode}'] {
+      width: $vim-mode-width;
       &::before {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $vim-status-mode-background;
+        background-color: $vim-mode-background;
         text-align: center;
       }
     }
 
-    &[aria-label*='-- INSERT --']:not(#\9):not(#\9) {
+    &:not([aria-label*='#{$vim-normal-mode}']):not(
+        [aria-label*='#{$vim-insert-mode}']
+      ):not([aria-label*='#{$vim-visual-mode}']):not(
+        [aria-label*='#{$vim-visual-line-mode}']
+      ):not([aria-label*='#{$vim-visual-block-mode}']):not(
+        [aria-label*='|']
+      ):not([class*='error-kind']):not(#\9) {
+      width: fit-content;
+      color: $vim-info-foreground;
+      background-color: $vim-info-background;
+      text-align: center;
+      padding: $status-bar-item-info-padding;
       &::before {
-        content: 'INSERT';
-      }
-    }
-    &[aria-label*='-- NORMAL --']:not(#\9):not(#\9) {
-      &::before {
-        content: 'NORMAL';
-      }
-    }
-
-    &[aria-label*='-- VISUAL --']:not(#\9):not(#\9) {
-      &::before {
-        content: 'VISUAL';
-      }
-    }
-
-    &[aria-label*='-- VISUAL LINE --']:not(#\9):not(#\9) {
-      &::before {
-        content: 'VISUAL LINE';
+        content: none;
       }
     }
 
-    &[aria-label*='-- VISUAL BLOCK --']:not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-insert-mode}']:not(#\9):not(#\9) {
       &::before {
-        content: 'VISUAL BLOCK';
+        content: $vim-insert-mode-replacement;
+      }
+    }
+    &[aria-label*='#{$vim-normal-mode}']:not(#\9):not(#\9) {
+      &::before {
+        content: $vim-normal-mode-replacement;
+      }
+    }
+
+    &[aria-label*='#{$vim-visual-mode}']:not(#\9):not(#\9) {
+      &::before {
+        content: $vim-visual-mode-replacement;
+      }
+    }
+
+    &[aria-label*='#{$vim-visual-line-mode}']:not(#\9):not(#\9) {
+      &::before {
+        content: $vim-visual-line-mode-replacement;
+      }
+    }
+
+    &[aria-label*='#{$vim-visual-block-mode}']:not(#\9):not(#\9) {
+      &::before {
+        content: $vim-visual-block-mode-replacement;
       }
     }
   }
@@ -189,15 +207,15 @@ div[id='vscodevim.vim.primary'] {
 
 div[id='vscodevim.vim.showcmd'] {
   > .statusbar-item-label {
-    color: $vim-pending-keys-foreground;
+    color: $vim-pending-foreground;
     justify-content: center;
     transition: min-width $general-trans-duration-medium,
       opacity $general-trans-duration-medium;
 
     &:not([style*='display: none']):not(#\9):not(#\9) {
       opacity: 1;
-      min-width: $vim-pending-keys-input-width;
-      outline: 2px solid $vim-pending-keys-foreground;
+      min-width: $vim-pending-input-width;
+      outline: 2px solid $vim-pending-foreground;
       padding: 2px 2px 5px;
     }
   }
