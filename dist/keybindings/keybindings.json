@@ -205,11 +205,49 @@
     "command": "projectManager.listProjectsNewWindow"
   },
   {
-    "key": "alt+shift+o",
-    "command": "outline.focus"
+    "key": "alt+y",
+    "command": "git.checkout"
+  },
+  {
+    "key": "alt+shift+y",
+    "command": "git.checkoutDetached"
+  },
+  {
+    "key": "alt+p",
+    "command": "copyRelativeFilePath"
+  },
+
+  /* ----------------------------- Search options ----------------------------- */
+  { "key": "alt+shift+r", "command": "toggleFindRegex", "when": "editorFocus" },
+  {
+    "key": "alt+shift+w",
+    "command": "toggleFindWholeWord",
+    "when": "editorFocus"
   },
   {
     "key": "alt+shift+i",
+    "command": "toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+shift+p",
+    "command": "togglePreserveCase",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+shift+l",
+    "command": "toggleFindInSelection",
+    "when": "editorFocus"
+  },
+
+  /* -------------------------------------------------------------------------- */
+
+  {
+    "key": "ctrl+shift+o",
+    "command": "outline.focus"
+  },
+  {
+    "key": "ctrl+shift+i",
     "command": "timeline.focus"
   },
 
