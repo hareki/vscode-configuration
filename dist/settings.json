@@ -23,7 +23,7 @@
   // https://medium.com/@krtirtho/make-visual-studio-code-less-ram-consuming-faster-90db8c76a187
   "files.exclude": {
     "**/yarn.lock/**": true,
-    "**/package.lock/**": true,
+    "**/package-lock.json": true,
     "**/node_modules/**": true
   },
 
@@ -292,15 +292,20 @@
 
   /* -------------------------------- Formatter ------------------------------- */
   "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
 
+  // Use plugin:tailwindcss/recommended in eslint config instead
+  "tailwindCSS.validate": false,
+
+  "eslint.codeActionsOnSave.mode": "problems",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  // "eslint.validate": ["javascript"],
 
   "prettier.trailingComma": "all",
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "eslint.validate": ["javascript"],
 
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
