@@ -140,11 +140,11 @@ div[id='vscodevim.vim.primary'] {
       padding: $status-bar-item-info-padding;
     }
 
-    &[aria-label*='#{$vim-normal-mode}'],
-    &[aria-label*='#{$vim-insert-mode}'],
-    &[aria-label*='#{$vim-visual-mode}'],
-    &[aria-label*='#{$vim-visual-line-mode}'],
-    &[aria-label*='#{$vim-visual-block-mode}'] {
+    &[aria-label='#{$vim-normal-mode}'],
+    &[aria-label='#{$vim-insert-mode}'],
+    &[aria-label='#{$vim-visual-mode}'],
+    &[aria-label='#{$vim-visual-line-mode}'],
+    &[aria-label='#{$vim-visual-block-mode}'] {
       width: $vim-mode-width;
       &::before {
         position: absolute;
@@ -154,6 +154,17 @@ div[id='vscodevim.vim.primary'] {
         height: 100%;
         background-color: $vim-mode-background;
         text-align: center;
+      }
+    }
+
+    &[aria-label*='Recording']:not(#\9):not(#\9) {
+      color: $vim-mode-foreground;
+      background-color: $vim-mode-background;
+      padding: $status-bar-item-info-padding;
+      width: fit-content;
+
+      &::before {
+        content: none;
       }
     }
 
@@ -174,30 +185,30 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-    &[aria-label*='#{$vim-insert-mode}']:not(#\9):not(#\9) {
+    &[aria-label='#{$vim-insert-mode}']:not(#\9):not(#\9) {
       &::before {
         content: $vim-insert-mode-replacement;
       }
     }
-    &[aria-label*='#{$vim-normal-mode}']:not(#\9):not(#\9) {
+    &[aria-label='#{$vim-normal-mode}']:not(#\9):not(#\9) {
       &::before {
         content: $vim-normal-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-mode}']:not(#\9):not(#\9) {
+    &[aria-label='#{$vim-visual-mode}']:not(#\9):not(#\9) {
       &::before {
         content: $vim-visual-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-line-mode}']:not(#\9):not(#\9) {
+    &[aria-label='#{$vim-visual-line-mode}']:not(#\9):not(#\9) {
       &::before {
         content: $vim-visual-line-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-block-mode}']:not(#\9):not(#\9) {
+    &[aria-label='#{$vim-visual-block-mode}']:not(#\9):not(#\9) {
       &::before {
         content: $vim-visual-block-mode-replacement;
       }
