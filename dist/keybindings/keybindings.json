@@ -51,7 +51,7 @@
   },
   {
     "key": "enter",
-    "command": "list.toggleExpand",
+    "command": "list.select",
     "when": "listFocus && !inputFocus && !treestickyScrollFocused"
   },
   {
