@@ -8,7 +8,8 @@
     "merge": "node src/scripts/concat.mjs",
     "minify": "postcss temp/main.css -o dist/custom.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
-    "build": "yarn compile &&  yarn minify && bash commands/macos.txt"
+    "build:mac": "yarn compile &&  yarn minify && bash commands/macos.txt",
+    "build:windows": "yarn compile &&  yarn minify && bash commands/macos.txt"
   },
   "keywords": [],
   "author": "Hareki",
