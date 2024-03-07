@@ -1,9 +1,9 @@
-# Notes to myself
-## Extensions needed:
+## Extensions needed
 - One Dark Pro
 - Apc Customize UI++
 - Clock
 
+## Notes
 - `settings` and `keybindings` backup are in the `dist` directory.
 - Known issues: 
   - *The sliding animation may cause some extensions for previewing stuff (SVG, Markdown,...) to not work properly, you need to switch to another tab in the same editor group and switch back to it to fix, currently disable the animation*.
