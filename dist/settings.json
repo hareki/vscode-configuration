@@ -17,8 +17,11 @@
   "editor.snippetSuggestions": "inline",
   "editor.quickSuggestions": {
     "other": "on",
-    "strings": "on"
+    "strings": "off",
+    "comments": "off"
   },
+  "editor.quickSuggestionsDelay": 50,
+
   "editor.tabCompletion": "on",
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.enabled": true,
@@ -48,10 +51,10 @@
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/**": true,
-    "**/env/**": true,
-    "**/venv/**": true,
-    "env-*": true
+    "**/node_modules/**": true
+    // "**/env/**": true,
+    // "**/venv/**": true,
+    // "env-*": true
   },
 
   /* -------------------------------- Explorer -------------------------------- */
@@ -121,7 +124,7 @@
   "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' off, 'ss02' off",
   "editor.fontSize": 14,
   "editor.fontWeight": 500,
-  "editor.fontFamily": "'JetBrainsMono Nerd Font','JetBrainsMono NF', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
 
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontWeight": "600",
@@ -129,19 +132,20 @@
 
   "apc.font.family": "JetBrainsMono Nerd Font",
 
-  "editor.lineHeight": 24,
-  "window.zoomLevel": 0.7,
+  "editor.lineHeight": 25,
+  "window.zoomLevel": 0.9,
 
   /* ---------------------------------- Theme --------------------------------- */
   "workbench.iconTheme": "bearded-icons",
   "symbols.hidesExplorerArrows": false,
   "oneDarkPro.editorTheme": "One Dark Pro",
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "oneDarkPro.italic": true,
 
   "workbench.colorCustomizations": {
     "menu.background": "#282c34",
     "quickInput.background": "#282c34",
+
     "editorCursor.foreground": "#61afef",
     "editorCursor.background": "#fff",
 
@@ -153,13 +157,15 @@
     "errorLens.infoMessageBackground": "#283f4d",
     "errorLens.warningMessageBackground": "#423b3b",
 
-    "[One Dark Pro]": {
+    "[One Dark Pro Darker]": {
       "editorStickyScroll.background": "#272b32",
       "terminalStickyScroll.background": "#272b32",
       // "editorStickyScroll.background": "#1e2227",
       "editorStickyScrollHover.background": "#474f5e",
+
       "editor.background": "#1e2227",
       "sideBar.background": "#1e2227",
+
       "sideBar.border": "#373d48",
       "statusBar.border": "#373d48",
       "titleBar.border": "#373d48",
@@ -167,35 +173,11 @@
       "titleBar.activeBackground": "#23272e",
       "editor.findMatchBackground": "#42557b1a",
       "editorGroup.border": "#373d48",
-      "terminal.background": "#1b1f23",
+      "terminal.background": "#1b1f23"
 
       // "editorError.foreground": "#00000000",
       // "editorWarning.foreground": "#00000000",
       // "editorInfo.foreground": "#00000000",
-
-      // Custom One Dark Pro to be exactly as One Dark Pro Darker
-      // For some reason the color customization doesn't work for Darker theme
-      "activityBar.background": "#23272e",
-      "debugToolBar.background": "#1e2227",
-      "dropdown.background": "#1e2227",
-      "dropdown.border": "#1e2227",
-      // "editor.background": "#23272e",
-      "editorGroupHeader.tabsBackground": "#1e2227",
-      "editorHoverWidget.background": "#1e2227",
-      "editorMarkerNavigation.background": "#1e2227",
-      "editorSuggestWidget.background": "#1e2227",
-      "editorWidget.background": "#1e2227",
-      "panelSectionHeader.background": "#1e2227",
-      "settings.focusedRowBackground": "#23272e",
-      //  "sideBar.background": "#1e2227",
-      "sideBarSectionHeader.background": "#23272e",
-      // "statusBar.background": "#1e2227",
-      "statusBar.noFolderBackground": "#1e2227",
-      "tab.activeBackground": "#23272e",
-      "tab.inactiveBackground": "#1e2227",
-      // "terminal.background": "#23272e",
-      // "titleBar.activeBackground": "#23272e",
-      "titleBar.inactiveBackground": "#23272e"
     }
   },
 
@@ -278,7 +260,11 @@
   /* -------------------------------------------------------------------------- */
 
   "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
+    "vscodevim.vim": 1,
+    "vscode.typescript-language-features": 1,
+    "dbaeumer.vscode-eslint": 1
+    // "GitHub.copilot": 1
+    // "streetsidesoftware.code-spell-checker": 1
   },
 
   /* ------------------------- Copilot Configurations ------------------------- */
@@ -297,7 +283,7 @@
   // Use plugin:tailwindcss/recommended in eslint config instead
   "tailwindCSS.validate": false,
 
-  "eslint.codeActionsOnSave.mode": "problems",
+  // "eslint.codeActionsOnSave.mode": "problems",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -342,9 +328,10 @@
   "html.format.wrapAttributes": "force-aligned",
 
   /* ------------------------------ Color preview ----------------------------- */
-  "color-highlight.markerType": "dot-before",
-  "color-highlight.markRuler": false,
+  // "color-highlight.markerType": "dot-before",
+  // "color-highlight.markRuler": false,
   "editor.colorDecorators": false,
+  "tailwindCSS.colorDecorators": false,
 
   "typescript.suggest.paths": true,
   "javascript.suggest.paths": true,
@@ -380,6 +367,7 @@
     "Formik",
     "gitblame",
     "hareki",
+    "immer",
     "jetbrains",
     "liga",
     "Lightbox",
@@ -405,7 +393,7 @@
 
   "clock.alignment": "Right",
   "clock.format": "ddd d/m/yyyy | hh:MM TT ",
-  "clock.updateInterval": 30000,
+  "clock.updateInterval": 60000,
   "clock.iconName": "null",
 
   /* --------------------- Other extension configurations --------------------- */
@@ -439,6 +427,7 @@
   "projectManager.git.baseFolders": [
     // Windows
     "D:\\Work\\Zigvy\\Repositories",
+    "D:\\Work\\Personal\\Repositories",
     "C:\\Users\\minht\\OneDrive\\Cloud Storage\\Settings\\VSCode",
 
     // MacOS
@@ -454,8 +443,8 @@
   "vim.history": 15,
   "vim.mouseSelectionGoesIntoVisualMode": false,
   "vim.overrideCopy": true,
-  "vim.leader": "<Space>",
   "vim.camelCaseMotion.enable": true,
+  "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["e"], "after": ["e", "l"] },
 
@@ -487,6 +476,7 @@
       "silent": true
     },
     {
+      "before": ["<C-d>"],
       "after": ["<C-d>", "z", "z"]
     },
     {
@@ -566,5 +556,6 @@
   "workbench.settings.editor": "json",
   "diffEditor.ignoreTrimWhitespace": false,
   "window.restoreWindows": "none",
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "editor.linkedEditing": false
 }
