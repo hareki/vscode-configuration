@@ -51,33 +51,8 @@
   },
   {
     "key": "enter",
-    "command": "list.select",
-    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
-  },
-  {
-    "key": "alt+w",
-    "command": "revealInExplorer"
-  },
-  {
-    "key": "alt+w",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-  {
-    "key": "alt+w",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active && explorerViewletVisible"
-  },
-  {
-    "key": "alt+e",
-    "command": "revealInExplorer"
-  },
-  {
-    "key": "alt+e",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-  {
-    "key": "alt+shift+w",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused && filesExplorerFocus"
   },
   {
     "key": "f1",
@@ -150,15 +125,8 @@
   /* -------------------------------------------------------------------------- */
   /*                                  UTILITIES                                 */
   /* -------------------------------------------------------------------------- */
-  {
-    "key": "alt+c",
-    "command": "turboConsoleLog.displayLogMessage"
-  },
-  {
-    "key": "alt+f",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelFocus"
-  },
+
+  /* ----------------------------------- Git ---------------------------------- */
   {
     "key": "alt+q",
     "command": "editor.action.dirtydiff.next",
@@ -169,41 +137,25 @@
     "command": "editor.action.dirtydiff.previous",
     "when": "editorTextFocus && !textCompareEditorActive"
   },
+
   {
-    "key": "alt+s",
-    "command": "gitlens.openWorkingFile"
+    "key": "alt+q",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
   },
+
   {
-    "key": "alt+z",
-    "command": "editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    "key": "alt+shift+q",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
   },
+
   {
-    "key": "alt+enter",
-    "command": "github.copilot.generate",
-    "when": "editorTextFocus && github.copilot.activated"
+    "key": "alt+o",
+    "command": "git.openFile",
+    "when": "textCompareEditorVisible"
   },
-  { "key": "alt+1", "command": "workbench.action.focusFirstEditorGroup" },
-  {
-    "key": "alt+2",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-  },
-  { "key": "alt+3", "command": "workbench.action.toggleAuxiliaryBar" },
-  { "key": "shift+alt+r", "command": "typescript.removeUnusedImports" },
-  {
-    "key": "alt+f3",
-    "command": "gitlens.diffLineWithPrevious",
-    "when": "editorTextFocus && !textCompareEditorActive"
-  },
-  {
-    "key": "alt+g",
-    "command": "projectManager.listProjects"
-  },
-  {
-    "key": "alt+shift+g",
-    "command": "projectManager.listProjectsNewWindow"
-  },
+
   {
     "key": "alt+y",
     "command": "git.checkout"
@@ -212,45 +164,100 @@
     "key": "alt+shift+y",
     "command": "git.checkoutDetached"
   },
+
+  /* ------------------------------- Extensions ------------------------------- */
   {
-    "key": "alt+p",
-    "command": "copyRelativeFilePath"
+    "key": "alt+c",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+
+  {
+    "key": "alt+enter",
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated"
+  },
+
+  {
+    "key": "alt+g",
+    "command": "projectManager.listProjects"
+  },
+  {
+    "key": "alt+shift+g",
+    "command": "projectManager.listProjectsNewWindow"
+  },
+
+  /* ----------------------------- Workbench parts ---------------------------- */
+  { "key": "alt+1", "command": "workbench.action.focusFirstEditorGroup" },
+  {
+    "key": "alt+2",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  { "key": "alt+3", "command": "workbench.action.toggleAuxiliaryBar" },
+
+  {
+    "key": "alt+w",
+    "command": "revealInExplorer"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && explorerViewletVisible"
+  },
+  {
+    "key": "alt+e",
+    "command": "revealInExplorer"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "alt+shift+w",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
+  {
+    "key": "alt+shift+o",
+    "command": "outline.focus"
+  },
+  {
+    "key": "alt+shift+i",
+    "command": "timeline.focus"
   },
 
   /* ----------------------------- Search options ----------------------------- */
-  { "key": "alt+shift+r", "command": "toggleFindRegex", "when": "editorFocus" },
   {
-    "key": "alt+shift+w",
+    "key": "ctrl+shift+r",
+    "command": "toggleFindRegex",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
     "command": "toggleFindWholeWord",
     "when": "editorFocus"
   },
   {
-    "key": "alt+shift+i",
+    "key": "ctrl+shift+i",
     "command": "toggleFindCaseSensitive",
     "when": "editorFocus"
   },
   {
-    "key": "alt+shift+p",
+    "key": "ctrl+shift+p",
     "command": "togglePreserveCase",
     "when": "editorFocus"
   },
   {
-    "key": "alt+shift+l",
+    "key": "ctrl+shift+l",
     "command": "toggleFindInSelection",
     "when": "editorFocus"
   },
 
-  /* -------------------------------------------------------------------------- */
-
-  {
-    "key": "ctrl+shift+o",
-    "command": "outline.focus"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "timeline.focus"
-  },
-
+  /* ---------------------------------- Misc ---------------------------------- */
   {
     "key": "ctrl+enter",
     "command": "editor.action.insertLineAfter",
@@ -262,16 +269,46 @@
     "when": "textInputFocus && vim.mode === 'Insert'"
   },
   { "key": "ctrl+shift+v", "command": "editor.action.clipboardPasteAction" },
+
   {
-    "key": "ctrl+shift+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    "key": "alt+p",
+    "command": "copyRelativeFilePath"
   },
+
   {
-    "key": "ctrl+shift+s",
-    "command": "saveAll",
-    "when": "editorTextFocus"
+    "key": "alt+f",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
   },
+
+  {
+    "key": "alt+z",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // {
+  //   "key": "alt+s",
+  //   "command": "gitlens.openWorkingFile"
+  // },
+
+  // {
+  //   "key": "ctrl+shift+s",
+  //   "command": "saveAll",
+  //   "when": "editorTextFocus"
+  // },
+
+  // {
+  //   "key": "alt+f3",
+  //   "command": "gitlens.diffLineWithPrevious",
+  //   "when": "editorTextFocus && !textCompareEditorActive"
+  // },
+
+  // {
+  //   "key": "ctrl+shift+g",
+  //   "command": "workbench.view.scm",
+  //   "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  // },
 
   // {
   //   "key": "f2",
@@ -310,6 +347,18 @@
     "key": "alt+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+
+  /* ----------------------- Rename suggestion (f2) menu ---------------------- */
+  {
+    "key": "alt+j",
+    "command": "focusNextRenameSuggestion",
+    "when": "renameInputVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "focusPreviousRenameSuggestion",
+    "when": "renameInputVisible && !renameInputFocused"
   },
 
   /* -------------------- Command pallette (ctrl + p) menu -------------------- */
@@ -353,7 +402,7 @@
   {
     "key": "alt+o",
     "command": "workbench.action.navigateBack",
-    "when": "canNavigateBack"
+    "when": "canNavigateBack && !textCompareEditorActive"
   },
   {
     "key": "alt+i",
@@ -429,3 +478,4 @@
     "key": "ctrl+-"
   }
 ]
+

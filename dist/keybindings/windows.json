@@ -1,5 +1,13 @@
 [
   {
+    "key": "alt+r",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal' || vim.mode == 'VisualLine' || vim.mode == 'Visual'",
+    "args": {
+      "after": ["<C-r>"]
+    }
+  },
+  {
     "key": "alt+u",
     "command": "vim.remap",
     "when": "inputFocus && vim.mode == 'Normal' || vim.mode == 'VisualLine' || vim.mode == 'Visual'",
