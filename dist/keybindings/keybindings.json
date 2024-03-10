@@ -86,11 +86,11 @@
 
   /* --------------------------------- Copilot -------------------------------- */
   {
-    "key": "ctrl+shift+c",
+    "key": "alt+shift+c",
     "command": "workbench.panel.chat.view.copilot.focus"
   },
   {
-    "key": "shift+alt+c",
+    "key": "ctrl+shift+c",
     "command": "workbench.action.openChat.copilot"
   },
   {
@@ -194,7 +194,11 @@
     "when": "terminal.active"
   },
   { "key": "alt+3", "command": "workbench.action.toggleAuxiliaryBar" },
-
+  {
+    "key": "alt+3",
+    "command": "workbench.panel.chat.view.copilot.focus",
+    "when": "!auxiliaryBarFocus && !auxiliaryBarVisible"
+  },
   {
     "key": "alt+w",
     "command": "revealInExplorer"
@@ -228,6 +232,10 @@
   {
     "key": "alt+shift+i",
     "command": "timeline.focus"
+  },
+  {
+    "key": "alt+shift+x",
+    "command": "workbench.view.extensions"
   },
 
   /* ----------------------------- Search options ----------------------------- */
