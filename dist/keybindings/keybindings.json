@@ -199,26 +199,30 @@
     "command": "workbench.panel.chat.view.copilot.focus",
     "when": "!auxiliaryBarFocus && !auxiliaryBarVisible"
   },
+  // {
+  //   "key": "alt+w",
+  //   "command": "revealInExplorer"
+  // },
+  // {
+  //   "key": "alt+w",
+  //   "command": "workbench.files.action.focusFilesExplorer"
+  // },
   {
     "key": "alt+w",
-    "command": "revealInExplorer"
+    "command": "workbench.view.scm"
+    // "when": "workbench.scm.active && explorerViewletVisible"
   },
+  // {
+  //   "key": "alt+e",
+  //   "command": "revealInExplorer"
+  // },
   {
-    "key": "alt+w",
+    "key": "alt+e",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
-    "key": "alt+w",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active && explorerViewletVisible"
-  },
-  {
-    "key": "alt+e",
+    "key": "alt+shift+e",
     "command": "revealInExplorer"
-  },
-  {
-    "key": "alt+e",
-    "command": "workbench.files.action.focusFilesExplorer"
   },
   {
     "key": "alt+shift+w",
