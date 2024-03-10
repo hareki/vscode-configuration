@@ -283,7 +283,7 @@
   // Use plugin:tailwindcss/recommended in eslint config instead
   "tailwindCSS.validate": false,
 
-  // "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.codeActionsOnSave.mode": "problems",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -338,7 +338,7 @@
 
   /* ----------------------------------- Git ---------------------------------- */
   "git.enableSmartCommit": true,
-  "gitlens.blame.compact": false,
+  // "gitlens.blame.compact": false,
 
   /* ----------------------------------- Env ---------------------------------- */
   "files.associations": {
@@ -425,6 +425,11 @@
     "'tw([^']*)", // 'tw ...'
     "\"tw([^']*)" // "tw ..."
   ],
+
+  // Performance reasons
+  "tailwindCSS.emmetCompletions": false,
+  "tailwindCSS.codeActions": false,
+  "tailwindCSS.lint.cssConflict": "error",
 
   "projectManager.git.baseFolders": [
     // Windows
@@ -562,3 +567,4 @@
   "editor.linkedEditing": false,
   "typescript.disableAutomaticTypeAcquisition": true
 }
+
