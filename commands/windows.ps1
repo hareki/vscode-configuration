@@ -1,0 +1,1 @@
+Copy-Item -Path "D:\Work\Personal\Repositories\vscode-configurations\dist\*" -Destination "C:\Users\minht\OneDrive\Cloud Storage\Settings\VSCode\dist" -Force

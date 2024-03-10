@@ -9,7 +9,7 @@
     "minify": "postcss temp/main.css -o dist/custom.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
     "build:mac": "yarn compile &&  yarn minify && bash commands/macos.txt",
-    "build:windows": "yarn compile &&  yarn minify && bash commands/macos.txt"
+    "build:windows": "yarn compile &&  yarn minify && powershell -ExecutionPolicy Bypass -File commands/windows.ps1"
   },
   "keywords": [],
   "author": "Hareki",
