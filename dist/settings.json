@@ -122,7 +122,7 @@
 
   /* ---------------------------------- Font ---------------------------------- */
   "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' off, 'ss02' off",
-  "editor.fontSize": 14,
+  "editor.fontSize": 13.6,
   "editor.fontWeight": 500,
   "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
 
@@ -133,7 +133,7 @@
   "apc.font.family": "JetBrainsMono Nerd Font",
 
   "editor.lineHeight": 25,
-  "window.zoomLevel": 0.9,
+  "window.zoomLevel": 1.1,
 
   /* ---------------------------------- Theme --------------------------------- */
   "workbench.iconTheme": "bearded-icons",
@@ -262,8 +262,8 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 1,
-    "dbaeumer.vscode-eslint": 1
-    // "GitHub.copilot": 1
+    "dbaeumer.vscode-eslint": 1,
+    "GitHub.copilot": 1
     // "streetsidesoftware.code-spell-checker": 1
   },
 
@@ -348,7 +348,9 @@
   "dotenv.enableAutocloaking": false,
 
   /* --------------------------- Spelling exceptions -------------------------- */
-  "cSpell.language": "en, vi",
+  "cSpell.suggestionNumChanges": 2,
+  "cSpell.numSuggestions": 4,
+  "cSpell.language": "en",
   "cSpell.userWords": [
     "antd",
     "appicon",
@@ -557,5 +559,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "window.restoreWindows": "none",
   "telemetry.telemetryLevel": "off",
-  "editor.linkedEditing": false
+  "editor.linkedEditing": false,
+  "typescript.disableAutomaticTypeAcquisition": true
 }
