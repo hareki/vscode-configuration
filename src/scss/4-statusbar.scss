@@ -130,7 +130,7 @@ div[id='vscodevim.vim.showcmd'] {
 
 div[id='vscodevim.vim.primary'] {
   > .statusbar-item-label {
-    transition: min-width $general-trans-duration-long;
+    // transition: min-width $general-trans-duration-long;
     color: $vim-mode-foreground;
     position: relative;
 
@@ -220,8 +220,8 @@ div[id='vscodevim.vim.showcmd'] {
   > .statusbar-item-label {
     color: $vim-pending-foreground;
     justify-content: center;
-    transition: min-width $general-trans-duration-medium,
-      opacity $general-trans-duration-medium;
+    // transition: min-width $general-trans-duration-medium,
+      // opacity $general-trans-duration-medium;
 
     &:not([style*='display: none']):not(#\9):not(#\9) {
       opacity: 1;
