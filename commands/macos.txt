@@ -1,0 +1,1 @@
+cp -f /Users/Hareki/Documents/Repositories/vscode-configurations/dist/custom.minified.css /Users/Hareki/Library/CloudStorage/OneDrive-Personal/Cloud\ Storage/Settings/VSCode/dist/
