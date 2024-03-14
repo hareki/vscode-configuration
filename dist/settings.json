@@ -137,7 +137,7 @@
 
   /* ---------------------------------- Theme --------------------------------- */
   "workbench.iconTheme": "bearded-icons",
-  "symbols.hidesExplorerArrows": false,
+  // "symbols.hidesExplorerArrows": false,
   "oneDarkPro.editorTheme": "One Dark Pro",
   "workbench.colorTheme": "One Dark Pro Darker",
   "oneDarkPro.italic": true,
@@ -206,10 +206,10 @@
   },
 
   /* -------------------------- Error Lens extension -------------------------- */
-  "errorLens.fontStyleItalic": true,
-  "errorLens.messageBackgroundMode": "message",
-  "errorLens.borderRadius": "6px",
-  "errorLens.padding": "0 6px",
+  // "errorLens.fontStyleItalic": true,
+  // "errorLens.messageBackgroundMode": "message",
+  // "errorLens.borderRadius": "6px",
+  // "errorLens.padding": "0 6px",
 
   /* -------------------------- Smooth transition -------------------------- */
   // "editor.cursorSmoothCaretAnimation": "on",
@@ -261,9 +261,10 @@
 
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
-    "vscode.typescript-language-features": 1,
-    "dbaeumer.vscode-eslint": 1,
-    "GitHub.copilot": 1
+    "vscode.typescript-language-features": 2,
+    "dbaeumer.vscode-eslint": 3,
+    "vscode.git": 4
+    // "GitHub.copilot": 1
     // "streetsidesoftware.code-spell-checker": 1
   },
 
@@ -278,12 +279,12 @@
 
   /* -------------------------------- Formatter ------------------------------- */
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  // "editor.formatOnSaveMode": "modificationsIfAvailable",
 
   // Use plugin:tailwindcss/recommended in eslint config instead
   "tailwindCSS.validate": false,
 
-  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -306,7 +307,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -339,13 +340,65 @@
   /* ----------------------------------- Git ---------------------------------- */
   "git.enableSmartCommit": true,
   // "gitlens.blame.compact": false,
+  "gitlens.codeLens.scopes": ["document", "containers"],
+  "gitlens.statusBar.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.views.commits.showBranchComparison": "branch",
+  "gitlens.views.repositories.showBranchComparison": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.autolinks.enabled": false,
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.pullRequests.enabled": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.fileAnnotations.dismissOnEscape": false,
+  "gitlens.fileAnnotations.preserveWhileEditing": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.changes.locations": [],
+  "gitlens.heatmap.locations": [],
+  "gitlens.heatmap.fadeLines": false,
+  "gitlens.graph.scrollMarkers.enabled": false,
+  "gitlens.graph.showDetailsView": false,
+  "gitlens.graph.showGhostRefsOnRowHover": false,
+  "gitlens.graph.highlightRowsOnRefHover": false,
+  "gitlens.graph.showUpstreamStatus": false,
+  "gitlens.graph.pullRequests.enabled": false,
+  "gitlens.graph.avatars": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.fileHistory.pullRequests.enabled": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.tags.files.compact": false,
+  "gitlens.views.tags.avatars": false,
+  "gitlens.worktrees.promptForLocation": false,
+  "gitlens.views.worktrees.showBranchComparison": false,
+  "gitlens.views.worktrees.pullRequests.enabled": false,
+  "gitlens.views.worktrees.files.compact": false,
+  "gitlens.views.worktrees.avatars": false,
+  "gitlens.views.contributors.pullRequests.enabled": false,
+  "gitlens.views.contributors.files.compact": false,
+  "gitlens.views.contributors.avatars": false,
+  "gitlens.terminalLinks.enabled": false,
+  "gitlens.menus": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.views.repositories.showUpstreamStatus": false,
+  "gitlens.views.repositories.pullRequests.enabled": false,
+  "gitlens.views.repositories.showCommits": false,
+  "gitlens.views.repositories.showRemotes": false,
+  "gitlens.views.repositories.showStashes": false,
+  "gitlens.views.repositories.showTags": false,
+  "gitlens.views.repositories.showContributors": false,
+  "gitlens.views.repositories.showBranches": false,
+  "gitlens.views.repositories.autoRefresh": false,
+  "gitlens.views.repositories.autoReveal": false,
+  "gitlens.views.repositories.avatars": false,
 
   /* ----------------------------------- Env ---------------------------------- */
   "files.associations": {
     "*.env.local": "env",
     ".env*": "dotenv"
   },
-  "dotenv.enableAutocloaking": false,
+  // "dotenv.enableAutocloaking": false,
 
   /* --------------------------- Spelling exceptions -------------------------- */
   "cSpell.suggestionNumChanges": 2,
@@ -393,10 +446,7 @@
     "widgetid"
   ],
 
-  "clock.alignment": "Right",
-  "clock.format": "ddd d/m/yyyy | hh:MM TT ",
-  "clock.updateInterval": 60000,
-  "clock.iconName": "null",
+  "clock.dateFormat": "ddd d/m/yyyy | hh:MM TT ",
 
   /* --------------------- Other extension configurations --------------------- */
   "emmet.excludeLanguages": ["typescriptreact", "javascriptreact"],
@@ -405,11 +455,6 @@
   "turboConsoleLog.logMessagePrefix": "TCL",
   "turboConsoleLog.quote": "'",
   "turboConsoleLog.addSemicolonInTheEnd": true,
-
-  "gitblame.inlineMessageEnabled": true,
-  "gitblame.inlineMessageFormat": "${author.name} | ${time.ago} | ${commit.summary}",
-  "gitblame.inlineMessageMargin": 4,
-  "gitblame.delayBlame": 500,
 
   "auto-rename-tag.activationOnLanguage": [
     "*",
@@ -446,31 +491,85 @@
   /* ----------------------------------- VIM Configurations ---------------------------------- */
   "editor.lineNumbers": "relative",
 
-  "vim.timeout": 350,
+  "vim.easymotionDimBackground": false,
+  "vim.autoindent": false,
+  "vim.easymotion": false,
+  // "vim.foldfix": true,
+  "vim.enableNeovim": false,
+  "vim.ignorecase": true,
+
+  "vim.timeout": 300,
   "vim.history": 15,
   "vim.mouseSelectionGoesIntoVisualMode": false,
   "vim.overrideCopy": true,
   "vim.camelCaseMotion.enable": true,
+
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["e"], "after": ["e", "l"] },
+    {
+      "before": ["<leader>", "c"],
+      "after": ["2", "g", "b", "Esc"],
+      "silent": true
+    },
+
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.pinEditor"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.unpinEditor"],
+      "silent": true
+    },
 
     { "before": ["leader", "v"], "commands": [":vsplit"], "silent": true },
-    { "before": ["leader", "d"], "commands": [":split"], "silent": true },
+    { "before": ["leader", "h"], "commands": [":split"], "silent": true },
 
     {
-      "silent": true,
       "before": ["leader", "s"],
-      "commands": ["workbench.action.files.save"]
+      "commands": [":w"],
+      "silent": true
     },
-    { "before": ["leader", "a"], "commands": ["saveAll"], "silent": true },
+    { "before": ["leader", "a"], "commands": [":wa"], "silent": true },
     {
       "before": ["leader", "q"],
+      "commands": ["workbench.action.closeOtherEditors"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "w"],
       "commands": ["workbench.action.closeActiveEditor"],
       "silent": true
     },
-    { "before": ["leader", "x"], "commands": [":x"] },
-    { "before": ["<C-f>"], "commands": ["actions.find"], "silent": true },
+    {
+      "before": ["leader", "r"],
+      "commands": ["workbench.action.closeEditorsToTheRight"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.reopenClosedEditor"],
+      "silent": true
+    },
+    // { "before": ["leader", "x"], "commands": [":x"] },
+    // { "before": ["<C-f>"], "commands": ["actions.find"], "silent": true },
+    { "before": ["/"], "commands": ["actions.find"], "silent": true },
+    {
+      "before": ["?"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["workbench.action.findInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "?"],
+      "commands": ["workbench.action.replaceInFiles"],
+      "silent": true
+    },
     { "before": ["leader", "f"], "commands": ["editor.action.formatDocument"] },
     {
       "before": ["g", "h"],
@@ -518,6 +617,39 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "c"],
+      "after": ["g", "b"],
+      "silent": true
+    },
+
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.pinEditor"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "K"],
+      "commands": ["workbench.action.unpinEditor"],
+      "silent": true
+    },
+
+    { "before": ["/"], "commands": ["actions.find"], "silent": true },
+    {
+      "before": ["?"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["workbench.action.findInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "?"],
+      "commands": ["workbench.action.replaceInFiles"],
+      "silent": true
+    },
     {
       "before": ["p"],
       "after": ["\"", "_", "d", "P"]
@@ -568,3 +700,14 @@
   "typescript.disableAutomaticTypeAcquisition": true
 }
 
+// "gitblame.inlineMessageEnabled": true,
+// "gitblame.inlineMessageFormat": "${author.name} | ${time.ago} | ${commit.summary}",
+// "gitblame.inlineMessageMargin": 4,
+// "gitblame.delayBlame": 500,
+
+// "clock.priority": 9999,
+// "gitblame.statusBarPositionPriority": 0,
+// "clock.alignment": "Right",
+// "clock.format": "ddd d/m/yyyy | hh:MM TT ",
+// "clock.updateInterval": 60000,
+// "clock.iconName": "null",
