@@ -205,20 +205,6 @@
     "textMateRules": []
   },
 
-  /* -------------------------- Error Lens extension -------------------------- */
-  // "errorLens.fontStyleItalic": true,
-  // "errorLens.messageBackgroundMode": "message",
-  // "errorLens.borderRadius": "6px",
-  // "errorLens.padding": "0 6px",
-
-  /* -------------------------- Smooth transition -------------------------- */
-  // "editor.cursorSmoothCaretAnimation": "on",
-  // "editor.cursorBlinking": "smooth",
-
-  // "editor.smoothScrolling": true,
-  // "terminal.integrated.smoothScrolling": true,
-  // "workbench.list.smoothScrolling": true,
-
   "editor.mouseWheelScrollSensitivity": 2.5,
   "workbench.list.mouseWheelScrollSensitivity": 2.5,
 
@@ -263,9 +249,11 @@
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 2,
     "dbaeumer.vscode-eslint": 3,
-    "vscode.git": 4
-    // "GitHub.copilot": 1
-    // "streetsidesoftware.code-spell-checker": 1
+    "eamodio.gitlens": 4,
+    "vscode.git": 4,
+    "GitHub.copilot": 5,
+    "bradlc.vscode-tailwindcss": 6
+    // "streetsidesoftware.code-spell-checker": 6
   },
 
   /* ------------------------- Copilot Configurations ------------------------- */
@@ -699,6 +687,20 @@
   "editor.linkedEditing": false,
   "typescript.disableAutomaticTypeAcquisition": true
 }
+
+/* -------------------------- Error Lens extension -------------------------- */
+// "errorLens.fontStyleItalic": true,
+// "errorLens.messageBackgroundMode": "message",
+// "errorLens.borderRadius": "6px",
+// "errorLens.padding": "0 6px",
+
+/* -------------------------- Smooth transition -------------------------- */
+// "editor.cursorSmoothCaretAnimation": "on",
+// "editor.cursorBlinking": "smooth",
+
+// "editor.smoothScrolling": true,
+// "terminal.integrated.smoothScrolling": true,
+// "workbench.list.smoothScrolling": true,
 
 // "gitblame.inlineMessageEnabled": true,
 // "gitblame.inlineMessageFormat": "${author.name} | ${time.ago} | ${commit.summary}",
