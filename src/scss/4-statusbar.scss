@@ -25,14 +25,15 @@
   order: 2;
 }
 
-[id='Compulim.vscode-clock']:not(#\9):not(#\9):not(#\9) {
+[id='angelo-breuer.clock']:not(#\9):not(#\9):not(#\9) {
+  // [id='Compulim.vscode-clock']:not(#\9):not(#\9):not(#\9) {
   padding-left: 5px;
   order: 1;
   margin-right: $screen-edge-gutter;
 
   .statusbar-item-label {
     padding: 0;
-    padding-left: 7px;
+    // padding-left: 7px;
     color: $date-time-foreground;
     background-color: $date-time-background;
   }

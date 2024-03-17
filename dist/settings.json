@@ -247,12 +247,14 @@
 
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
+
     "vscode.typescript-language-features": 2,
-    "dbaeumer.vscode-eslint": 3,
-    "eamodio.gitlens": 4,
-    "vscode.git": 4,
-    "GitHub.copilot": 5,
-    "bradlc.vscode-tailwindcss": 6
+    "dbaeumer.vscode-eslint": 2
+
+    // "vscode.git": 2
+    // "bradlc.vscode-tailwindcss": 2,
+    // "eamodio.gitlens": 2,
+    // "GitHub.copilot": 4
     // "streetsidesoftware.code-spell-checker": 6
   },
 
@@ -434,7 +436,11 @@
     "widgetid"
   ],
 
-  "clock.dateFormat": "ddd d/m/yyyy | hh:MM TT ",
+  "clock.priority": 9999,
+  "clock.alignment": "Right",
+  "clock.format": "ddd d/m/yyyy | hh:MM TT ",
+  "clock.updateInterval": 60000,
+  "clock.iconName": "null",
 
   /* --------------------- Other extension configurations --------------------- */
   "emmet.excludeLanguages": ["typescriptreact", "javascriptreact"],
@@ -706,10 +712,4 @@
 // "gitblame.inlineMessageFormat": "${author.name} | ${time.ago} | ${commit.summary}",
 // "gitblame.inlineMessageMargin": 4,
 // "gitblame.delayBlame": 500,
-
-// "clock.priority": 9999,
 // "gitblame.statusBarPositionPriority": 0,
-// "clock.alignment": "Right",
-// "clock.format": "ddd d/m/yyyy | hh:MM TT ",
-// "clock.updateInterval": 60000,
-// "clock.iconName": "null",

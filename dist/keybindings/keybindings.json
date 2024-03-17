@@ -85,10 +85,10 @@
   },
 
   /* --------------------------------- Copilot -------------------------------- */
-  {
-    "key": "alt+shift+c",
-    "command": "workbench.panel.chat.view.copilot.focus"
-  },
+  // {
+  //   "key": "alt+shift+c",
+  //   "command": "workbench.panel.chat.view.copilot.focus"
+  // },
   {
     "key": "ctrl+shift+c",
     "command": "workbench.action.openChat.copilot"
@@ -163,6 +163,10 @@
   {
     "key": "alt+shift+y",
     "command": "git.checkoutDetached"
+  },
+  {
+    "key": "alt+shift+c",
+    "command": "gitlens.views.commits.focus"
   },
 
   /* ------------------------------- Extensions ------------------------------- */
@@ -249,7 +253,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+shift+w",
+    "key": "ctrl+shift+o",
     "command": "toggleFindWholeWord",
     "when": "editorFocus"
   },
@@ -490,4 +494,3 @@
     "key": "ctrl+-"
   }
 ]
-
