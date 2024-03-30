@@ -455,6 +455,17 @@
     "command": "list.find",
     "when": "listFocus && listSupportsFind"
   },
+
+  {
+    "key": "alt+shift+p",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned "
+  },
+  {
+    "key": "alt+shift+p",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned "
+  },
   /* -------------------------------------------------------------------------- */
   /*                                    TABS                                    */
   /* -------------------------------------------------------------------------- */
