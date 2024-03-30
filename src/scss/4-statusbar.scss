@@ -25,7 +25,7 @@
   order: 2;
 }
 
-[id='angelo-breuer.clock']:not(#\9):not(#\9):not(#\9) {
+[id='angelo-breuer.clock'] {
   // [id='Compulim.vscode-clock']:not(#\9):not(#\9):not(#\9) {
   padding-left: 5px;
   order: 1;
@@ -167,16 +167,6 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-    &[aria-label*='Recording']:not(#\9):not(#\9) {
-      color: $vim-mode-foreground;
-      background-color: $vim-mode-background;
-      padding: $status-bar-item-info-padding;
-      width: fit-content;
-
-      &::before {
-        content: none;
-      }
-    }
 
     &:not([aria-label*='#{$vim-normal-mode}']):not([aria-label*='#{$vim-insert-mode}']):not([aria-label*='#{$vim-visual-mode}']):not([aria-label*='#{$vim-visual-line-mode}']):not([aria-label*='#{$vim-visual-block-mode}']):not([aria-label*='|']):not([class*='error-kind']):not(#\9) {
       width: fit-content;
@@ -190,33 +180,44 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-    &[aria-label*='#{$vim-insert-mode}']:not(#\9):not(#\9):not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-insert-mode}'] {
       &::before {
         content: $vim-insert-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-normal-mode}']:not(#\9):not(#\9):not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-normal-mode}'] {
       &::before {
         content: $vim-normal-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-mode}']:not(#\9):not(#\9):not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-visual-mode}'] {
       &::before {
         content: $vim-visual-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-line-mode}']:not(#\9):not(#\9):not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-visual-line-mode}'] {
       &::before {
         content: $vim-visual-line-mode-replacement;
       }
     }
 
-    &[aria-label*='#{$vim-visual-block-mode}']:not(#\9):not(#\9):not(#\9) {
+    &[aria-label*='#{$vim-visual-block-mode}'] {
       &::before {
         content: $vim-visual-block-mode-replacement;
+      }
+    }
+
+    &[aria-label*="Recording"]:not(#\9) {
+      color: $vim-mode-foreground;
+      background-color: $vim-mode-background;
+      padding: $status-bar-item-info-padding;
+      width: fit-content;
+
+      &::before {
+        content: none;
       }
     }
   }
