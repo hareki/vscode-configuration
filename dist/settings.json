@@ -133,7 +133,7 @@
   "apc.font.family": "JetBrainsMono Nerd Font",
 
   "editor.lineHeight": 25,
-  "window.zoomLevel": 1.2,
+  "window.zoomLevel": 1.3,
 
   /* ---------------------------------- Theme --------------------------------- */
   "workbench.iconTheme": "bearded-icons",
@@ -507,23 +507,6 @@
     },
 
     {
-      "before": ["leader", "h"],
-      "commands": [
-        "workbench.action.newGroupBelow",
-        "workbench.action.focusAboveGroup"
-      ],
-      "silent": true
-    },
-    {
-      "before": ["leader", "v"],
-      "commands": [
-        "workbench.action.newGroupRight",
-        "workbench.action.focusLeftGroup"
-      ],
-      "silent": true
-    },
-
-    {
       "before": ["leader", "j"],
       "commands": ["workbench.action.moveEditorToBelowGroup"],
       "silent": true
@@ -546,10 +529,14 @@
 
     {
       "before": ["leader", "s"],
-      "commands": [":w"],
+      "commands": ["workbench.action.files.save"],
       "silent": true
     },
-    { "before": ["leader", "a"], "commands": [":wa"], "silent": true },
+    {
+      "before": ["leader", "a"],
+      "commands": ["workbench.action.files.saveAll"],
+      "silent": true
+    },
     {
       "before": ["leader", "q"],
       "commands": ["workbench.action.closeOtherEditors"],
@@ -558,6 +545,11 @@
     {
       "before": ["leader", "w"],
       "commands": ["workbench.action.closeActiveEditor"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "g"],
+      "commands": ["workbench.action.closeGroup"],
       "silent": true
     },
     {
