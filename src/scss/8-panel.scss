@@ -1,5 +1,5 @@
 [id='#{$panel-id}'] {
-  > .title {
+  >.title {
     background-color: $panel-background;
     border-color: $separator-color;
     border-style: solid;
@@ -9,7 +9,7 @@
     border-width: 1px 1px 0px;
   }
 
-  > .content {
+  >.content {
     background-color: $panel-background;
     box-sizing: border-box;
     overflow: hidden;

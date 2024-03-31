@@ -1,21 +1,16 @@
 /* --------------------------------- Styles --------------------------------- */
 .title.tabs {
-  &:has(
-      > .tabs-and-actions-container
-        > .monaco-scrollable-element
-        div.tabs-container[role='tablist']
-    ) {
+  &:has(> .tabs-and-actions-container > .monaco-scrollable-element div.tabs-container[role='tablist']) {
     --editor-group-tab-height: #{$tab-height} !important;
     margin-bottom: $internal-gutter;
   }
 
-  > .tabs-and-actions-container
-    > .monaco-scrollable-element
-    div.tabs-container[role='tablist'] {
-    & + [role='presentation'] > .slider:not(#\9) {
+  >.tabs-and-actions-container>.monaco-scrollable-element div.tabs-container[role='tablist'] {
+    &+[role='presentation']>.slider:not(#\9) {
       height: 3px;
     }
-    > .tab[role='tab'] {
+
+    >.tab[role='tab'] {
       margin-right: $tab-gutter;
       border-right: none;
       border-radius: $border-radius-md;
@@ -25,19 +20,13 @@
 
 /* ------------------ Active and hover background for tabs ------------------ */
 .title.tabs {
-  > .tabs-and-actions-container
-    > .monaco-scrollable-element
-    div.tabs-container[role='tablist']
-    > .tab.active[role='tab']:not(#\9):not(#\9) {
+  >.tabs-and-actions-container>.monaco-scrollable-element div.tabs-container[role='tablist']>.tab.active[role='tab']:not(#\9):not(#\9) {
     background-color: $active-tab-editor-background;
   }
 }
 
 .title.tabs {
-  > .tabs-and-actions-container
-    > .monaco-scrollable-element
-    div.tabs-container[role='tablist']
-    > .tab[role='tab']:not(#\9):not(#\9):hover {
+  >.tabs-and-actions-container>.monaco-scrollable-element div.tabs-container[role='tablist']>.tab[role='tab']:not(#\9):not(#\9):hover {
     background-color: $hovered-tab-editor-background;
   }
 }
@@ -54,6 +43,7 @@
 
 .monaco-editor .monaco-hover {
   border-radius: $border-radius-md;
+
   .monaco-hover-content {
     background-color: $popup-background;
   }
@@ -70,20 +60,11 @@
 }
 
 /* -------------------------------- Watermark ------------------------------- */
-.monaco-workbench
-  .part.editor
-  > .content
-  .editor-group-container
-  > .editor-group-watermark {
+.monaco-workbench .part.editor>.content .editor-group-container>.editor-group-watermark {
   max-width: $watermark-width;
 }
 
-.monaco-workbench
-  .part.editor
-  > .content
-  .editor-group-container
-  > .editor-group-watermark
-  > .letterpress {
+.monaco-workbench .part.editor>.content .editor-group-container>.editor-group-watermark>.letterpress {
   height: $watermark-height;
   opacity: 0.8;
   background-position: center;
@@ -92,21 +73,13 @@
     url($macos-one-drive-path + $watermark-light-path);
 }
 
-.monaco-workbench.vs-dark
-  .part.editor
-  > .content
-  .editor-group-container
-  > .editor-group-watermark
-  > .letterpress {
+.monaco-workbench.vs-dark .part.editor>.content .editor-group-container>.editor-group-watermark>.letterpress {
   background-image: url($windows-one-drive-path + $watermark-light-path),
     url($macos-one-drive-path + $watermark-light-path);
 }
 
 /* ------------------------ Git blame inline message ------------------------ */
-.monaco-editor
-  span[class*='ced-1-TextEditorDecorationType']:not(#\9):not(#\9):not(
-    #\9
-  )::after {
+.monaco-editor span[class*='ced-1-TextEditorDecorationType']:not(#\9):not(#\9):not(#\9)::after {
   color: #99999959;
 }
 

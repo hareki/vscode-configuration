@@ -1,12 +1,13 @@
 /* ---------------------------- Main icon buttons --------------------------- */
 .monaco-workbench {
-  .pane-composite-part > .title > .composite-bar-container > .composite-bar {
-    > .monaco-action-bar > .actions-container {
+  .pane-composite-part>.title>.composite-bar-container>.composite-bar {
+    >.monaco-action-bar>.actions-container {
       align-items: start;
       gap: $icon-button-wrapper-gap;
     }
 
     .monaco-action-bar {
+
       // Wrapper
       .action-item.icon {
         padding: 0;
@@ -36,8 +37,8 @@
 }
 
 // Buttons and content gutter
-[id='#{$sidebar-id}'] > .title + .content,
-[id='#{$auxiliarybar-id}'] > .title + .content {
+[id='#{$sidebar-id}']>.title+.content,
+[id='#{$auxiliarybar-id}']>.title+.content {
   padding-top: $icon-button-and-content-gutter;
   box-sizing: border-box;
 }
@@ -48,19 +49,15 @@
 }
 
 [id='workbench.parts.auxiliarybar'] {
-  > .title > .title-actions > .monaco-toolbar,
-  > .title > .global-actions > .monaco-toolbar {
+
+  >.title>.title-actions>.monaco-toolbar,
+  >.title>.global-actions>.monaco-toolbar {
     height: 100%;
   }
 }
 
 .monaco-workbench {
-  .pane-composite-part
-    > .title.has-composite-bar
-    > .title-actions
-    .monaco-action-bar
-    .action-item
-    .action-label {
+  .pane-composite-part>.title.has-composite-bar>.title-actions .monaco-action-bar .action-item .action-label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,23 +67,13 @@
 
 /* ---------- Active and hover background for icon buttons and tabs --------- */
 .monaco-workbench {
-  .pane-composite-part
-    > .title
-    > .composite-bar-container
-    > .composite-bar
-    > .monaco-action-bar
-    .action-item.icon.checked:not(#\9):not(#\9) {
+  .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon.checked:not(#\9):not(#\9) {
     background-color: $active-tab-editor-background;
   }
 }
 
 .monaco-workbench {
-  .pane-composite-part
-    > .title
-    > .composite-bar-container
-    > .composite-bar
-    > .monaco-action-bar
-    .action-item.icon:hover {
+  .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon:hover {
     background-color: $hovered-tab-editor-background;
   }
 }
