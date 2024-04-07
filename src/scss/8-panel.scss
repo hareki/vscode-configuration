@@ -23,3 +23,8 @@
     border-width: 0px 1px;
   }
 }
+
+/* -------------------- Increase panel titles font-weight ------------------- */
+.monaco-workbench .part>.title>.title-label h2 {
+  font-weight: 600;
+}

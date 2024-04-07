@@ -47,6 +47,10 @@
   order: 4;
 }
 
+[id='status.scm.0'][aria-label*='CU-'] {
+  max-width: 133px;
+}
+
 /* --------------------------------- Spacing -------------------------------- */
 [id='#{$statusbar-id}'] {
   background-color: $status-bar-background;

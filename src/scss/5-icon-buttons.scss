@@ -1,6 +1,6 @@
 /* ---------------------------- Main icon buttons --------------------------- */
 .monaco-workbench {
-  .pane-composite-part>.title>.composite-bar-container>.composite-bar {
+  .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar {
     >.monaco-action-bar>.actions-container {
       align-items: start;
       gap: $icon-button-wrapper-gap;
@@ -57,7 +57,7 @@
 }
 
 .monaco-workbench {
-  .pane-composite-part>.title.has-composite-bar>.title-actions .monaco-action-bar .action-item .action-label {
+  .pane-composite-part>.header-or-footer.has-composite-bar>.title-actions .monaco-action-bar .action-item .action-label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,13 +67,13 @@
 
 /* ---------- Active and hover background for icon buttons and tabs --------- */
 .monaco-workbench {
-  .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon.checked:not(#\9):not(#\9) {
+  .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon.checked:not(#\9):not(#\9) {
     background-color: $active-tab-editor-background;
   }
 }
 
 .monaco-workbench {
-  .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon:hover {
+  .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.icon:hover {
     background-color: $hovered-tab-editor-background;
   }
 }
