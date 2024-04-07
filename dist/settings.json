@@ -529,12 +529,12 @@
 
     {
       "before": ["leader", "s"],
-      "commands": ["workbench.action.files.save"],
+      "commands": [":w", "workbench.action.keepEditor"],
       "silent": true
     },
     {
       "before": ["leader", "a"],
-      "commands": ["workbench.action.files.saveAll"],
+      "commands": [":wa"],
       "silent": true
     },
     {
@@ -705,7 +705,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "window.restoreWindows": "none",
   "telemetry.telemetryLevel": "off",
-  "editor.linkedEditing": false,
+  "editor.linkedEditing": true,
   "typescript.disableAutomaticTypeAcquisition": true
 }
 
