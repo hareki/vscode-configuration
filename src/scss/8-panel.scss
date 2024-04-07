@@ -28,3 +28,8 @@
 .monaco-workbench .part>.title>.title-label h2 {
   font-weight: 600;
 }
+
+// Fix inconsistent font-family due to vscode inline styles .view-lines.monaco-mouse-cursor-text,
+.scm-editor-placeholder {
+  font-family: var(--custom-font-family);
+}
