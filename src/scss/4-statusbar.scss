@@ -8,15 +8,15 @@
   order: 2;
 }
 
-[id='status.scm.0'] {
+[id='status.problems'] {
   order: 3;
 }
 
-[id='status.scm.1'] {
+[id='status.scm.0'] {
   order: 4;
 }
 
-[id='status.problems'] {
+[id='status.scm.1'] {
   order: 5;
 }
 
@@ -47,9 +47,9 @@
   order: 4;
 }
 
-[id='status.scm.0'][aria-label*='CU-'] {
-  max-width: 133px;
-}
+// [id='status.scm.0'][aria-label*='CU-'] {
+//   max-width: 133px;
+// }
 
 /* --------------------------------- Spacing -------------------------------- */
 [id='#{$statusbar-id}'] {
@@ -171,7 +171,6 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-
     &:not([aria-label*='#{$vim-normal-mode}']):not([aria-label*='#{$vim-insert-mode}']):not([aria-label*='#{$vim-visual-mode}']):not([aria-label*='#{$vim-visual-line-mode}']):not([aria-label*='#{$vim-visual-block-mode}']):not([aria-label*='|']):not([class*='error-kind']):not(#\9) {
       width: fit-content;
       color: $vim-info-foreground;
@@ -214,7 +213,7 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-    &[aria-label*="Recording"]:not(#\9) {
+    &[aria-label*='Recording']:not(#\9) {
       color: $vim-mode-foreground;
       background-color: $vim-mode-background;
       padding: $status-bar-item-info-padding;
