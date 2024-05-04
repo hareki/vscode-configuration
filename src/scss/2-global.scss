@@ -12,7 +12,7 @@
 }
 
 /* --------------------------------- Spacing -------------------------------- */
-.monaco-pane-view .pane>.pane-header.not-collapsible .title {
+.monaco-pane-view .pane > .pane-header.not-collapsible .title {
   margin-left: 4px;
 }
 
@@ -20,19 +20,19 @@
   padding-left: $screen-edge-gutter;
   box-sizing: border-box;
 
-  &>.content {
+  & > .content {
     padding-right: $screen-edge-gutter;
     box-sizing: border-box;
   }
 }
 
-[id='#{$auxiliarybar-id}']>.content {
+[id='#{$auxiliarybar-id}'] > .content {
   padding-right: $screen-edge-gutter;
   box-sizing: border-box;
 }
 
 .monaco-workbench {
-  .part>.title {
+  .part > .title {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -43,7 +43,13 @@
   }
 }
 
-[role='application']>.monaco-grid-view>.monaco-grid-branch-node>.monaco-split-view2.vertical>.monaco-scrollable-element>.split-view-container>.split-view-view:not( :has(> [id='#{$titlebar-id}'], > [id='#{$banner-id}'])) {
+[role='application']
+  > .monaco-grid-view
+  > .monaco-grid-branch-node
+  > .monaco-split-view2.vertical
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view:not(:has(> [id='#{$titlebar-id}'], > [id='#{$banner-id}'])) {
   margin-top: $screen-edge-gutter;
 }
 
@@ -70,7 +76,6 @@
 }
 
 .monaco-tree-sticky-container {
-
   &,
   .monaco-tree-sticky-row {
     border-radius: $border-radius-md;
@@ -106,23 +111,22 @@ is controlled by JS, so we can't use padding, margin to style it properly*/
 
 // Accordion in the auxiliary bar
 .split-view-view.visible[style*='top'] {
-
   &:first-child:has(> .pane > .pane-header[role='button']),
-  &:first-child>.pane>.pane-header[role='button'] {
+  &:first-child > .pane > .pane-header[role='button'] {
     border-top-left-radius: $border-radius-lg;
     border-top-right-radius: $border-radius-lg;
     overflow: hidden;
   }
 
   &:last-child:has(> .pane > .pane-header[role='button']:last-child),
-  &:last-child>.pane>.pane-header[role='button'] {
+  &:last-child > .pane > .pane-header[role='button'] {
     border-bottom-left-radius: $border-radius-lg;
     border-bottom-right-radius: $border-radius-lg;
     overflow: hidden;
   }
 
-  &:has(> .pane.expanded > .pane-header[role='button'])+&:has(> .pane.expanded > .pane-header[role='button']),
-  &:has(> .pane.expanded > .pane-header[role='button'])+&>.pane.expanded>.pane-header[role='button'] {
+  &:has(> .pane.expanded > .pane-header[role='button']) + &:has(> .pane.expanded > .pane-header[role='button']),
+  &:has(> .pane.expanded > .pane-header[role='button']) + & > .pane.expanded > .pane-header[role='button'] {
     border-radius: $border-radius-lg;
     overflow: hidden;
   }
@@ -132,11 +136,11 @@ is controlled by JS, so we can't use padding, margin to style it properly*/
 .slider {
   border-radius: $scrollbar-border-radius;
 
-  .vertical>& {
+  .vertical > & {
     width: $scrollbar-thickness;
   }
 
-  .horizontal>& {
+  .horizontal > & {
     height: $scrollbar-thickness;
   }
 }
@@ -171,7 +175,10 @@ div[id='#{$titlebar-id}'] {
   border-width: $separator-width;
 }
 
-.monaco-split-view2.separator-border.horizontal>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before {
+.monaco-split-view2.separator-border.horizontal
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view:not(:first-child):before {
   width: $separator-width;
 }
 
@@ -180,7 +187,13 @@ div[id='#{$titlebar-id}'] {
     height: $separator-width;
   }
 
-  .part.editor>.content .editor-group-container>.title .tabs-container>.tab.active.tab-border-bottom>.tab-border-bottom-container {
+  .part.editor
+    > .content
+    .editor-group-container
+    > .title
+    .tabs-container
+    > .tab.active.tab-border-bottom
+    > .tab-border-bottom-container {
     height: $separator-width;
   }
 }
@@ -198,7 +211,6 @@ div[id='#{$titlebar-id}'] {
 }
 
 .notification-toast-container {
-
   &:has([title*='Error initializing Apollo GraphQL project']),
   &:has([aria-label*='Error: Failed to connect to a running GraphQL']) {
     display: none;

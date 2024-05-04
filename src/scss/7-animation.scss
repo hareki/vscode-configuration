@@ -119,23 +119,23 @@
 
 /* ---------------------------------- Tabs ---------------------------------- */
 .tabs-container {
-  >.tab.moveLeft {
+  > .tab.moveLeft {
     transform-origin: left;
     z-index: 2;
   }
 
-  >.tab.moveRight {
+  > .tab.moveRight {
     transform-origin: left;
     animation: tabMoveRight $tabs-duration;
     z-index: 2;
   }
 
-  >.tab {
+  > .tab {
     transform-origin: left;
     animation: openTab $tabs-duration;
   }
 
-  >.tab {
+  > .tab {
     z-index: 2;
   }
 }
@@ -146,7 +146,6 @@
   scale: 0.98;
 }
 
-.monaco-list-row:not(.explorer-folders-view .monaco-list-row,
-  .code-cell-row).focused {
+.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row).focused {
   scale: 1;
 }

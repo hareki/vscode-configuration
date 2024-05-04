@@ -55,8 +55,8 @@
 [id='#{$statusbar-id}'] {
   background-color: $status-bar-background;
 
-  >.left-items.items-container>div,
-  >.right-items.items-container>div {
+  > .left-items.items-container > div,
+  > .right-items.items-container > div {
     // > .left-items.items-container > div > .statusbar-item-label,
     // > .right-items.items-container > div > .statusbar-item-label {
     height: $status-bar-item-height;
@@ -64,22 +64,22 @@
     padding: 0;
   }
 
-  >.left-items.items-container>div>.statusbar-item-label,
-  >.right-items.items-container>div>.statusbar-item-label {
+  > .left-items.items-container > div > .statusbar-item-label,
+  > .right-items.items-container > div > .statusbar-item-label {
     margin: 0;
     padding: 0px 5px;
     border-radius: $border-radius-md;
   }
 
-  >.left-items.items-container {
-    >[id='vscodevim.vim.primary'] {
+  > .left-items.items-container {
+    > [id='vscodevim.vim.primary'] {
       margin-left: $screen-edge-gutter;
     }
 
     gap: $status-bar-item-gap;
   }
 
-  >.right-items.items-container {
+  > .right-items.items-container {
     gap: $status-bar-item-gap;
   }
 
@@ -109,7 +109,7 @@ div[id='vscodevim.vim.showcmd'] {
   &.error-kind {
     background-color: initial;
 
-    >.statusbar-item-label:not(#\9):not(#\9) {
+    > .statusbar-item-label:not(#\9):not(#\9) {
       width: fit-content;
       padding: $status-bar-item-info-padding;
       color: $error-foreground;
@@ -118,7 +118,7 @@ div[id='vscodevim.vim.showcmd'] {
     }
   }
 
-  >.statusbar-item-label:not(#\9) {
+  > .statusbar-item-label:not(#\9) {
     margin: 0;
     padding: 0;
     min-width: 0;
@@ -142,7 +142,7 @@ div[id='vscodevim.vim.showcmd'] {
 }
 
 div[id='vscodevim.vim.primary'] {
-  >.statusbar-item-label {
+  > .statusbar-item-label {
     // transition: min-width $general-trans-duration-long;
     color: $vim-mode-foreground;
     position: relative;
@@ -171,7 +171,11 @@ div[id='vscodevim.vim.primary'] {
       }
     }
 
-    &:not([aria-label*='#{$vim-normal-mode}']):not([aria-label*='#{$vim-insert-mode}']):not([aria-label*='#{$vim-visual-mode}']):not([aria-label*='#{$vim-visual-line-mode}']):not([aria-label*='#{$vim-visual-block-mode}']):not([aria-label*='|']):not([class*='error-kind']):not(#\9) {
+    &:not([aria-label*='#{$vim-normal-mode}']):not([aria-label*='#{$vim-insert-mode}']):not(
+        [aria-label*='#{$vim-visual-mode}']
+      ):not([aria-label*='#{$vim-visual-line-mode}']):not([aria-label*='#{$vim-visual-block-mode}']):not(
+        [aria-label*='|']
+      ):not([class*='error-kind']):not(#\9) {
       width: fit-content;
       color: $vim-info-foreground;
       background-color: $vim-info-background;
@@ -227,7 +231,7 @@ div[id='vscodevim.vim.primary'] {
 }
 
 div[id='vscodevim.vim.showcmd'] {
-  >.statusbar-item-label {
+  > .statusbar-item-label {
     color: $vim-pending-foreground;
     justify-content: center;
     // transition: min-width $general-trans-duration-medium,
