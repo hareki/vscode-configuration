@@ -25,7 +25,7 @@
   order: 2;
 }
 
-[id='angelo-breuer.clock'] {
+[id='angelo-breuer.clock']:not(#\9) {
   // [id='Compulim.vscode-clock']:not(#\9):not(#\9):not(#\9) {
   padding-left: 5px;
   order: 1;

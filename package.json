@@ -9,8 +9,9 @@
     "merge": "node src/scripts/concat.mjs",
     "minify": "postcss temp/main.css -o dist/custom.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
-    "build:mac": "yarn format && yarn compile &&  yarn minify && bash commands/macos.txt",
-    "build:windows": "yarn format && yarn compile &&  yarn minify && powershell -ExecutionPolicy Bypass -File commands/windows.ps1"
+    "build": "yarn format && yarn compile && yarn merge && yarn minify",
+    "build:mac": "yarn build && bash commands/macos.txt",
+    "build:windows": "yarn build && powershell -ExecutionPolicy Bypass -File commands/windows.ps1"
   },
   "keywords": [],
   "author": "Hareki",

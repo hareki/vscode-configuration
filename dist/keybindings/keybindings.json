@@ -79,6 +79,10 @@
     "command": "workbench.action.reloadWindow"
   },
   {
+    "key": "f12",
+    "command": "workbench.action.toggleDevTools"
+  },
+  {
     "key": "shift+tab",
     "command": "editor.action.inlineSuggest.acceptNextWord",
     "when": "inlineSuggestionVisible && !editorReadonly"
@@ -198,6 +202,11 @@
     "when": "terminal.active"
   },
   { "key": "alt+3", "command": "workbench.action.toggleAuxiliaryBar" },
+  // {
+  //   "key": "alt+3",
+  //   "command": "workbench.view.extensions",
+  //   "when": "!auxiliaryBarFocus && !auxiliaryBarVisible"
+  // },
   {
     "key": "alt+3",
     "command": "workbench.panel.chat.view.copilot.focus",
@@ -496,12 +505,15 @@
     "command": "workbench.action.closeEditorsToTheRight"
   },
   /* -------------------------------------------------------------------------- */
-  /*                    AVOID ACCIDENTALLY ZOOMING IN OR OUT                    */
+  /*                               AVOID MISCLICKS                              */
   /* -------------------------------------------------------------------------- */
   {
     "key": "ctrl+="
   },
   {
     "key": "ctrl+-"
+  },
+  {
+    "key": "ctrl+o"
   }
 ]

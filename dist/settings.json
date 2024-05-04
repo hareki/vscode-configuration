@@ -31,8 +31,8 @@
   // https://medium.com/@krtirtho/make-visual-studio-code-less-ram-consuming-faster-90db8c76a187
   "files.exclude": {
     "**/yarn.lock/**": true,
-    "**/package-lock.json": true,
-    "**/node_modules/**": true
+    "**/package-lock.json": true
+    // "**/node_modules/**": true
   },
 
   "json.schemas": [
@@ -234,8 +234,11 @@
 
   /* ---------------------------------- Tabs ---------------------------------- */
   "workbench.editor.untitled.labelFormat": "name",
-  "breadcrumbs.enabled": false,
-  "workbench.editor.labelFormat": "short",
+  "workbench.editor.customLabels.patterns": {
+    "**/src/**/index.{ts,tsx,js,jsx}": "[I] | ${dirname}.${extname}"
+  },
+  "workbench.editor.labelFormat": "default",
+  "breadcrumbs.enabled": true,
 
   /* ------------------------------ Bracket pairs ----------------------------- */
   "editor.guides.bracketPairs": "active",
@@ -298,7 +301,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -409,6 +412,7 @@
     "esbenp",
     "filematch",
     "Flexbox",
+    "flexprops",
     "Formik",
     "gitblame",
     "hareki",
@@ -418,6 +422,8 @@
     "Lightbox",
     "matchtext",
     "minht",
+    "MISCLICK",
+    "MISCLICKS",
     "Monokai",
     "nestjs",
     "nextjs",
@@ -446,7 +452,7 @@
   "emmet.excludeLanguages": ["typescriptreact", "javascriptreact"],
 
   "turboConsoleLog.delimiterInsideMessage": "-",
-  "turboConsoleLog.logMessagePrefix": "TCL",
+  "turboConsoleLog.logMessagePrefix": "",
   "turboConsoleLog.quote": "'",
   "turboConsoleLog.addSemicolonInTheEnd": true,
 
@@ -479,8 +485,6 @@
     // MacOS
     "/Users/Hareki/Documents/Repositories"
   ],
-
-  "turboConsoleLog.includeFileNameAndLineNum": true,
 
   /* ----------------------------------- VIM Configurations ---------------------------------- */
   "editor.lineNumbers": "relative",
@@ -705,8 +709,9 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "window.restoreWindows": "none",
   "telemetry.telemetryLevel": "off",
-  "editor.linkedEditing": true,
-  "typescript.disableAutomaticTypeAcquisition": true
+  "editor.linkedEditing": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "git.confirmSync": false
 }
 
 /* -------------------------- Error Lens extension -------------------------- */
@@ -728,3 +733,4 @@
 // "gitblame.inlineMessageMargin": 4,
 // "gitblame.delayBlame": 500,
 // "gitblame.statusBarPositionPriority": 0,
+

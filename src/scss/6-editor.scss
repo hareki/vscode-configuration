@@ -87,6 +87,11 @@
 /* ------------------------------- Breadcrumb ------------------------------- */
 .breadcrumbs-below-tabs {
   height: $breadcrumb-height;
+  & .breadcrumbs-control,
+  & .monaco-scrollable-element,
+  & .monaco-breadcrumbs {
+    height: 100%;
+  }
 }
 
 .monaco-breadcrumbs {
