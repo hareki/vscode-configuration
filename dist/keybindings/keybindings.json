@@ -95,11 +95,11 @@
   // },
   {
     "key": "ctrl+shift+c",
-    "command": "workbench.action.openChat.copilot"
+    "command": "workbench.action.openChat"
   },
   {
     "key": "shift+escape",
-    "command": "workbench.action.chat.copilot.newChat"
+    "command": "workbench.action.chat.newChat"
   },
 
   /* -------------------------------------------------------------------------- */

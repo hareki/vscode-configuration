@@ -9,8 +9,9 @@
   "terminal.integrated.stickyScroll.enabled": true,
 
   /* --------------------------------- Preview -------------------------------- */
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreviewFromCodeNavigation": false,
   "editor.suggest.preview": true,
 
   /* ------------------------------- Suggestions ------------------------------ */
@@ -158,6 +159,7 @@
     "errorLens.warningMessageBackground": "#423b3b",
 
     "[One Dark Pro Darker]": {
+      "quickInputList.focusBackground": "#39404c",
       "editorStickyScroll.background": "#272b32",
       "terminalStickyScroll.background": "#272b32",
       // "editorStickyScroll.background": "#1e2227",
@@ -442,7 +444,7 @@
     "widgetid"
   ],
 
-  "clock.priority": 9999,
+  // "clock.priority": 9999,
   "clock.alignment": "Right",
   "clock.format": "ddd d/m/yyyy | hh:MM TT ",
   "clock.updateInterval": 60000,
@@ -491,7 +493,7 @@
 
   "vim.easymotionDimBackground": false,
   "vim.autoindent": false,
-  "vim.easymotion": false,
+  "vim.easymotion": true,
   // "vim.foldfix": true,
   "vim.enableNeovim": false,
   "vim.ignorecase": true,
@@ -505,8 +507,19 @@
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<leader>", "e"],
+      "after": ["<leader>", "<leader>", "f"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "b"],
+      "after": ["<leader>", "<leader>", "F"],
+      "silent": true
+    },
+    // Add multi cursors
+    {
       "before": ["<leader>", "c"],
-      "after": ["2", "g", "b", "Esc"],
+      "after": ["2", "g", "b"],
       "silent": true
     },
 
@@ -693,12 +706,12 @@
   },
 
   /* -------------------------- Smooth transition -------------------------- */
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "smooth",
+  // "editor.cursorSmoothCaretAnimation": "on",
+  // "editor.cursorBlinking": "smooth",
 
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
+  // "editor.smoothScrolling": true,
+  // "terminal.integrated.smoothScrolling": true,
+  // "workbench.list.smoothScrolling": true,
 
   /* -------------------------------------------------------------------------- */
   /*                                    MISC                                    */
@@ -733,4 +746,3 @@
 // "gitblame.inlineMessageMargin": 4,
 // "gitblame.delayBlame": 500,
 // "gitblame.statusBarPositionPriority": 0,
-

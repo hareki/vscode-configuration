@@ -85,22 +85,22 @@
 //   }
 // }
 
-.monaco-workbench {
-  background-color: var(--vscode-editor-background);
-}
+// .monaco-workbench {
+//   background-color: var(--vscode-editor-background);
+// }
 
-.lightBulbWidget {
-  transition: top $general-trans-duration-short;
-}
+// .lightBulbWidget {
+//   transition: top $general-trans-duration-short;
+// }
 
-.monaco-hover:not(.hidden) {
-  transform-origin: bottom;
-  animation: openPopupScale $general-trans-duration-short;
-}
+// .monaco-hover:not(.hidden) {
+//   transform-origin: bottom;
+//   animation: openPopupScale $general-trans-duration-short;
+// }
 
-.action-label {
-  transition: color $general-trans-duration-medium;
-}
+// .action-label {
+//   transition: color $general-trans-duration-medium;
+// }
 
 /* ----------------------------- Command pallette ---------------------------- */
 .quick-input-widget,
@@ -140,12 +140,12 @@
   }
 }
 
-/* ----------------------------- Rows ----------------------------- */
-.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row) {
-  transition: scale $active-row-duration;
-  scale: 0.98;
-}
+// /* ----------------------------- Rows ----------------------------- */
+// .monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row) {
+//   transition: scale $active-row-duration;
+//   scale: 0.98;
+// }
 
-.monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row).focused {
-  scale: 1;
-}
+// .monaco-list-row:not(.explorer-folders-view .monaco-list-row, .code-cell-row).focused {
+//   scale: 1;
+// }
