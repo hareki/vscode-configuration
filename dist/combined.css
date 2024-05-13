@@ -564,34 +564,6 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
     transform: scaleY(0);
   }
 }
-@keyframes tabMoveLeft {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes tabMoveRight {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes openTab {
-  from {
-    z-index: 1;
-    opacity: 0;
-    transform: translateX(-50%) scale(0);
-  }
-  to {
-    z-index: 1;
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
 /* --------------------------- General transitions -------------------------- */
 /* ----------------------------- Command pallette ---------------------------- */
 .quick-input-widget,
@@ -609,23 +581,6 @@ div[id="vscodevim.vim.showcmd"] > .statusbar-item-label:not([style*="display: no
 }
 
 /* ---------------------------------- Tabs ---------------------------------- */
-.tabs-container > .tab.moveLeft {
-  transform-origin: left;
-  z-index: 2;
-}
-.tabs-container > .tab.moveRight {
-  transform-origin: left;
-  animation: tabMoveRight 150ms;
-  z-index: 2;
-}
-.tabs-container > .tab {
-  transform-origin: left;
-  animation: openTab 150ms;
-}
-.tabs-container > .tab {
-  z-index: 2;
-}
-
 [id="workbench.parts.panel"] > .title {
   background-color: #1b1f23;
   border-color: #373d48;

@@ -9,9 +9,9 @@
   "terminal.integrated.stickyScroll.enabled": true,
 
   /* --------------------------------- Preview -------------------------------- */
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.enablePreviewFromCodeNavigation": false,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
   "editor.suggest.preview": true,
 
   /* ------------------------------- Suggestions ------------------------------ */
