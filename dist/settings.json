@@ -278,7 +278,8 @@
   // "editor.formatOnSaveMode": "modificationsIfAvailable",
 
   // Use plugin:tailwindcss/recommended in eslint config instead
-  "tailwindCSS.validate": false,
+  // Downside: plugin:tailwindcss/recommended won't work when wrapping the string in `cn`
+  // "tailwindCSS.validate": false,
 
   "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
