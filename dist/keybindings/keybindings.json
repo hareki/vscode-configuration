@@ -504,6 +504,10 @@
     "key": "ctrl+shift+q",
     "command": "workbench.action.closeEditorsToTheRight"
   },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+  },
   /* -------------------------------------------------------------------------- */
   /*                               AVOID MISCLICKS                              */
   /* -------------------------------------------------------------------------- */
@@ -513,7 +517,7 @@
   {
     "key": "ctrl+-"
   },
-  {
-    "key": "ctrl+o"
-  }
+  // {
+  //   "key": "ctrl+o"
+  // },
 ]
