@@ -7,9 +7,9 @@ const sortedFiles = files.sort((a, b) => {
   return path.basename(a).localeCompare(path.basename(b));
 });
 
-concat(sortedFiles, 'dist/combined.css')
+concat(sortedFiles, 'dist/styles/compiled.css')
   .then(() => {
-    console.log('All files were concatenated into dist/combined.css');
+    console.log('All files were concatenated into dist/styles/compiled.css');
   })
   .catch((err) => {
     console.error('Error during concatenation:', err);

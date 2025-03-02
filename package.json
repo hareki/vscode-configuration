@@ -7,7 +7,7 @@
     "format": "prettier --write \"src/**/*\"",
     "compile": "sass src/main.scss temp/main.css --no-source-map --style=expanded",
     "merge": "node src/scripts/concat.mjs",
-    "minify": "postcss temp/main.css -o dist/custom.minified.css",
+    "minify": "postcss temp/main.css -o dist/styles/compiled.minified.css",
     "cleanup": "node src/scripts/cleanup.mjs",
     "build": "yarn format && yarn compile && yarn merge && yarn minify",
     "build:mac": "yarn build && bash commands/macos.txt",
