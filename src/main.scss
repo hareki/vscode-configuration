@@ -7,51 +7,49 @@
 // @import './scss/7-animation.scss';
 // @import './scss/8-panel.scss';
 
-
 * {
-    box-shadow: none !important;
-  }
-  
-  .windows,
-  .editorPlaceholder,
-  .monaco-mouse-cursor-text,
-  .shadow-root-host {
-    font-family: 'Maple Mono NF' !important;
-  }
-  
-  .monaco-workbench .part.statusbar,
-  .monaco-workbench
-    .part.editor
-    > .content
-    .editor-group-container
-    > .title.breadcrumbs
-    .breadcrumbs-control
-    .monaco-icon-label
-    .label-name {
-    font-size: 13px !important;
-  }
-  
-  [id='alefragnani.project-manager.projectManager.statusBar'] {
-    order: 1;
-  }
-  
-  [id='status.scm.0'] {
-    order: 2;
-  }
-  
-  [id='status.scm.1'] {
-    order: 3;
-  }
-  
-  [id='status.problems'] {
-    order: 4;
-  }
-  
-  [id='vscodevim.vim.primary'] {
-    order: 5;
-  }
-  
-  [id='be5invis.vscode-custom-css'] {
-    display: none !important;
-  }
-  
+  box-shadow: none !important;
+}
+
+.windows,
+.editorPlaceholder,
+.monaco-mouse-cursor-text,
+.shadow-root-host {
+  font-family: 'Maple Mono NF' !important;
+}
+
+.monaco-workbench .part.statusbar,
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title.breadcrumbs
+  .breadcrumbs-control
+  .monaco-icon-label
+  .label-name {
+  font-size: 13px !important;
+}
+
+[id='alefragnani.project-manager.projectManager.statusBar'] {
+  order: 1;
+}
+
+[id='status.scm.0'] {
+  order: 2;
+}
+
+[id='status.scm.1'] {
+  order: 3;
+}
+
+[id='status.problems'] {
+  order: 4;
+}
+
+[id='vscodevim.vim.primary'] {
+  order: 5;
+}
+
+[id='be5invis.vscode-custom-css'] {
+  display: none !important;
+}
