@@ -30,11 +30,12 @@
   /* --------------------- File exclusion for performance --------------------- */
 
   // https://medium.com/@krtirtho/make-visual-studio-code-less-ram-consuming-faster-90db8c76a187
-  "files.exclude": {
-    "**/yarn.lock/**": true,
-    "**/package-lock.json": true
-    // "**/node_modules/**": true
-  },
+  // "files.exclude": {
+  //   "**/yarn.lock/**": true,
+  //   "**/package-lock.json": true
+  //   // "**/node_modules/**": true
+  // },
+  // "explorer.excludeGitIgnore": true,
 
   "json.schemas": [
     {
@@ -80,7 +81,7 @@
   /*                                 APPEARANCE                                 */
   /* -------------------------------------------------------------------------- */
   "vscode_custom_css.imports": [
-    "file:///C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/dist/temp-styles.css"
+    "file:///C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/dist/styles/compiled.minified.css"
   ],
 
   /* -------------------------------- Title bar -------------------------------- */
@@ -533,11 +534,16 @@
     },
     {
       "before": ["<leader>", "/"],
+      "commands": ["workbench.action.quickTextSearch"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f"],
       "commands": ["workbench.action.findInFiles"],
       "silent": true
     },
     {
-      "before": ["<leader>", "?"],
+      "before": ["<leader>", "r"],
       "commands": ["workbench.action.replaceInFiles"],
       "silent": true
     },

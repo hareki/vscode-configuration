@@ -261,11 +261,16 @@
   // },
   {
     "key": "space /",
+    "command": "workbench.action.quickTextSearch",
+    "when": "!editorFocus && !inputFocus && vim.active"
+  },
+  {
+    "key": "space f",
     "command": "workbench.action.findInFiles",
     "when": "!editorFocus && !inputFocus && vim.active"
   },
   {
-    "key": "space shift+/",
+    "key": "space r",
     "command": "workbench.action.replaceInFiles",
     "when": "!editorfocus && !inputFocus && vim.active"
   },
