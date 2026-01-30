@@ -4,24 +4,21 @@
   /* -------------------------------------------------------------------------- */
 
   /* ------------------------------ Sticky scroll ----------------------------- */
-  "editor.stickyScroll.enabled": true,
-  "workbench.tree.enableStickyScroll": true,
+  "editor.stickyScroll.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
   "terminal.integrated.stickyScroll.enabled": true,
-
-  /* --------------------------------- Preview -------------------------------- */
-  "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "editor.suggest.preview": true,
 
   /* ------------------------------- Suggestions ------------------------------ */
   "editor.snippetSuggestions": "inline",
-  // "editor.quickSuggestions": {
-  //   "other": "on",
-  //   "strings": "off",
-  //   "comments": "off"
-  // },
-  "editor.quickSuggestionsDelay": 50,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "strings": "on",
+    "comments": "on",
+  },
+  // "editor.quickSuggestionsDelay": 50,
 
   "editor.tabCompletion": "on",
   "editor.inlineSuggest.showToolbar": "always",
@@ -39,13 +36,13 @@
 
   "json.schemas": [
     {
-      "exclude": ["node_modules"]
-    }
+      "exclude": ["node_modules"],
+    },
   ],
 
   "search.exclude": {
     "**/node_modules": true,
-    "**/bower_components": true
+    "**/bower_components": true,
     // "**/env": true,
     // "**/venv": true
   },
@@ -53,7 +50,7 @@
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/**": true
+    "**/node_modules/**": true,
     // "**/env/**": true,
     // "**/venv/**": true,
     // "env-*": true
@@ -80,12 +77,10 @@
   /* -------------------------------------------------------------------------- */
   /*                                 APPEARANCE                                 */
   /* -------------------------------------------------------------------------- */
-  "vscode_custom_css.imports": [
-    "file:///C:/Users/minht/OneDrive/Cloud Storage/Settings/VSCode/dist/styles/compiled.minified.css"
-  ],
+  "vscode_custom_css.imports": ["file:///Users/hareki/.config/vscode/custom-styles.css"],
 
   /* -------------------------------- Title bar -------------------------------- */
-  // "window.titleBarStyle": "custom",
+  "window.titleBarStyle": "custom",
   // "window.title": "${dirty}Hareki's Secret Lab",
   // "window.titleSeparator": " | ",
   "window.customTitleBarVisibility": "windowed",
@@ -95,23 +90,20 @@
   "window.menuBarVisibility": "toggle",
 
   /* ---------------------------------- Font ---------------------------------- */
-  "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' off, 'ss02' off",
+  "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' off, 'ss02' off, 'cv35' on",
   "editor.fontSize": 14,
   "editor.fontWeight": 500,
   "editor.fontFamily": "'Maple Mono NF', Consolas, 'Courier New', monospace",
+  "window.zoomLevel": 1.4,
 
   "terminal.integrated.fontFamily": "Maple Mono NF",
   "terminal.integrated.fontWeight": "600",
   "terminal.integrated.fontSize": 14,
 
   "editor.lineHeight": 25,
-
-  /* ---------------------------------- Theme --------------------------------- */
-  "window.zoomLevel": 1.55,
   "workbench.iconTheme": "catppuccin-mocha",
-  "workbench.colorTheme": "Catppuccin Mocha",
 
-  "catppuccin.accentColor": "lavender",
+  "catppuccin.accentColor": "blue",
   "catppuccin-icons.specificFolders": false,
   "catppuccin-icons.hidesExplorerArrows": true,
   // "symbols.hidesExplorerArrows": false,
@@ -151,8 +143,8 @@
       "terminal.background": "#1e1e2e",
       "sideBarSectionHeader.background": "#1e1e2e",
 
-      "panel.border": "#0000"
-    }
+      "panel.border": "#0000",
+    },
   },
 
   "editor.tokenColorCustomizations": {
@@ -161,22 +153,22 @@
         {
           "scope": "ref.matchtext",
           "settings": {
-            "foreground": "#000"
-          }
-        }
-      ]
+            "foreground": "#000",
+          },
+        },
+      ],
     },
     "[*Dark*]": {
       "textMateRules": [
         {
           "scope": "ref.matchtext",
           "settings": {
-            "foreground": "#fff"
-          }
-        }
-      ]
+            "foreground": "#fff",
+          },
+        },
+      ],
     },
-    "textMateRules": []
+    "textMateRules": [],
   },
 
   "editor.mouseWheelScrollSensitivity": 2.5,
@@ -185,7 +177,6 @@
   /* --------------------------------- Minimap -------------------------------- */
   "editor.minimap.side": "left",
   "editor.minimap.scale": 2,
-  "editor.minimap.enabled": true,
   "editor.minimap.showSlider": "always",
   "editor.minimap.maxColumn": 80,
 
@@ -200,8 +191,8 @@
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-      "args": ["-NoLogo"]
-    }
+      "args": ["-NoLogo"],
+    },
   },
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
@@ -209,12 +200,11 @@
   "terminal.integrated.gpuAcceleration": "auto",
   "terminal.integrated.tabs.location": "left",
   "terminal.integrated.mouseWheelScrollSensitivity": 2.5,
-  "terminal.integrated.tabs.enabled": false,
 
   /* ---------------------------------- Tabs ---------------------------------- */
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.editor.customLabels.patterns": {
-    "**/src/**/index.{ts,tsx,js,jsx}": "[I] | ${dirname}.${extname}"
+    "**/src/**/index.{ts,tsx,js,jsx}": "[I] | ${dirname}.${extname}",
   },
   "workbench.editor.labelFormat": "default",
   "workbench.editor.revealIfOpen": true,
@@ -250,7 +240,7 @@
     // "bradlc.vscode-tailwindcss": 2,
     // "eamodio.gitlens": 2,
     "GitHub.copilot": 4,
-    "GitHub.copilot-chat": 4
+    "GitHub.copilot-chat": 4,
     // "streetsidesoftware.code-spell-checker": 6
   },
 
@@ -260,13 +250,14 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "yaml": false
+    "yaml": false,
   },
 
   /* -------------------------------- Formatter ------------------------------- */
   "editor.formatOnSave": true,
-  // "editor.formatOnSaveMode": "file",
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.formatOnSaveMode": "file",
+  // causing trouble becasue vscode doesn't have the full context of the file, leading to wrong format
+  // "editor.formatOnSaveMode": "modificationsIfAvailable",
 
   // Use plugin:tailwindcss/recommended in eslint config instead
   // Downside: plugin:tailwindcss/recommended won't work when wrapping the string in `cn`
@@ -275,7 +266,7 @@
   "eslint.codeActionsOnSave.mode": "all",
   // "eslint.codeActionsOnSave.mode": "problems",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "always",
   },
   // "eslint.validate": ["javascript"],
 
@@ -284,34 +275,37 @@
   "prettier.singleQuote": true,
 
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
   },
 
   "html.format.wrapLineLength": 100,
@@ -383,7 +377,7 @@
   /* ----------------------------------- Env ---------------------------------- */
   "files.associations": {
     "*.env.local": "env",
-    ".env*": "dotenv"
+    ".env*": "env",
   },
   // "dotenv.enableAutocloaking": false,
 
@@ -394,33 +388,58 @@
   "cSpell.userWords": [
     "antd",
     "appicon",
+    "augroup",
+    "Autocloaking",
+    "autocmd",
+    "autocmds",
+    "Autocommands",
     "auxiliarybar",
     "calt",
+    "checktime",
     "classname",
+    "Consolas",
     "customview",
     "devserver",
     "donot",
     "dtos",
     "esbenp",
     "filematch",
+    "Flexbox",
     "flexprops",
+    "Formik",
     "gitblame",
     "hareki",
+    "Hoverable",
+    "hrforte",
     "immer",
+    "importmap",
     "jetbrains",
+    "keymaps",
     "libphonenumber",
+    "lifecycles",
     "liga",
+    "Lightbox",
     "matchtext",
+    "microfrontend",
     "minht",
+    "MISCLICK",
+    "MISCLICKS",
+    "Monokai",
     "nestjs",
     "nextjs",
+    "nofile",
     "noninteractive",
+    "nvim",
+    "oklch",
     "partialize",
     "pdfs",
+    "Popconfirm",
     "reduxjs",
     "scminput",
+    "shadcn",
     "showcmd",
     "stylesheet",
+    "systemjs",
     "tablist",
     "tabnine",
     "tanstack",
@@ -428,17 +447,6 @@
     "vscodevim",
     "vsplit",
     "widgetid",
-
-    "Autocloaking",
-    "Consolas",
-    "Flexbox",
-    "Formik",
-    "Hoverable",
-    "Lightbox",
-    "MISCLICK",
-    "MISCLICKS",
-    "Monokai",
-    "Popconfirm"
   ],
 
   // "clock.priority": 9999,
@@ -461,14 +469,19 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "html"
+    "html",
   ],
 
   "tailwindCSS.experimental.classRegex": [
-    "`tw([^`]*)", // `tw ...`
-    "'tw([^']*)", // 'tw ...'
-    "\"tw([^']*)" // "tw ..."
+    // tw`` / 'tw' / "tw"
+    "`tw([^`]*)",
+    "'tw([^']*)",
+    "\"tw([^\"]*)",
   ],
+
+  // No need to include "cn" or "tw". They work by default (not sure why).
+  // In fact, including them will break suggestions if they are used nestedly inside "cva"
+  "tailwindCSS.classFunctions": ["cva", "tw", "cn"],
 
   // Performance reasons
   "tailwindCSS.emmetCompletions": false,
@@ -479,10 +492,10 @@
     // Windows
     "D:\\Repositories",
     "C:\\Users\\minht\\OneDrive\\Cloud Storage\\Settings\\VSCode",
-    "D:\\Test"
+    "D:\\Test",
 
     // MacOS
-    // "/Users/Hareki/Documents/Repositories"
+    "/Users/hareki/Repositories/Work/Zigvy",
   ],
 
   /* ----------------------------------- VIM Configurations ---------------------------------- */
@@ -507,7 +520,7 @@
     {
       "before": ["?"],
       "commands": ["editor.action.startFindReplaceAction"],
-      "silent": true
+      "silent": true,
     },
 
     // Need to duplicate the settings here,
@@ -516,124 +529,121 @@
     {
       "before": ["<leader>", "<leader>"],
       "commands": ["workbench.action.quickOpen"],
-      "silent": true
+      "silent": true,
     },
 
     {
       "before": ["<leader>", "e"],
-      "commands": [
-        "revealInExplorer",
-        "workbench.files.action.focusFilesExplorer"
-      ],
-      "silent": true
+      "commands": ["revealInExplorer", "workbench.files.action.focusFilesExplorer"],
+      "silent": true,
     },
     {
       "before": ["<leader>", "g"],
       "commands": ["workbench.view.scm"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "/"],
       "commands": ["workbench.action.quickTextSearch"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.findInFiles"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "r"],
       "commands": ["workbench.action.replaceInFiles"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "t"],
       "commands": ["todo-tree-view.focus"],
-      "silent": true
+      "silent": true,
     },
 
     {
       "before": ["<leader>", "c"],
       "commands": ["workbench.panel.chat.view.edits.focus"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "x"],
       "commands": ["workbench.view.extensions"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "d"],
       "commands": ["workbench.view.debug"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "p"],
       "commands": ["workbench.action.focusPanel"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["<leader>", "l"],
       "commands": ["workbench.action.showCommands"],
-      "silent": true
+      "silent": true,
     },
 
     // Multi-curor
     {
       "before": ["<C-m>"],
-      "after": ["g", "b"]
+      "after": ["g", "b"],
     },
     {
       "before": ["w"],
-      "after": ["<leader>", "w"]
+      "after": ["<leader>", "w"],
     },
     {
       "before": ["b"],
-      "after": ["<leader>", "b"]
+      "after": ["<leader>", "b"],
     },
     {
       "before": ["<C-a>"],
-      "after": ["v", "i", "e"]
+      "after": ["v", "i", "e"],
     },
     {
       "before": ["g", "h"],
       "commands": ["editor.action.showDefinitionPreviewHover"],
-      "silent": true
+      "silent": true,
     },
     {
       "before": ["g", "r"],
       "commands": ["references-view.findReferences"],
-      "silent": true
+      "silent": true,
     },
 
     { "before": ["P"], "after": ["\"", "0", "p"] },
     {
       "before": ["Y"],
-      "after": ["y", "$"]
+      "after": ["y", "$"],
     },
     {
       "before": ["C"],
-      "after": ["c", "$"]
-    }
+      "after": ["c", "$"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<C-m>"],
-      "after": ["g", "b"]
+      "after": ["g", "b"],
     },
     {
       "before": ["p"],
-      "after": ["\"", "_", "d", "P"]
+      "after": ["\"", "_", "d", "P"],
     },
     {
       "before": ["x"],
-      "after": ["\"", "0", "d"]
+      "after": ["\"", "0", "d"],
     },
     {
       "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
-    }
+      "after": ["\"", "+", "y"],
+    },
   ],
   "vim.handleKeys": {
     "<C-c>": false,
@@ -650,7 +660,7 @@
     "<C-i>": false,
     "<C-e>": false,
 
-    "<C-space>": false
+    "<C-space>": false,
   },
 
   /* -------------------------- Smooth transition -------------------------- */
@@ -687,12 +697,153 @@
     "commits": false,
     "branches": false,
     "remotes": false,
-    "stashes": false,
+    "stashes": true,
     "tags": false,
     "worktrees": false,
     "contributors": false,
+    "fileHistory": false,
     "repositories": false,
     "searchAndCompare": false,
-    "launchpad": false
-  }
+    "launchpad": false,
+  },
+  "git.autofetch": true,
+  "settingsSync.ignoredExtensions": ["be5invis.vscode-custom-css", "github.copilot-chat"],
+  "chat.agent.enabled": true,
+  "terminal.integrated.suggest.enabled": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default",
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "Lua.format.enable": false,
+  "workbench.externalBrowser": "edge",
+  "Lua.runtime.version": "Lua 5.4",
+  "chat.agent.maxRequests": 2500,
+  "Lua.diagnostics.globals": ["vim", "Snacks"],
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "chat.tools.terminal.autoApprove": {
+    "cd": true,
+    "echo": true,
+    "ls": true,
+    "pwd": true,
+    "cat": true,
+    "head": true,
+    "tail": true,
+    "findstr": true,
+    "wc": true,
+    "tr": true,
+    "cut": true,
+    "cmp": true,
+    "which": true,
+    "basename": true,
+    "dirname": true,
+    "realpath": true,
+    "readlink": true,
+    "stat": true,
+    "file": true,
+    "du": true,
+    "df": true,
+    "sleep": true,
+    "grep": true,
+    "git status": true,
+    "git log": true,
+    "git show": true,
+    "git diff": true,
+    "git grep": true,
+    "git branch": true,
+    "/^git branch\\b.*-(d|D|m|M|-delete|-force)\\b/": false,
+    "Get-ChildItem": true,
+    "Get-Content": true,
+    "Get-Date": true,
+    "Get-Random": true,
+    "Get-Location": true,
+    "Write-Host": true,
+    "Write-Output": true,
+    "Split-Path": true,
+    "Join-Path": true,
+    "Start-Sleep": true,
+    "Where-Object": true,
+    "/^Select-[a-z0-9]/i": true,
+    "/^Measure-[a-z0-9]/i": true,
+    "/^Compare-[a-z0-9]/i": true,
+    "/^Format-[a-z0-9]/i": true,
+    "/^Sort-[a-z0-9]/i": true,
+    "column": true,
+    "/^column\\b.*-c\\s+[0-9]{4,}/": false,
+    "date": true,
+    "/^date\\b.*(-s|--set)\\b/": false,
+    "find": true,
+    "/^find\\b.*-(delete|exec|execdir|fprint|fprintf|fls|ok|okdir)\\b/": false,
+    "sort": true,
+    "/^sort\\b.*-(o|S)\\b/": false,
+    "tree": true,
+    "/^tree\\b.*-o\\b/": false,
+    "/\\(.+\\)/s": {
+      "approve": false,
+      "matchCommandLine": true,
+    },
+    "/\\{.+\\}/s": {
+      "approve": false,
+      "matchCommandLine": true,
+    },
+    "/`.+`/s": {
+      "approve": false,
+      "matchCommandLine": true,
+    },
+    "rm": false,
+    "rmdir": false,
+    "del": false,
+    "Remove-Item": false,
+    "ri": false,
+    "rd": false,
+    "erase": false,
+    "dd": false,
+    "kill": false,
+    "ps": false,
+    "top": false,
+    "Stop-Process": false,
+    "spps": false,
+    "taskkill": false,
+    "taskkill.exe": false,
+    "curl": false,
+    "wget": false,
+    "Invoke-RestMethod": false,
+    "Invoke-WebRequest": false,
+    "irm": false,
+    "iwr": false,
+    "chmod": false,
+    "chown": false,
+    "Set-ItemProperty": false,
+    "sp": false,
+    "Set-Acl": false,
+    "jq": false,
+    "xargs": false,
+    "eval": false,
+    "Invoke-Expression": false,
+    "iex": false,
+    "npm run format": true,
+    "rg": true,
+    "nl": true,
+    "sed": true,
+    "cargo check": true,
+    "stylua": true,
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.viewSessions.enabled": false,
+  "chat.tools.urls.autoApprove": {
+    "https://raw.githubusercontent.com": {
+      "approveRequest": false,
+      "approveResponse": true,
+    },
+    "https://github.com": {
+      "approveRequest": false,
+      "approveResponse": true,
+    },
+    "https://cmp.saghen.dev": true,
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.minimap.enabled": false,
 }
