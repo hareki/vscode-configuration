@@ -212,7 +212,7 @@
   "breadcrumbs.enabled": true,
 
   /* ------------------------------ Bracket pairs ----------------------------- */
-  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairs": false,
   "editor.guides.bracketPairsHorizontal": false,
 
   /* -------------------------------------------------------------------------- */
